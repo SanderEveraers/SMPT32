@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20C04ECD1CEF1BE300B09717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04ECC1CEF1BE300B09717 /* AppDelegate.swift */; };
+		20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04ECE1CEF1BE300B09717 /* ViewController.swift */; };
+		20C04ED21CEF1BE300B09717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C04ED01CEF1BE300B09717 /* Main.storyboard */; };
+		20C04ED51CEF1BE300B09717 /* WordFlip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20C04ED31CEF1BE300B09717 /* WordFlip.xcdatamodeld */; };
+		20C04ED71CEF1BE300B09717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C04ED61CEF1BE300B09717 /* Assets.xcassets */; };
+		20C04EDA1CEF1BE300B09717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C04ED81CEF1BE300B09717 /* LaunchScreen.storyboard */; };
+		20C04EE51CEF1BE400B09717 /* WordFlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04EE41CEF1BE400B09717 /* WordFlipTests.swift */; };
+		20C04EF01CEF1BE400B09717 /* WordFlipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04EEF1CEF1BE400B09717 /* WordFlipUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20C04EE11CEF1BE400B09717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20C04EC11CEF1BE300B09717 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20C04EC81CEF1BE300B09717;
+			remoteInfo = WordFlip;
+		};
+		20C04EEC1CEF1BE400B09717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20C04EC11CEF1BE300B09717 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20C04EC81CEF1BE300B09717;
+			remoteInfo = WordFlip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20C04EC91CEF1BE300B09717 /* WordFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C04ECC1CEF1BE300B09717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20C04ECE1CEF1BE300B09717 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		20C04ED11CEF1BE300B09717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20C04ED41CEF1BE300B09717 /* WordFlip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordFlip.xcdatamodel; sourceTree = "<group>"; };
+		20C04ED61CEF1BE300B09717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20C04ED91CEF1BE300B09717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20C04EDB1CEF1BE300B09717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20C04EE01CEF1BE400B09717 /* WordFlipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordFlipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C04EE41CEF1BE400B09717 /* WordFlipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFlipTests.swift; sourceTree = "<group>"; };
+		20C04EE61CEF1BE400B09717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20C04EEB1CEF1BE400B09717 /* WordFlipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordFlipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C04EEF1CEF1BE400B09717 /* WordFlipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFlipUITests.swift; sourceTree = "<group>"; };
+		20C04EF11CEF1BE400B09717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20C04EC61CEF1BE300B09717 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C04EDD1CEF1BE400B09717 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C04EE81CEF1BE400B09717 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20C04EC01CEF1BE300B09717 = {
+			isa = PBXGroup;
+			children = (
+				20C04ECB1CEF1BE300B09717 /* WordFlip */,
+				20C04EE31CEF1BE400B09717 /* WordFlipTests */,
+				20C04EEE1CEF1BE400B09717 /* WordFlipUITests */,
+				20C04ECA1CEF1BE300B09717 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20C04ECA1CEF1BE300B09717 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20C04EC91CEF1BE300B09717 /* WordFlip.app */,
+				20C04EE01CEF1BE400B09717 /* WordFlipTests.xctest */,
+				20C04EEB1CEF1BE400B09717 /* WordFlipUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20C04ECB1CEF1BE300B09717 /* WordFlip */ = {
+			isa = PBXGroup;
+			children = (
+				20C04ECC1CEF1BE300B09717 /* AppDelegate.swift */,
+				20C04ECE1CEF1BE300B09717 /* ViewController.swift */,
+				20C04ED01CEF1BE300B09717 /* Main.storyboard */,
+				20C04ED61CEF1BE300B09717 /* Assets.xcassets */,
+				20C04ED81CEF1BE300B09717 /* LaunchScreen.storyboard */,
+				20C04EDB1CEF1BE300B09717 /* Info.plist */,
+				20C04ED31CEF1BE300B09717 /* WordFlip.xcdatamodeld */,
+			);
+			path = WordFlip;
+			sourceTree = "<group>";
+		};
+		20C04EE31CEF1BE400B09717 /* WordFlipTests */ = {
+			isa = PBXGroup;
+			children = (
+				20C04EE41CEF1BE400B09717 /* WordFlipTests.swift */,
+				20C04EE61CEF1BE400B09717 /* Info.plist */,
+			);
+			path = WordFlipTests;
+			sourceTree = "<group>";
+		};
+		20C04EEE1CEF1BE400B09717 /* WordFlipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				20C04EEF1CEF1BE400B09717 /* WordFlipUITests.swift */,
+				20C04EF11CEF1BE400B09717 /* Info.plist */,
+			);
+			path = WordFlipUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20C04EC81CEF1BE300B09717 /* WordFlip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C04EF41CEF1BE400B09717 /* Build configuration list for PBXNativeTarget "WordFlip" */;
+			buildPhases = (
+				20C04EC51CEF1BE300B09717 /* Sources */,
+				20C04EC61CEF1BE300B09717 /* Frameworks */,
+				20C04EC71CEF1BE300B09717 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordFlip;
+			productName = WordFlip;
+			productReference = 20C04EC91CEF1BE300B09717 /* WordFlip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20C04EDF1CEF1BE400B09717 /* WordFlipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C04EF71CEF1BE400B09717 /* Build configuration list for PBXNativeTarget "WordFlipTests" */;
+			buildPhases = (
+				20C04EDC1CEF1BE400B09717 /* Sources */,
+				20C04EDD1CEF1BE400B09717 /* Frameworks */,
+				20C04EDE1CEF1BE400B09717 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20C04EE21CEF1BE400B09717 /* PBXTargetDependency */,
+			);
+			name = WordFlipTests;
+			productName = WordFlipTests;
+			productReference = 20C04EE01CEF1BE400B09717 /* WordFlipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		20C04EEA1CEF1BE400B09717 /* WordFlipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C04EFA1CEF1BE400B09717 /* Build configuration list for PBXNativeTarget "WordFlipUITests" */;
+			buildPhases = (
+				20C04EE71CEF1BE400B09717 /* Sources */,
+				20C04EE81CEF1BE400B09717 /* Frameworks */,
+				20C04EE91CEF1BE400B09717 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20C04EED1CEF1BE400B09717 /* PBXTargetDependency */,
+			);
+			name = WordFlipUITests;
+			productName = WordFlipUITests;
+			productReference = 20C04EEB1CEF1BE400B09717 /* WordFlipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20C04EC11CEF1BE300B09717 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = FHICT;
+				TargetAttributes = {
+					20C04EC81CEF1BE300B09717 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 3YHSFD6C25;
+					};
+					20C04EDF1CEF1BE400B09717 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 3YHSFD6C25;
+						TestTargetID = 20C04EC81CEF1BE300B09717;
+					};
+					20C04EEA1CEF1BE400B09717 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 3YHSFD6C25;
+						TestTargetID = 20C04EC81CEF1BE300B09717;
+					};
+				};
+			};
+			buildConfigurationList = 20C04EC41CEF1BE300B09717 /* Build configuration list for PBXProject "WordFlip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20C04EC01CEF1BE300B09717;
+			productRefGroup = 20C04ECA1CEF1BE300B09717 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20C04EC81CEF1BE300B09717 /* WordFlip */,
+				20C04EDF1CEF1BE400B09717 /* WordFlipTests */,
+				20C04EEA1CEF1BE400B09717 /* WordFlipUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20C04EC71CEF1BE300B09717 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C04EDA1CEF1BE300B09717 /* LaunchScreen.storyboard in Resources */,
+				20C04ED71CEF1BE300B09717 /* Assets.xcassets in Resources */,
+				20C04ED21CEF1BE300B09717 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C04EDE1CEF1BE400B09717 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C04EE91CEF1BE400B09717 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20C04EC51CEF1BE300B09717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */,
+				20C04ECD1CEF1BE300B09717 /* AppDelegate.swift in Sources */,
+				20C04ED51CEF1BE300B09717 /* WordFlip.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C04EDC1CEF1BE400B09717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C04EE51CEF1BE400B09717 /* WordFlipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C04EE71CEF1BE400B09717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C04EF01CEF1BE400B09717 /* WordFlipUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20C04EE21CEF1BE400B09717 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20C04EC81CEF1BE300B09717 /* WordFlip */;
+			targetProxy = 20C04EE11CEF1BE400B09717 /* PBXContainerItemProxy */;
+		};
+		20C04EED1CEF1BE400B09717 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20C04EC81CEF1BE300B09717 /* WordFlip */;
+			targetProxy = 20C04EEC1CEF1BE400B09717 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20C04ED01CEF1BE300B09717 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20C04ED11CEF1BE300B09717 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20C04ED81CEF1BE300B09717 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20C04ED91CEF1BE300B09717 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20C04EF21CEF1BE400B09717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20C04EF31CEF1BE400B09717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20C04EF51CEF1BE400B09717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WordFlip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.edu.WordFlip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		20C04EF61CEF1BE400B09717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WordFlip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.edu.WordFlip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		20C04EF81CEF1BE400B09717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WordFlipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.edu.WordFlipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordFlip.app/WordFlip";
+			};
+			name = Debug;
+		};
+		20C04EF91CEF1BE400B09717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WordFlipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.edu.WordFlipTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordFlip.app/WordFlip";
+			};
+			name = Release;
+		};
+		20C04EFB1CEF1BE400B09717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WordFlipUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.edu.WordFlipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WordFlip;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		20C04EFC1CEF1BE400B09717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WordFlipUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.edu.WordFlipUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WordFlip;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20C04EC41CEF1BE300B09717 /* Build configuration list for PBXProject "WordFlip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C04EF21CEF1BE400B09717 /* Debug */,
+				20C04EF31CEF1BE400B09717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20C04EF41CEF1BE400B09717 /* Build configuration list for PBXNativeTarget "WordFlip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C04EF51CEF1BE400B09717 /* Debug */,
+				20C04EF61CEF1BE400B09717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		20C04EF71CEF1BE400B09717 /* Build configuration list for PBXNativeTarget "WordFlipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C04EF81CEF1BE400B09717 /* Debug */,
+				20C04EF91CEF1BE400B09717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		20C04EFA1CEF1BE400B09717 /* Build configuration list for PBXNativeTarget "WordFlipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C04EFB1CEF1BE400B09717 /* Debug */,
+				20C04EFC1CEF1BE400B09717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		20C04ED31CEF1BE300B09717 /* WordFlip.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				20C04ED41CEF1BE300B09717 /* WordFlip.xcdatamodel */,
+			);
+			currentVersion = 20C04ED41CEF1BE300B09717 /* WordFlip.xcdatamodel */;
+			path = WordFlip.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 20C04EC11CEF1BE300B09717 /* Project object */;
+}

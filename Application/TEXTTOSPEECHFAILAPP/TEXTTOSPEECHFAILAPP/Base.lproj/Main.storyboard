@@ -17,20 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a0k-jR-8GU">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Hallo, ik ben iemand." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a0k-jR-8GU">
                                 <rect key="frame" x="97" y="20" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">This text is used as an example for this Text to Speech application. Write your own text here or copy and paste something, then tap the button below.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpj-l9-chx">
                                 <rect key="frame" x="191" y="227" width="52" height="30"/>
                                 <state key="normal" title="Speech"/>
+                                <connections>
+                                    <action selector="textToSpeech:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0c-gM-CoY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr1-Zy-jHT">
+                                <rect key="frame" x="193" y="381" width="49" height="30"/>
+                                <state key="normal" title="Spreek"/>
+                                <connections>
+                                    <action selector="tekstNaarSpraak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WCh-fl-4WY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RK-iu-yb9">
+                                <rect key="frame" x="184" y="301" width="66" height="30"/>
+                                <state key="normal" title="Sprechen"/>
+                                <connections>
+                                    <action selector="textZumSprechen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hU7-Ns-yBj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="speechText" destination="a0k-jR-8GU" id="KFr-WX-okd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,7 @@
 		F58F350B1CEF37A800AE63B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58F35091CEF37A800AE63B8 /* LaunchScreen.storyboard */; };
 		F58F35161CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F35151CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests.swift */; };
 		F58F35211CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F35201CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.swift */; };
+		F58F352F1CEF396000AE63B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58F352E1CEF396000AE63B8 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F58F351C1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEXTTOSPEECHFAILAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58F35201CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEXTTOSPEECHFAILAPPUITests.swift; sourceTree = "<group>"; };
 		F58F35221CEF37A800AE63B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F58F352E1CEF396000AE63B8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58F352F1CEF396000AE63B8 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		F58F34F41CEF37A700AE63B8 = {
 			isa = PBXGroup;
 			children = (
+				F58F352E1CEF396000AE63B8 /* AVFoundation.framework */,
 				F58F34FF1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPP */,
 				F58F35141CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests */,
 				F58F351F1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests */,

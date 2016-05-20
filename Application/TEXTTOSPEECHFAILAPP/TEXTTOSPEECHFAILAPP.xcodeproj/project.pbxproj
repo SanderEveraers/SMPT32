@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F58F35011CEF37A800AE63B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F35001CEF37A800AE63B8 /* AppDelegate.swift */; };
+		F58F35031CEF37A800AE63B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F35021CEF37A800AE63B8 /* ViewController.swift */; };
+		F58F35061CEF37A800AE63B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58F35041CEF37A800AE63B8 /* Main.storyboard */; };
+		F58F35081CEF37A800AE63B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58F35071CEF37A800AE63B8 /* Assets.xcassets */; };
+		F58F350B1CEF37A800AE63B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58F35091CEF37A800AE63B8 /* LaunchScreen.storyboard */; };
+		F58F35161CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F35151CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests.swift */; };
+		F58F35211CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F35201CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F58F35121CEF37A800AE63B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F58F34F51CEF37A700AE63B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F58F34FC1CEF37A700AE63B8;
+			remoteInfo = TEXTTOSPEECHFAILAPP;
+		};
+		F58F351D1CEF37A800AE63B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F58F34F51CEF37A700AE63B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F58F34FC1CEF37A700AE63B8;
+			remoteInfo = TEXTTOSPEECHFAILAPP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F58F34FD1CEF37A700AE63B8 /* TEXTTOSPEECHFAILAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEXTTOSPEECHFAILAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F58F35001CEF37A800AE63B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F58F35021CEF37A800AE63B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F58F35051CEF37A800AE63B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F58F35071CEF37A800AE63B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F58F350A1CEF37A800AE63B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F58F350C1CEF37A800AE63B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F58F35111CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEXTTOSPEECHFAILAPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F58F35151CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEXTTOSPEECHFAILAPPTests.swift; sourceTree = "<group>"; };
+		F58F35171CEF37A800AE63B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F58F351C1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEXTTOSPEECHFAILAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F58F35201CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEXTTOSPEECHFAILAPPUITests.swift; sourceTree = "<group>"; };
+		F58F35221CEF37A800AE63B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F58F34FA1CEF37A700AE63B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58F350E1CEF37A800AE63B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58F35191CEF37A800AE63B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F58F34F41CEF37A700AE63B8 = {
+			isa = PBXGroup;
+			children = (
+				F58F34FF1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPP */,
+				F58F35141CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests */,
+				F58F351F1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests */,
+				F58F34FE1CEF37A700AE63B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F58F34FE1CEF37A700AE63B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F58F34FD1CEF37A700AE63B8 /* TEXTTOSPEECHFAILAPP.app */,
+				F58F35111CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests.xctest */,
+				F58F351C1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F58F34FF1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPP */ = {
+			isa = PBXGroup;
+			children = (
+				F58F35001CEF37A800AE63B8 /* AppDelegate.swift */,
+				F58F35021CEF37A800AE63B8 /* ViewController.swift */,
+				F58F35041CEF37A800AE63B8 /* Main.storyboard */,
+				F58F35071CEF37A800AE63B8 /* Assets.xcassets */,
+				F58F35091CEF37A800AE63B8 /* LaunchScreen.storyboard */,
+				F58F350C1CEF37A800AE63B8 /* Info.plist */,
+			);
+			path = TEXTTOSPEECHFAILAPP;
+			sourceTree = "<group>";
+		};
+		F58F35141CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests */ = {
+			isa = PBXGroup;
+			children = (
+				F58F35151CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests.swift */,
+				F58F35171CEF37A800AE63B8 /* Info.plist */,
+			);
+			path = TEXTTOSPEECHFAILAPPTests;
+			sourceTree = "<group>";
+		};
+		F58F351F1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F58F35201CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.swift */,
+				F58F35221CEF37A800AE63B8 /* Info.plist */,
+			);
+			path = TEXTTOSPEECHFAILAPPUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F58F34FC1CEF37A700AE63B8 /* TEXTTOSPEECHFAILAPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F58F35251CEF37A800AE63B8 /* Build configuration list for PBXNativeTarget "TEXTTOSPEECHFAILAPP" */;
+			buildPhases = (
+				F58F34F91CEF37A700AE63B8 /* Sources */,
+				F58F34FA1CEF37A700AE63B8 /* Frameworks */,
+				F58F34FB1CEF37A700AE63B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TEXTTOSPEECHFAILAPP;
+			productName = TEXTTOSPEECHFAILAPP;
+			productReference = F58F34FD1CEF37A700AE63B8 /* TEXTTOSPEECHFAILAPP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F58F35101CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F58F35281CEF37A800AE63B8 /* Build configuration list for PBXNativeTarget "TEXTTOSPEECHFAILAPPTests" */;
+			buildPhases = (
+				F58F350D1CEF37A800AE63B8 /* Sources */,
+				F58F350E1CEF37A800AE63B8 /* Frameworks */,
+				F58F350F1CEF37A800AE63B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F58F35131CEF37A800AE63B8 /* PBXTargetDependency */,
+			);
+			name = TEXTTOSPEECHFAILAPPTests;
+			productName = TEXTTOSPEECHFAILAPPTests;
+			productReference = F58F35111CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F58F351B1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F58F352B1CEF37A800AE63B8 /* Build configuration list for PBXNativeTarget "TEXTTOSPEECHFAILAPPUITests" */;
+			buildPhases = (
+				F58F35181CEF37A800AE63B8 /* Sources */,
+				F58F35191CEF37A800AE63B8 /* Frameworks */,
+				F58F351A1CEF37A800AE63B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F58F351E1CEF37A800AE63B8 /* PBXTargetDependency */,
+			);
+			name = TEXTTOSPEECHFAILAPPUITests;
+			productName = TEXTTOSPEECHFAILAPPUITests;
+			productReference = F58F351C1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F58F34F51CEF37A700AE63B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Fontys;
+				TargetAttributes = {
+					F58F34FC1CEF37A700AE63B8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = H5DDT55EN4;
+					};
+					F58F35101CEF37A800AE63B8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = H5DDT55EN4;
+						TestTargetID = F58F34FC1CEF37A700AE63B8;
+					};
+					F58F351B1CEF37A800AE63B8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = H5DDT55EN4;
+						TestTargetID = F58F34FC1CEF37A700AE63B8;
+					};
+				};
+			};
+			buildConfigurationList = F58F34F81CEF37A700AE63B8 /* Build configuration list for PBXProject "TEXTTOSPEECHFAILAPP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F58F34F41CEF37A700AE63B8;
+			productRefGroup = F58F34FE1CEF37A700AE63B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F58F34FC1CEF37A700AE63B8 /* TEXTTOSPEECHFAILAPP */,
+				F58F35101CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests */,
+				F58F351B1CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F58F34FB1CEF37A700AE63B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58F350B1CEF37A800AE63B8 /* LaunchScreen.storyboard in Resources */,
+				F58F35081CEF37A800AE63B8 /* Assets.xcassets in Resources */,
+				F58F35061CEF37A800AE63B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58F350F1CEF37A800AE63B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58F351A1CEF37A800AE63B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F58F34F91CEF37A700AE63B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58F35031CEF37A800AE63B8 /* ViewController.swift in Sources */,
+				F58F35011CEF37A800AE63B8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58F350D1CEF37A800AE63B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58F35161CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58F35181CEF37A800AE63B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58F35211CEF37A800AE63B8 /* TEXTTOSPEECHFAILAPPUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F58F35131CEF37A800AE63B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F58F34FC1CEF37A700AE63B8 /* TEXTTOSPEECHFAILAPP */;
+			targetProxy = F58F35121CEF37A800AE63B8 /* PBXContainerItemProxy */;
+		};
+		F58F351E1CEF37A800AE63B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F58F34FC1CEF37A700AE63B8 /* TEXTTOSPEECHFAILAPP */;
+			targetProxy = F58F351D1CEF37A800AE63B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F58F35041CEF37A800AE63B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F58F35051CEF37A800AE63B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F58F35091CEF37A800AE63B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F58F350A1CEF37A800AE63B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F58F35231CEF37A800AE63B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F58F35241CEF37A800AE63B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F58F35261CEF37A800AE63B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = TEXTTOSPEECHFAILAPP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.TEXTTOSPEECHFAILAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		F58F35271CEF37A800AE63B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = TEXTTOSPEECHFAILAPP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.TEXTTOSPEECHFAILAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		F58F35291CEF37A800AE63B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TEXTTOSPEECHFAILAPPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.TEXTTOSPEECHFAILAPPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEXTTOSPEECHFAILAPP.app/TEXTTOSPEECHFAILAPP";
+			};
+			name = Debug;
+		};
+		F58F352A1CEF37A800AE63B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TEXTTOSPEECHFAILAPPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.TEXTTOSPEECHFAILAPPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEXTTOSPEECHFAILAPP.app/TEXTTOSPEECHFAILAPP";
+			};
+			name = Release;
+		};
+		F58F352C1CEF37A800AE63B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TEXTTOSPEECHFAILAPPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.TEXTTOSPEECHFAILAPPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TEXTTOSPEECHFAILAPP;
+			};
+			name = Debug;
+		};
+		F58F352D1CEF37A800AE63B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TEXTTOSPEECHFAILAPPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.TEXTTOSPEECHFAILAPPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TEXTTOSPEECHFAILAPP;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F58F34F81CEF37A700AE63B8 /* Build configuration list for PBXProject "TEXTTOSPEECHFAILAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F58F35231CEF37A800AE63B8 /* Debug */,
+				F58F35241CEF37A800AE63B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F58F35251CEF37A800AE63B8 /* Build configuration list for PBXNativeTarget "TEXTTOSPEECHFAILAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F58F35261CEF37A800AE63B8 /* Debug */,
+				F58F35271CEF37A800AE63B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F58F35281CEF37A800AE63B8 /* Build configuration list for PBXNativeTarget "TEXTTOSPEECHFAILAPPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F58F35291CEF37A800AE63B8 /* Debug */,
+				F58F352A1CEF37A800AE63B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F58F352B1CEF37A800AE63B8 /* Build configuration list for PBXNativeTarget "TEXTTOSPEECHFAILAPPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F58F352C1CEF37A800AE63B8 /* Debug */,
+				F58F352D1CEF37A800AE63B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F58F34F51CEF37A700AE63B8 /* Project object */;
+}

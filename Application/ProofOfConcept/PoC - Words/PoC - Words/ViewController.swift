@@ -17,11 +17,11 @@ class ViewController: UIViewController {
 
     @IBAction func btWoordDoorgeven(sender: UIButton) {
         let vertaling = tbVertaling.text?.lowercaseString
-        if(vertaling == "vrijheid") {
-            lbUitkomst.text = "Juist!"
+        if(vertaling == "onafhankelijkheid") {
+            lbUitkomst.text = "Juist! 🎊🎉😃"
             lbUitkomst.textColor = UIColor.init(red: 0.0, green: 153.0/255, blue: 51.0/255, alpha: 255.0/255)
         } else {
-            lbUitkomst.text = "Probeer het later nog eens"
+            lbUitkomst.text = "Probeer het later nog eens 🙁"
             lbUitkomst.textColor = UIColor.redColor()
         }
     }

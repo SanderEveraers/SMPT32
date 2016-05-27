@@ -15,6 +15,7 @@
 		20C04EDA1CEF1BE300B09717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C04ED81CEF1BE300B09717 /* LaunchScreen.storyboard */; };
 		20C04EE51CEF1BE400B09717 /* WordFlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04EE41CEF1BE400B09717 /* WordFlipTests.swift */; };
 		20C04EF01CEF1BE400B09717 /* WordFlipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04EEF1CEF1BE400B09717 /* WordFlipUITests.swift */; };
+		20D80CAC1CF7046D004DD75E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D80CAB1CF7046D004DD75E /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		20C04EEB1CEF1BE400B09717 /* WordFlipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordFlipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C04EEF1CEF1BE400B09717 /* WordFlipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFlipUITests.swift; sourceTree = "<group>"; };
 		20C04EF11CEF1BE400B09717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20D80CAB1CF7046D004DD75E /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				20C04ECC1CEF1BE300B09717 /* AppDelegate.swift */,
 				20C04ECE1CEF1BE300B09717 /* ViewController.swift */,
 				20C04ED01CEF1BE300B09717 /* Main.storyboard */,
+				20D80CAB1CF7046D004DD75E /* SplashViewController.swift */,
 				20C04ED61CEF1BE300B09717 /* Assets.xcassets */,
 				20C04ED81CEF1BE300B09717 /* LaunchScreen.storyboard */,
 				20C04EDB1CEF1BE300B09717 /* Info.plist */,
@@ -265,6 +268,7 @@
 				20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */,
 				20C04ECD1CEF1BE300B09717 /* AppDelegate.swift in Sources */,
 				20C04ED51CEF1BE300B09717 /* WordFlip.xcdatamodeld in Sources */,
+				20D80CAC1CF7046D004DD75E /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,9 +408,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WordFlip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.edu.WordFlip;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dragonball-Z.Kaio-ken";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -415,9 +420,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WordFlip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.edu.WordFlip;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dragonball-Z.Kaio-ken";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -489,6 +495,7 @@
 				20C04EF61CEF1BE400B09717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20C04EF71CEF1BE400B09717 /* Build configuration list for PBXNativeTarget "WordFlipTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +504,7 @@
 				20C04EF91CEF1BE400B09717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20C04EFA1CEF1BE400B09717 /* Build configuration list for PBXNativeTarget "WordFlipUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +513,7 @@
 				20C04EFC1CEF1BE400B09717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -63,3 +63,5 @@ fastlane/report.xml
 fastlane/screenshots
 /Application/api/target/
 Documents/WordFlip.vpp~6
+
+Application/api/.idea/workspace.xml

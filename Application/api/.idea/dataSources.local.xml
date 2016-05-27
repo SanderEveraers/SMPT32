@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - vangasteWordFlip@84.246.4.143" uuid="e574c664-ac13-4137-b9cb-5b1bbdec3ad0">
+      <secret-storage>master_key</secret-storage>
+      <user-name>VangasteWordFlip</user-name>
+    </data-source>
+  </component>
+</project>

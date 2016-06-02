@@ -23,6 +23,17 @@ public class SqlCreator {
         }
     }
 
+    public DataSource createDataSource(){
+        try {
+            DBConfiguration db = new DBConfiguration();
+            ds = db.dataSource();
+            return ds;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public boolean testDataSource() {
 
         Connection con = null;
@@ -34,6 +45,7 @@ public class SqlCreator {
             con = (Connection) ds.getConnection();
             stmt = (Statement) con.createStatement();
             rs = stmt.executeQuery("select * FROM leerling");
+
 
             while(rs.next()){
                 gotConnection = true;
@@ -51,4 +63,6 @@ public class SqlCreator {
         }
         return gotConnection;
     }
+
+
 }

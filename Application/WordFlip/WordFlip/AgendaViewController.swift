@@ -161,7 +161,7 @@ class AgendaViewController: ViewController, PiechartDelegate {
     }
     
     func setSubtitleForPieChart(piechart: Piechart, total: CGFloat, slice: Piechart.Slice) -> String{
-        return "\(Int(slice.value / total * 100))% \(slice.text)"
+        return "\(Int(round(Double(slice.value) / Double(total) * 100)))% \(slice.text)"
     }
     
     func setInfoForPieChart(piechart: Piechart, total: CGFloat, slice: Piechart.Slice) -> String{

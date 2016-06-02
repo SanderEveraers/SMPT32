@@ -7,26 +7,31 @@ import java.util.Date;
  */
 public class Practice {
 
-    private Date date;
+    private String date;
     private int duration;
     private int amountOfWords;
+    private int correct;
 
-    public Practice(Date date, int duration, int amountOfWords) {
+    public Practice(String date, int duration, int amountOfWords, int correct) {
         this.date = date;
         this.duration = duration;
         this.amountOfWords = amountOfWords;
+        this.correct = correct;
     }
 
     public int getAmountOfWords() {
         return amountOfWords;
     }
 
-
     public int getDuration() {
         return duration;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
+    }
+
+    public int getCorrect() {
+        return correct;
     }
 }

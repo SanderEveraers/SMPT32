@@ -74,8 +74,8 @@ class ViewController: UIViewController {
         
         if loggedInPupil != nil
         {
-            lblErrorMessage.text = "Inloggen gelukt"
-                            loggedInPupil = nil
+            lblErrorMessage.text = "Inloggen gelukt\(loggedInPupil?.lastLoggedIn)"
+            loggedInPupil = nil
         }
         else{
             lblErrorMessage.text = "Inloggen niet gelukt"

@@ -1,13 +1,16 @@
 package com.wordflip.api;
 
 import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 import com.wordflip.api.models.Practice;
+import com.wordflip.api.models.Pupil;
 
 import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
+import java.util.Calendar;
 
 /**
  * Created by robvangastel on 02/06/16.
@@ -81,6 +84,39 @@ public class SqlCreator {
             }
         }
         return valid;
+    }
+
+    public Pupil loginPupil(String username, String password) {
+
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        Pupil p = null;
+
+        try {
+            con = (Connection) ds.getConnection();
+            stmt = (PreparedStatement) con.prepareStatement("SELECT * FROM leerling WHERE gebruikersnaam = ? AND wachtwoord = ?");
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+            rs = stmt.executeQuery();
+
+            while(rs.next()){
+                Calendar c = Calendar.getInstance();
+                c.setTime(rs.getTimestamp("Laatstingelogd"));
+                p = new Pupil(rs.getInt("ID"), rs.getString("Gebruikersnaam"), rs.getString("Wachtwoord"), c);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            try {
+                if(rs != null) rs.close();
+                if(stmt != null) stmt.close();
+                if(con != null) con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return p;
     }
 
     public void addPractice(Practice practice, String userId) {

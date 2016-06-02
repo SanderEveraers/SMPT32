@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/{userId}/practice")
-public class PracticeController {
-    @Autowired
-    private JdbcTemplate jt;
-
-
-    @RequestMapping(value = "/practice", method = RequestMethod.GET)
-    public String tip(@PathVariable String userId) {
-        jt.getQueryTimeout();
-        jt.execute("CALL `getToetsvragen`('" + Engels + "', " + userId + ")");
-        return "Blijf vooral leren";
-    }
+class PracticeController {
+//    @Autowired
+//    private JdbcTemplate jt;
+//
+//
+//    @RequestMapping(value = "/practice", method = RequestMethod.GET)
+//    public String tip(@PathVariable String userId) {
+//        jt.getQueryTimeout();
+//        jt.execute("CALL `getToetsvragen`('" + Engels + "', " + userId + ")");
+//        return "Blijf vooral leren";
+//    }
 }

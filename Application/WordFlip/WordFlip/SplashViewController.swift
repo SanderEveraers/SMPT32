@@ -31,9 +31,9 @@ class SplashViewController: UIViewController {
 //            self.presentViewController(vc, animated: true, completion: nil)
 //            
 //        } else {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storyboard.instantiateViewControllerWithIdentifier("LoginViewController")
-//            self.presentViewController(vc, animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("LoginViewController")
+            self.presentViewController(vc, animated: true, completion: nil)
 //        }
     }
 

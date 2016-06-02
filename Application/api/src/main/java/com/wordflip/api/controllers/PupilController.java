@@ -22,9 +22,6 @@ public class PupilController {
     @Autowired
     private JdbcTemplate jt;
 
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
-
     @RequestMapping("/login")
     public Pupil greeting(@RequestParam(value="name", defaultValue="World") String name, @RequestParam(value="password", defaultValue = "World") String password) {
         jt.getQueryTimeout();
@@ -38,6 +35,8 @@ public class PupilController {
                 return p;
             }
         });
+
+
 
         return p;
     }

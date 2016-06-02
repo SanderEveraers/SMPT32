@@ -16,6 +16,11 @@
 		20C04EE51CEF1BE400B09717 /* WordFlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04EE41CEF1BE400B09717 /* WordFlipTests.swift */; };
 		20C04EF01CEF1BE400B09717 /* WordFlipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04EEF1CEF1BE400B09717 /* WordFlipUITests.swift */; };
 		20D80CAC1CF7046D004DD75E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D80CAB1CF7046D004DD75E /* SplashViewController.swift */; };
+		F503AE1A1CF8367000DA3F45 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F503AE191CF8367000DA3F45 /* logo.png */; };
+		F503AE1D1CF83CCA00DA3F45 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F503AE1B1CF83CCA00DA3F45 /* Roboto-Light.ttf */; };
+		F503AE1E1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */; };
+		F503AE351CF8454900DA3F45 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503AE341CF8454900DA3F45 /* AgendaViewController.swift */; };
+		F5A198431CF850C60042703C /* Piechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A198411CF850C60042703C /* Piechart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F503AE331CF8442300DA3F45 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		20C04EC91CEF1BE300B09717 /* WordFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C04ECC1CEF1BE300B09717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +69,11 @@
 		20C04EEF1CEF1BE400B09717 /* WordFlipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFlipUITests.swift; sourceTree = "<group>"; };
 		20C04EF11CEF1BE400B09717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D80CAB1CF7046D004DD75E /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F503AE191CF8367000DA3F45 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		F503AE1B1CF83CCA00DA3F45 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		F503AE341CF8454900DA3F45 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
+		F5A198411CF850C60042703C /* Piechart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Piechart.swift; path = ../PieChart/Piechart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +104,7 @@
 		20C04EC01CEF1BE300B09717 = {
 			isa = PBXGroup;
 			children = (
+				F503AE1F1CF83CCF00DA3F45 /* Fonts */,
 				20C04ECB1CEF1BE300B09717 /* WordFlip */,
 				20C04EE31CEF1BE400B09717 /* WordFlipTests */,
 				20C04EEE1CEF1BE400B09717 /* WordFlipUITests */,
@@ -101,6 +125,8 @@
 		20C04ECB1CEF1BE300B09717 /* WordFlip */ = {
 			isa = PBXGroup;
 			children = (
+				F5A198411CF850C60042703C /* Piechart.swift */,
+				F503AE191CF8367000DA3F45 /* logo.png */,
 				20C04ECC1CEF1BE300B09717 /* AppDelegate.swift */,
 				20C04ECE1CEF1BE300B09717 /* ViewController.swift */,
 				20C04ED01CEF1BE300B09717 /* Main.storyboard */,
@@ -109,6 +135,7 @@
 				20C04ED81CEF1BE300B09717 /* LaunchScreen.storyboard */,
 				20C04EDB1CEF1BE300B09717 /* Info.plist */,
 				20C04ED31CEF1BE300B09717 /* WordFlip.xcdatamodeld */,
+				F503AE341CF8454900DA3F45 /* AgendaViewController.swift */,
 			);
 			path = WordFlip;
 			sourceTree = "<group>";
@@ -131,6 +158,15 @@
 			path = WordFlipUITests;
 			sourceTree = "<group>";
 		};
+		F503AE1F1CF83CCF00DA3F45 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F503AE1B1CF83CCA00DA3F45 /* Roboto-Light.ttf */,
+				F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +177,7 @@
 				20C04EC51CEF1BE300B09717 /* Sources */,
 				20C04EC61CEF1BE300B09717 /* Frameworks */,
 				20C04EC71CEF1BE300B09717 /* Resources */,
+				F503AE331CF8442300DA3F45 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,7 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F503AE1A1CF8367000DA3F45 /* logo.png in Resources */,
 				20C04EDA1CEF1BE300B09717 /* LaunchScreen.storyboard in Resources */,
+				F503AE1E1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf in Resources */,
+				F503AE1D1CF83CCA00DA3F45 /* Roboto-Light.ttf in Resources */,
 				20C04ED71CEF1BE300B09717 /* Assets.xcassets in Resources */,
 				20C04ED21CEF1BE300B09717 /* Main.storyboard in Resources */,
 			);
@@ -268,6 +308,8 @@
 				20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */,
 				20C04ECD1CEF1BE300B09717 /* AppDelegate.swift in Sources */,
 				20C04ED51CEF1BE300B09717 /* WordFlip.xcdatamodeld in Sources */,
+				F503AE351CF8454900DA3F45 /* AgendaViewController.swift in Sources */,
+				F5A198431CF850C60042703C /* Piechart.swift in Sources */,
 				20D80CAC1CF7046D004DD75E /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = WordFlip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dragonball-Z.Kaio-ken";
@@ -421,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = WordFlip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dragonball-Z.Kaio-ken";

@@ -14,8 +14,13 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
@@ -26,41 +31,43 @@ import java.util.concurrent.atomic.AtomicLong;
 @RequestMapping("/{userId}/tip")
 public class TipController {
 
+    private SqlCreator creator = new SqlCreator();
+
     @RequestMapping(method = RequestMethod.GET)
     public String tip(@PathVariable String userId) {
 
-        SqlCreator creator = new SqlCreator();
-
-
-        //jt.execute("SELECT * FROM LEERLING WHERE ID ='" + userId + "'");
+        creator = new SqlCreator();
+        validateUser(userId);
         return "Blijf vooral leren";
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Practice add(@PathVariable String userId,
+    public String add(@PathVariable String userId,
                       @RequestParam(value="amount", defaultValue="8") int amount,
                       @RequestParam(value="correct", defaultValue="0") int correct,
                       @RequestParam(value="date", defaultValue="12-12-1995") String date,
-                      @RequestParam(value="duration", defaultValue="120") int duration) {
+                      @RequestParam(value="duration", defaultValue="120") int duration) throws ParseException {
         System.out.println(amount);
         System.out.println(correct);
         System.out.println(date);
         System.out.println(duration);
         System.out.println(userId);
 
-//        jt.execute("INSERT INTO oefenmoment(Tijdstip, Tijdsduur, Leerling_ID, aantal, correct) " +
-//                "VALUES ('" + date + "','" + duration + "','" + userId + "','" + amount + "','" + duration + ")");
+        Timestamp t = new Timestamp(1000L);
+        t.
+        System.out.println(t);
 
-        return new Practice(Calendar.getInstance().getTime(), 10, 10);
-//        return "Blijf vooral leren";
+        creator = new SqlCreator();
+        validateUser(userId);
+        creator.addPractice(new Practice(date, duration, amount, correct), userId);
+        return "Blijf vooral leren";
     }
 
-    private void ValidateUser(String userId) {
-//        jt.getQueryTimeout();
-//        jt.execute("SELECT * FROM LEERLING WHERE ID ='" + userId + "'");
-//        if(jt.getFetchSize() < 0) {
-//            throw new UserNotFoundException(userId);
-//        }
+    private void validateUser(String userId) {
+        creator = new SqlCreator();
+        if(!creator.validateUser(userId)) {
+            throw new UserNotFoundException(userId);
+        }
     }
 }
 

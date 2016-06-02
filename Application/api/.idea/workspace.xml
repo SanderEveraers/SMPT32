@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72be85b5-a860-463e-b454-8a24f7e3b7fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/DBConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/GreetingController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/GreetingController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" />
     </list>
     <ignored path="api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,12 +29,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="TipController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="244">
+              <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2465#2466#0" expanded="true" />
+                <element signature="e#2527#2528#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,96 +46,24 @@
       <file leaf-file-name="Practice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-              <folding>
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#459#460#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="69">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GreetingController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/GreetingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1464851730000" expanded="true" signature="1039:1061" ph="SELECT * FRO... LEERLING" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TipController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="2" selection-end-line="62" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2426#2427#0" expanded="true" />
-                <element signature="e#2488#2489#0" expanded="true" />
-                <marker date="1464861733000" expanded="true" signature="953:975" ph="SELECT * FRO... LEERLING" />
-                <marker date="1464861733000" expanded="true" signature="953:987" ph="SELECT * FRO... LEERLING" />
-                <marker date="1464861733000" expanded="true" signature="953:1002" ph="SELECT * FRO... LEERLING" />
-                <marker date="1464861733000" expanded="true" signature="1702:1823" ph="INSERT INTO oefenmoment... " />
-                <marker date="1464861733000" expanded="true" signature="1702:1894" ph="INSERT INTO oefenmoment... " />
-                <marker date="1464861733000" expanded="true" signature="2117:2166" ph="SELECT * FRO... LEERLING" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SqlCreator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SqlCreator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+            <state relative-caret-position="69">
+              <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1464861682000" expanded="true" signature="825:847" ph="SELECT * FRO... leerling" />
+                <marker date="1464869925000" expanded="true" signature="895:917" ph="SELECT * FRO... leerling" />
+                <marker date="1464869925000" expanded="true" signature="1708:1741" ph="select * FRO... leerling" />
+                <marker date="1464869925000" expanded="true" signature="2641:2891" ph="INSERT INTO oefenmoment... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/DBConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PupilController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PupilController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding>
-                <marker date="1464851731000" expanded="true" signature="1070:1136" ph="SELECT * FRO... LEERLING" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PracticeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -161,12 +94,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/GreetingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/DBConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/GreetingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
       </list>
     </option>
   </component>
@@ -957,12 +890,12 @@
       <option name="presentableId" value="Default" />
       <updated>1464341029845</updated>
       <workItem from="1464341037827" duration="7773000" />
-      <workItem from="1464845369370" duration="8408000" />
+      <workItem from="1464845369370" duration="15056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16181000" />
+    <option name="totallyTimeSpent" value="22829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="6" />
@@ -1026,8 +959,7 @@
         <state relative-caret-position="135">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1464851730000" expanded="true" signature="1039:1061" ph="SELECT * FRO... LEERLING" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1038,14 +970,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2426#2427#0" expanded="true" />
-            <element signature="e#2488#2489#0" expanded="true" />
-            <marker date="1464861733000" expanded="true" signature="953:975" ph="SELECT * FRO... LEERLING" />
-            <marker date="1464861733000" expanded="true" signature="953:987" ph="SELECT * FRO... LEERLING" />
-            <marker date="1464861733000" expanded="true" signature="953:1002" ph="SELECT * FRO... LEERLING" />
-            <marker date="1464861733000" expanded="true" signature="1702:1823" ph="INSERT INTO oefenmoment... " />
-            <marker date="1464861733000" expanded="true" signature="1702:1894" ph="INSERT INTO oefenmoment... " />
-            <marker date="1464861733000" expanded="true" signature="2117:2166" ph="SELECT * FRO... LEERLING" />
+            <element signature="e#2465#2466#0" expanded="true" />
+            <element signature="e#2527#2528#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1100,54 +1026,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/GreetingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1464851730000" expanded="true" signature="1039:1061" ph="SELECT * FRO... LEERLING" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PupilController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <marker date="1464851731000" expanded="true" signature="1070:1136" ph="SELECT * FRO... LEERLING" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
+            <marker date="1464869925000" expanded="true" signature="1070:1136" ph="SELECT * FRO... LEERLING" />
           </folding>
         </state>
       </provider>
@@ -1162,31 +1046,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/GreetingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+        <state relative-caret-position="279">
+          <caret line="28" column="93" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1464861682000" expanded="true" signature="825:847" ph="SELECT * FRO... leerling" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/practiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="2" selection-end-line="62" selection-end-column="11" />
+        <state relative-caret-position="244">
+          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2426#2427#0" expanded="true" />
-            <element signature="e#2488#2489#0" expanded="true" />
-            <marker date="1464861733000" expanded="true" signature="953:975" ph="SELECT * FRO... LEERLING" />
-            <marker date="1464861733000" expanded="true" signature="953:987" ph="SELECT * FRO... LEERLING" />
-            <marker date="1464861733000" expanded="true" signature="953:1002" ph="SELECT * FRO... LEERLING" />
-            <marker date="1464861733000" expanded="true" signature="1702:1823" ph="INSERT INTO oefenmoment... " />
-            <marker date="1464861733000" expanded="true" signature="1702:1894" ph="INSERT INTO oefenmoment... " />
-            <marker date="1464861733000" expanded="true" signature="2117:2166" ph="SELECT * FRO... LEERLING" />
+            <element signature="e#2465#2466#0" expanded="true" />
+            <element signature="e#2527#2528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1464869925000" expanded="true" signature="895:917" ph="SELECT * FRO... leerling" />
+            <marker date="1464869925000" expanded="true" signature="1708:1741" ph="select * FRO... leerling" />
+            <marker date="1464869925000" expanded="true" signature="2641:2891" ph="INSERT INTO oefenmoment... " />
           </folding>
         </state>
       </provider>

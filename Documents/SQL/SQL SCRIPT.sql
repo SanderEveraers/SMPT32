@@ -125,3 +125,36 @@ CREATE TABLE OEFENMOMENT
     CONSTRAINT FK_OEFENLEERLING            FOREIGN KEY (Leerling_ID)   REFERENCES LEERLING(ID)
     
 );
+
+INSERT INTO `leerling` (`ID`, `Gebruikersnaam`, `Wachtwoord`, `LaatstIngelogd`) VALUES
+(6, 'Sander', 'sanderiscool', '2016-05-27 11:57:17'),
+(7, 'Bram', 'bramiscool', '2016-05-27 11:57:17'),
+(8, 'Rob', 'robiscool', '2016-05-27 11:57:17'),
+(9, 'Stan', 'staniscool', '2016-05-27 11:57:17'),
+(10, 'Joris', 'jorisiscool', '2016-05-27 11:57:17');
+
+INSERT INTO `vak` (`ID`, `Naam`, `Leerjaar`, `Niveau`) VALUES
+(1, 'Engels', 4, 'Havo');
+
+INSERT INTO `klas` (`ID`, `GegevenVak`) VALUES
+(1, 1);
+
+INSERT INTO `leerling_klas` (`Leerling_ID`, `Klas_ID`) VALUES
+(6, 1),
+(7, 1),
+(8, 1),
+(9, 1),
+(10, 1);
+
+INSERT INTO `toets` (`ID`, `Naam`, `Aanmaakdatum`, `Toetsdatum`, `Klas_ID`) VALUES
+(1, 'Unit 1', '2016-05-27 12:02:07', '2016-05-30 11:00:00', 1);
+
+INSERT INTO `vraag` (`ID`, `Vraag`, `Antwoord`, `ContextZin`, `ContextAfb`) VALUES
+(1, 'independence', 'onafhankelijkheid', NULL, NULL),
+(2, 'city', 'stad', 'Welcome to the city Amsterdam', NULL),
+(3, 'rhythm', 'ritme', 'That music has nice rhythm', NULL);
+
+INSERT INTO `toets_vraag` (`Toets_ID`, `Vraag_ID`) VALUES
+(1, 1),
+(1, 2),
+(1, 3);

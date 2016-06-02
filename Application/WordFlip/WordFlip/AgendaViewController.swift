@@ -130,14 +130,14 @@ class AgendaViewController: ViewController, PiechartDelegate {
         views2["timePie"] = timePie
         views3["vakChart"] = vakChart
         views4["tijdChart"] = tijdChart
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-20-[piechart(==150)]", options: [], metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-200-[piechart(==150)]", options: [], metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-20-[timePie(==150)]", options: [], metrics: nil, views: views2))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-370-[timePie(==150)]", options: [], metrics: nil, views: views2))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[vakChart(==150)]-20-|", options: [], metrics: nil, views: views3))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-200-[vakChart(==150)]", options: [], metrics: nil, views: views3))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[tijdChart(==150)]-20-|", options: [], metrics: nil, views: views4))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-370-[tijdChart(==150)]", options: [], metrics: nil, views: views4))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[piechart(==120)]", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-200-[piechart(==120)]", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[timePie(==120)]", options: [], metrics: nil, views: views2))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-340-[timePie(==120)]", options: [], metrics: nil, views: views2))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[vakChart(==120)]-25-|", options: [], metrics: nil, views: views3))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-200-[vakChart(==120)]", options: [], metrics: nil, views: views3))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[tijdChart(==120)]-25-|", options: [], metrics: nil, views: views4))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-340-[tijdChart(==120)]", options: [], metrics: nil, views: views4))
         
         
 //        

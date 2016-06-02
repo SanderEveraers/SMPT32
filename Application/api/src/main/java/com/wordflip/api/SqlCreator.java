@@ -128,11 +128,9 @@ public class SqlCreator {
         try {
             con = (Connection) ds.getConnection();
             stmt = (Statement) con.createStatement();
-            //java.sql.Date sqlDate = new java.sql.Date(practice.getDate().getTime());
-            //System.out.println(sqlDate.toString());
 
             stmt.execute("INSERT INTO oefenmoment(Tijdstip, Tijdsduur, Leerling_ID, Aantal, Correct) VALUES ( " +
-                    "T'" + practice.getDuration() + "','" + userId + "','" +
+                    "DATE_FORMAT(NOW(),'%m-%d-%Y %T:%S')"+ ",'" + practice.getDuration() + "','" + userId + "','" +
                     practice.getAmountOfWords() + "','" + practice.getCorrect() + "')");
         } catch (SQLException e) {
             e.printStackTrace();

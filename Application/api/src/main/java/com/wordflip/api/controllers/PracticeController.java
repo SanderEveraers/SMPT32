@@ -9,10 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by bramiscool on 02/06/16.
  */
+<<<<<<< Updated upstream
 
 @RestController
 @RequestMapping("/{userId}/practice")
 class PracticeController {
+=======
+//
+//@RestController
+//@RequestMapping("/{userId}/practice")
+//public class PracticeController {
+>>>>>>> Stashed changes
 //    @Autowired
 //    private JdbcTemplate jt;
 //
@@ -23,4 +30,8 @@ class PracticeController {
 //        jt.execute("CALL `getToetsvragen`('" + Engels + "', " + userId + ")");
 //        return "Blijf vooral leren";
 //    }
+<<<<<<< Updated upstream
 }
+=======
+//}
+>>>>>>> Stashed changes

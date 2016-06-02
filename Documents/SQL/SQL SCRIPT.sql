@@ -1,4 +1,3 @@
---DATABASE FOR WORDFLIP
 DROP TABLE OEFENMOMENT;
 DROP TABLE VRAAG_BEANTWOORD;
 DROP TABLE VRAAG;
@@ -29,7 +28,7 @@ CREATE TABLE LEERLING
     CONSTRAINT PK_LEERLING  PRIMARY KEY (ID)
 );
 
-CREATE TABLE VAK
+/*CREATE TABLE VAK
 (
     ID              INT             NOT NULL     AUTO_INCREMENT,
     Naam            VARCHAR(30)     NOT NULL,
@@ -39,16 +38,14 @@ CREATE TABLE VAK
     CONSTRAINT PK_VAK       PRIMARY KEY (ID),
     
     CONSTRAINT UQ_VAK       UNIQUE (Naam, Leerjaar, Niveau)
-);
+);*/
 
 CREATE TABLE KLAS
 (
     ID              INT             NOT NULL    AUTO_INCREMENT,
-    GegevenVak      INT             NOT NULL,
+    GegevenVak      VARCHAR(255)             NOT NULL,
     
-    CONSTRAINT PK_KLAS      PRIMARY KEY (ID),
-    
-    CONSTRAINT FK_VAKKLAS   FOREIGN KEY (GegevenVak) REFERENCES VAK(ID)
+    CONSTRAINT PK_KLAS      PRIMARY KEY (ID)
 );
 
 CREATE TABLE LEERLING_KLAS
@@ -97,6 +94,19 @@ CREATE TABLE TOETS_VRAAG
     CONSTRAINT FK_TOETSVRAAGVRAAG       FOREIGN KEY (Vraag_ID)      REFERENCES VRAAG(ID)
 );
 
+CREATE TABLE OEFENMOMENT
+(
+    ID                  INT             NOT NULL    AUTO_INCREMENT,
+    Tijdstip            DATETIME        NOT NULL,
+    Tijdsduur           TIME            NOT NULL,
+    Leerling_ID         INT             NOT NULL,
+    
+    CONSTRAINT PK_OEFENMOMENT           PRIMARY KEY (ID),
+    
+    CONSTRAINT FK_OEFENLEERLING            FOREIGN KEY (Leerling_ID)   REFERENCES LEERLING(ID)
+    
+);
+
 CREATE TABLE VRAAG_BEANTWOORD
 (
     ID                  INT             NOT NULL    AUTO_INCREMENT,
@@ -113,19 +123,6 @@ CREATE TABLE VRAAG_BEANTWOORD
     CONSTRAINT FK_VBOEFEN               FOREIGN KEY (Oefenmoment)   REFERENCES OEFENMOMENT(ID)
 );
 
-CREATE TABLE OEFENMOMENT
-(
-    ID                  INT             NOT NULL    AUTO_INCREMENT,
-    Tijdstip            DATETIME        NOT NULL,
-    Tijdsduur           TIME            NOT NULL,
-    Leerling_ID         INT             NOT NULL,
-    
-    CONSTRAINT PK_OEFENMOMENT           PRIMARY KEY (ID),
-    
-    CONSTRAINT FK_OEFENLEERLING            FOREIGN KEY (Leerling_ID)   REFERENCES LEERLING(ID)
-    
-);
-
 INSERT INTO `leerling` (`ID`, `Gebruikersnaam`, `Wachtwoord`, `LaatstIngelogd`) VALUES
 (6, 'Sander', 'sanderiscool', '2016-05-27 11:57:17'),
 (7, 'Bram', 'bramiscool', '2016-05-27 11:57:17'),
@@ -133,11 +130,11 @@ INSERT INTO `leerling` (`ID`, `Gebruikersnaam`, `Wachtwoord`, `LaatstIngelogd`) 
 (9, 'Stan', 'staniscool', '2016-05-27 11:57:17'),
 (10, 'Joris', 'jorisiscool', '2016-05-27 11:57:17');
 
-INSERT INTO `vak` (`ID`, `Naam`, `Leerjaar`, `Niveau`) VALUES
-(1, 'Engels', 4, 'Havo');
+/*INSERT INTO `vak` (`ID`, `Naam`, `Leerjaar`, `Niveau`) VALUES
+(1, 'Engels', 4, 'Havo');*/
 
 INSERT INTO `klas` (`ID`, `GegevenVak`) VALUES
-(1, 1);
+(1, 'Engels');
 
 INSERT INTO `leerling_klas` (`Leerling_ID`, `Klas_ID`) VALUES
 (6, 1),

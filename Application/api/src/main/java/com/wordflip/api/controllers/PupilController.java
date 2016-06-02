@@ -40,12 +40,7 @@ public class PupilController {
                 return p;
             }
         });
+
         return p;
-//        PreparedStatementCreator psc;
-//
-//
-//
-//        return new Greeting(counter.incrementAndGet(),
-//                String.format(template, name));
     }
 }

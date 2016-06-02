@@ -15,11 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var tbVertaling: UITextField!
     @IBOutlet weak var lbWoord: UILabel!
     @IBOutlet weak var lbUitkomst: UILabel!
+    @IBOutlet weak var lbAantalWoorden: UILabel!
 
     let w1 = Word(woord: "Independence",antwoord: "onafhankelijkheid")
     let w2 = Word(woord: "City",antwoord: "stad")
     let w3 = Word(woord: "Rhythm",antwoord: "ritme")
-    let w4 = Word(woord: "a",antwoord: "a")
+    let w4 = Word(woord: "Joke",antwoord: "grapje")
     
     var word = Word(woord: ".", antwoord:"." )
     
@@ -73,6 +74,7 @@ class ViewController: UIViewController {
                 lbWoord.text = randomVal.getWoord()
                 self.geoefendeWoorden += 1
                 isGoed = true
+                self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(aantalWoorden)
                 continue //repeatDing
             } else {
                 //lbUitkomst.text = "Probeer het later opnieuw."
@@ -87,7 +89,11 @@ class ViewController: UIViewController {
         }
         
         //}while(geoefendeWoorden < aantalWoorden)
-        
+        if(geoefendeWoorden >= aantalWoorden) {
+        self.lbWoord.text = "Je bent klaar"
+        var disableMyButton = sender as? UIButton
+        disableMyButton!.enabled = false
+        }
         
 //        if(words[vertaling!] != nil) {
 //            if(words[vertaling!] == lbWoord.text)
@@ -127,6 +133,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(aantalWoorden)
         // Do any additional setup after loading the view, typically from a nib.
         words.append(w1)
         words.append(w2)

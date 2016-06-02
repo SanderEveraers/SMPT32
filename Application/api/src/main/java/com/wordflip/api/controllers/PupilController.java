@@ -1,10 +1,8 @@
 package com.wordflip.api.controllers;
 
-import com.wordflip.api.models.Greeting;
 import com.wordflip.api.models.Pupil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

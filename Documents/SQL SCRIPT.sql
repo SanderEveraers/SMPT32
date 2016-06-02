@@ -91,15 +91,28 @@ CREATE TABLE TOETS_VRAAG
 CREATE TABLE VRAAG_BEANTWOORD
 (
     ID                  INT             NOT NULL    AUTO_INCREMENT,
-    Leerling_ID         INT             NOT NULL,
     Vraag_ID            INT             NOT NULL,
     GegevenAntwoord     VARCHAR(255)    NOT NULL,
     Tijdsduur           TIME            NOT NULL,
-    Datum               DATETIME        NOT NULL,
-    GoedBeantwoord      BOOLEAN          NOT NULL,
+    Datum               DATETIME        NULL,
+    GoedBeantwoord      BOOLEAN         NOT NULL,
+    Oefenmoment         INT             NOT NULL,
     
     CONSTRAINT PK_VRAAGBEANTWOORD       PRIMARY KEY (ID),
     
-    CONSTRAINT FK_VBLEERLING            FOREIGN KEY (Leerling_ID)   REFERENCES LEERLING(ID),
-    CONSTRAINT FK_VBVRAAG               FOREIGN KEY (Vraag_ID)      REFERENCES VRAAG(ID)
+    CONSTRAINT FK_VBVRAAG               FOREIGN KEY (Vraag_ID)      REFERENCES VRAAG(ID),
+    CONSTRAINT FK_VBOEFEN               FOREIGN KEY (Oefenmoment)   REFERENCES OEFENMOMENT(ID)
+);
+
+CREATE TABLE OEFENMOMENT
+(
+    ID                  INT             NOT NULL    AUTO_INCREMENT,
+    Tijdstip            DATETIME        NOT NULL,
+    Tijdsduur           TIME            NOT NULL,
+    Leerling_ID         INT             NOT NULL,
+    
+    CONSTRAINT PK_OEFENMOMENT           PRIMARY KEY (ID),
+    
+    CONSTRAINT FK_OEFENLEERLING            FOREIGN KEY (Leerling_ID)   REFERENCES LEERLING(ID)
+    
 );

@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     
     var timer = NSTimer()
     var timerInterrupt = NSTimer()
+    var timerSwipe = NSTimer()
+    
     var isGoed:Bool = false
     
     var hetAntWoord = ""
@@ -83,6 +85,7 @@ class ViewController: UIViewController {
                 //isGoed = false
                 tbVertaling.text = ""
                 //self.geoefendeWoorden += 1
+                performSelector(#selector(nextWord), withObject: nil, afterDelay: 2)
             }
             }
                 }
@@ -141,46 +144,30 @@ class ViewController: UIViewController {
         words.append(w4)
         
         
-        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleSwipes(_:)))
+        //var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
         
         leftSwipe.direction = .Left
-        rightSwipe.direction = .Right
+        //rightSwipe.direction = .Right
         
         view.addGestureRecognizer(leftSwipe)
-        view.addGestureRecognizer(rightSwipe)
+        //view.addGestureRecognizer(rightSwipe)
     }
     
     func handleSwipes(sender:UISwipeGestureRecognizer) {
         if (sender.direction == .Left) {
+            forLoop: for (_, element) in words.enumerate() {
+                if(element.getWoord() == lbWoord.text!) {
+                    word = Word(woord: element.getWoord(), antwoord: element.getAntwoord())
+                }
+            }
+            timerSwipe = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(timerSwipeAction), userInfo: word, repeats: false)
             
-            backgroundThread(background: {
-                // Your function here to run in the background
-                //self.lbUitkomst.text = self.words[self.lbWoord.text!]
-                //self.lbUitkomst.text = "xxx"
-                let index: Int = Int(arc4random_uniform(UInt32(self.words.count)))
-                let randomVal = Array(self.words)[index]
-                var bool = false
-                
-//                while(!bool) {
-//                    if(randomVal.getWoord() == self.lbWoord.text!) {
-//                         index: Int = Int(arc4random_uniform(UInt32(words.count)))
-//                         randomVal = Array(words)[index]
-//                    } else {
-//                        bool = true
-//                    }
-//                }
-                self.lbWoord.text = ""
-                self.tbVertaling.text = ""
-                //lbUitkomst.text = ""
-                self.lbWoord.text = randomVal.getWoord()
-                },
-                             completion: {
-                                // A function to run in the foreground when the background thread is complete
-                                self.lbUitkomst.text = ""
-
-            })
-                    }
+            timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: false)
+            
+            performSelector(#selector(nextWord), withObject: nil, afterDelay: 2)
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -218,10 +205,34 @@ class ViewController: UIViewController {
         lbUitkomst.textColor = UIColor.redColor()
     }
     
+    func timerSwipeAction() {
+        // Something cool
+        timerSwipe.invalidate()
+        //let word = timer.userInfo as! Word
+        self.lbUitkomst.text = word.getAntwoord()
+        lbUitkomst.textColor = UIColor.redColor()
+    }
+    
     func timerInterruptAction() {
         // Something cool
         timer.invalidate()
         self.lbUitkomst.text = ""
+    }
+    
+    func nextWord() {
+        var index: Int = Int(arc4random_uniform(UInt32(words.count)))
+        var randomVal = Array(words)[index]
+        var bool = false
+        while(!bool) {
+            if(randomVal.getWoord() == lbWoord.text!) {
+                index = Int(arc4random_uniform(UInt32(words.count)))
+                randomVal = Array(words)[index]
+            } else {
+                bool = true
+                lbWoord.text = randomVal.getWoord()
+                lbUitkomst.text = ""
+            }
+        }
     }
 
 

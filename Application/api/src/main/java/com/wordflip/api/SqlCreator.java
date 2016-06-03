@@ -28,10 +28,10 @@ public class SqlCreator {
     public DataSource createDataSource(){
         try {
             DBConfiguration db = new DBConfiguration();
-            ds = db.dataSource();
+            DataSource ds = db.dataSource();
             return ds;
         } catch (SQLException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
         return null;
     }

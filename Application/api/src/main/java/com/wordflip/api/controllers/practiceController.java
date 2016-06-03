@@ -5,15 +5,15 @@ import com.mysql.jdbc.Statement;
 import com.wordflip.api.SqlCreator;
 import com.wordflip.api.models.Question;
 import javax.sql.DataSource;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,11 +25,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/practice")
 public class PracticeController {
-    private SqlCreator sqlCreator;
+    private SqlCreator sqlCreator = new SqlCreator();
     private DataSource ds;
 
-    @RequestMapping(value = "/practice", method = RequestMethod.GET)
-    public ArrayList tip(@RequestParam(value="course", defaultValue="Engels") String course, @RequestParam(value="userid", defaultValue="0") String userID) {
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity<ArrayList<Question>> tip(@RequestParam(value="course", defaultValue="Engels") String course,
+                                                   @RequestParam(value="userid", defaultValue="0") String userID) {
         ds = sqlCreator.createDataSource();
         Connection con = null;
         ResultSet rs = null;
@@ -50,7 +51,7 @@ public class PracticeController {
                 if(rs != null) rs.close();
                 if(stmt != null) stmt.close();
                 if(con != null) con.close();
-                return questions;
+                return new ResponseEntity<>(questions, HttpStatus.OK);
             } catch (SQLException e) {
                 e.printStackTrace();
             }

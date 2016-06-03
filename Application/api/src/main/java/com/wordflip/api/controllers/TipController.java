@@ -54,8 +54,8 @@ public class TipController {
         System.out.println(userId);
 
         Timestamp t = new Timestamp(1000L);
-        t.
-        System.out.println(t);
+        //t.
+        //System.out.println(t);
 
         creator = new SqlCreator();
         validateUser(userId);

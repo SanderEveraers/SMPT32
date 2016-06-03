@@ -191,6 +191,9 @@
 				F503AE341CF8454900DA3F45 /* AgendaViewController.swift */,
 				20C04ECC1CEF1BE300B09717 /* AppDelegate.swift */,
 <<<<<<< HEAD
+				20C04ED61CEF1BE300B09717 /* Assets.xcassets */,
+=======
+<<<<<<< HEAD
 				20C04ECE1CEF1BE300B09717 /* ViewController.swift */,
 				20C04ED01CEF1BE300B09717 /* Main.storyboard */,
 				20D80CAB1CF7046D004DD75E /* SplashViewController.swift */,
@@ -199,6 +202,7 @@
 =======
 				20C04ED61CEF1BE300B09717 /* Assets.xcassets */,
 >>>>>>> LoginOnApp
+>>>>>>> UI
 				20C04EDB1CEF1BE300B09717 /* Info.plist */,
 				20C04ED81CEF1BE300B09717 /* LaunchScreen.storyboard */,
 				F5A9A66B1D01706C00CAF718 /* LoginController.swift */,
@@ -210,11 +214,14 @@
 				20C04ECE1CEF1BE300B09717 /* ViewController.swift */,
 				20C04ED31CEF1BE300B09717 /* WordFlip.xcdatamodeld */,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 				F503AE341CF8454900DA3F45 /* AgendaViewController.swift */,
 				F554AEAC1D01790A00A80443 /* Images.xcassets */,
 				F554AEAE1D01797600A80443 /* Images-2.xcassets */,
 =======
 >>>>>>> LoginOnApp
+>>>>>>> UI
 			);
 			path = WordFlip;
 			sourceTree = "<group>";

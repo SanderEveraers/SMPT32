@@ -1,27 +1,18 @@
 package com.wordflip.api.controllers;
 
-import com.mysql.jdbc.Statement;
-import com.wordflip.api.DBConfiguration;
+
 import com.wordflip.api.SqlCreator;
-import com.wordflip.api.models.Greeting;
 import com.wordflip.api.models.Practice;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import com.wordflip.api.models.Tip;
 import org.springframework.http.HttpStatus;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.text.DateFormat;
+import org.joda.time.Days;
+
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.List;
 
 /**
  * Created by robvangastel on 27/05/16.
@@ -33,37 +24,51 @@ public class TipController {
 
     private SqlCreator creator = new SqlCreator();
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/practice", method = RequestMethod.GET)
+    public ResponseEntity<List<Practice>> allPractices(@PathVariable String userId) {
+
+        creator = new SqlCreator();
+        validateUser(userId);
+        List<Practice> practices = creator.getPractices(userId);
+        return new ResponseEntity<List<Practice>>(practices, HttpStatus.OK);
+    }
+
+    @RequestMapping( method = RequestMethod.GET)
     public String tip(@PathVariable String userId) {
 
         creator = new SqlCreator();
         validateUser(userId);
-        return "Blijf vooral leren";
+        List<Practice> practices = creator.getPractices(userId);
+
+        int speed = 0;
+        int correctie = 0;
+        int consistent = 0;
+        //int others = 0;
+
+        for(int i = 0; i < practices.size(); i++) {
+            speed += practices.get(i).compareSpeed();
+            correctie += practices.get(i).compareCorrect();
+
+            if(i+1 >= practices.size()) {
+                break;
+            }
+            if(practices.get(i).compareDates(practices.get(i+1)) > 2) {
+                consistent++;
+            }
+        }
+
+        return new Tip().getTip(speed, correctie, consistent);
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String add(@PathVariable String userId,
+    public void addPractice(@PathVariable String userId,
                       @RequestParam(value="amount", defaultValue="8") int amount,
-                      @RequestParam(value="correct", defaultValue="0") int correct,
-                      @RequestParam(value="date", defaultValue="12-12-1995") String date,
+                      @RequestParam(value="mistakes", defaultValue="0") int mistakes,
                       @RequestParam(value="duration", defaultValue="120") int duration) throws ParseException {
-        System.out.println(amount);
-        System.out.println(correct);
-        System.out.println(date);
-        System.out.println(duration);
-        System.out.println(userId);
 
-<<<<<<< Updated upstream
-        Timestamp t = new Timestamp(1000L);
-//        t.
-//        System.out.println(t);
-
-=======
->>>>>>> Stashed changes
         creator = new SqlCreator();
         validateUser(userId);
-        creator.addPractice(new Practice(date, duration, amount, correct), userId);
-        return "Blijf vooral leren";
+        creator.addPractice(new Practice(duration, amount, mistakes), userId);
     }
 
     private void validateUser(String userId) {

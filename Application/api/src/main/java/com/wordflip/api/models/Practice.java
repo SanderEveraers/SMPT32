@@ -1,22 +1,31 @@
 package com.wordflip.api.models;
 
-import java.util.Date;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+
+import java.util.Calendar;
 
 /**
  * Created by robvangastel on 02/06/16.
  */
 public class Practice {
 
-    private String date;
     private int duration;
     private int amountOfWords;
-    private int correct;
+    private int mistakes;
+    private Calendar timeOfPractice;
 
-    public Practice(String date, int duration, int amountOfWords, int correct) {
-        this.date = date;
+    public Practice(int duration, int amountOfWords, int mistakes) {
         this.duration = duration;
         this.amountOfWords = amountOfWords;
-        this.correct = correct;
+        this.mistakes = mistakes;
+    }
+
+    public Practice(int duration, int amountOfWords, int mistakes, Calendar timeOfPractice) {
+        this.duration = duration;
+        this.amountOfWords = amountOfWords;
+        this.mistakes = mistakes;
+        this.timeOfPractice = timeOfPractice;
     }
 
     public int getAmountOfWords() {
@@ -27,11 +36,43 @@ public class Practice {
         return duration;
     }
 
-    public String getDate() {
-        return date;
+    public int getMistakes() {
+        return mistakes;
     }
 
-    public int getCorrect() {
-        return correct;
+    public Calendar getTimeOfPractice() {
+        return timeOfPractice;
+    }
+
+    public int compareDates(Practice o) {
+        DateTime date = new DateTime(timeOfPractice.getTime());
+        DateTime otherDate = new DateTime(o.getTimeOfPractice().getTime());
+        return Days.daysBetween(date, otherDate).getDays();
+    }
+
+    public int compareSpeed() {
+        int speed = duration/amountOfWords;
+
+        if(speed < 20) {
+            return -1;
+        } else if(speed > 20 || speed < 40) {
+            return 0;
+        } else if(speed > 40) {
+            return 1;
+        }
+        return 0;
+    }
+
+    public int compareCorrect() {
+        double correct = mistakes/amountOfWords;
+
+        if(correct < 0.3) {
+            return -1;
+        } else if(correct > 0.3 || correct < 0.7) {
+            return 0;
+        } else if(correct > 0.7) {
+            return 1;
+        }
+        return 0;
     }
 }

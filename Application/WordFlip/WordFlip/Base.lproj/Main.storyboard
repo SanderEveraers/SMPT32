@@ -8,8 +8,12 @@
     <customFonts key="customFonts">
         <mutableArray key="Roboto-Light.ttf">
             <string>Roboto-Light</string>
+            <string>Roboto-Light</string>
+            <string>Roboto-Light</string>
+            <string>Roboto-Light</string>
         </mutableArray>
         <mutableArray key="Roboto-LightItalic.ttf">
+            <string>Roboto-LightItalic</string>
             <string>Roboto-LightItalic</string>
             <string>Roboto-LightItalic</string>
             <string>Roboto-LightItalic</string>
@@ -380,7 +384,26 @@
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XYM-Ae-VXd">
                                         <rect key="frame" x="20" y="43" width="240" height="56"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2WR-NZ-iGC">
+                                                <rect key="frame" x="45" y="46" width="150" height="2"/>
+                                                <color key="progressTintColor" red="0.1137254902" green="0.41568627450000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uG-YJ-YnR">
+                                                <rect key="frame" x="97" y="8" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                                                <state key="normal" title="Hoofdstuk 12">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="2WR-NZ-iGC" firstAttribute="leading" secondItem="XYM-Ae-VXd" secondAttribute="leading" constant="70" id="PcY-Jk-u2k"/>
+                                            <constraint firstAttribute="trailing" secondItem="2uG-YJ-YnR" secondAttribute="trailing" id="gRH-Mc-0XM"/>
+                                            <constraint firstAttribute="trailing" secondItem="2WR-NZ-iGC" secondAttribute="trailing" constant="70" id="lKD-Kg-c3S"/>
+                                            <constraint firstItem="2uG-YJ-YnR" firstAttribute="leading" secondItem="XYM-Ae-VXd" secondAttribute="leading" id="rwp-B5-opp"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.64705882349999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -406,7 +429,26 @@
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3WD-23-OqH">
                                         <rect key="frame" x="20" y="48" width="240" height="56"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nBM-hh-Q5A">
+                                                <rect key="frame" x="45" y="46" width="150" height="2"/>
+                                                <color key="progressTintColor" red="0.1137254902" green="0.41568627450000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEQ-Qa-1o7">
+                                                <rect key="frame" x="97" y="8" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                                                <state key="normal" title="Hoofdstuk 17">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="fEQ-Qa-1o7" secondAttribute="trailing" id="6Ia-vM-BuQ"/>
+                                            <constraint firstItem="nBM-hh-Q5A" firstAttribute="leading" secondItem="3WD-23-OqH" secondAttribute="leading" constant="70" id="b4i-ZS-1Wk"/>
+                                            <constraint firstItem="fEQ-Qa-1o7" firstAttribute="leading" secondItem="3WD-23-OqH" secondAttribute="leading" id="g99-Qu-GAj"/>
+                                            <constraint firstAttribute="trailing" secondItem="nBM-hh-Q5A" secondAttribute="trailing" constant="70" id="x7S-zl-2kU"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.64705882349999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -432,7 +474,26 @@
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22d-fY-Vv5">
                                         <rect key="frame" x="20" y="48" width="240" height="56"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hxh-ac-kHb">
+                                                <rect key="frame" x="45" y="46" width="150" height="2"/>
+                                                <color key="progressTintColor" red="0.1137254902" green="0.41568627450000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCL-6a-9kK">
+                                                <rect key="frame" x="97" y="8" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                                                <state key="normal" title="Hoofdstuk 5">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="hCL-6a-9kK" firstAttribute="leading" secondItem="22d-fY-Vv5" secondAttribute="leading" id="BNP-jQ-42C"/>
+                                            <constraint firstItem="Hxh-ac-kHb" firstAttribute="leading" secondItem="22d-fY-Vv5" secondAttribute="leading" constant="70" id="Nku-Db-VSl"/>
+                                            <constraint firstAttribute="trailing" secondItem="hCL-6a-9kK" secondAttribute="trailing" id="OOx-qh-102"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hxh-ac-kHb" secondAttribute="trailing" constant="70" id="hP4-wa-Bhj"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.64705882349999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -449,6 +510,26 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="113" id="pl1-xM-PZt"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-Ir-4Y8">
+                                <rect key="frame" x="20" y="391" width="280" height="69"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgp-w1-eoN">
+                                        <rect key="frame" x="15" y="8" width="242" height="30"/>
+                                        <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="20"/>
+                                        <state key="normal" title="Oefen Nu!">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="2TL-wq-h0o"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dgp-w1-eoN" secondAttribute="bottom" id="6u4-Y3-utG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dgp-w1-eoN" secondAttribute="trailing" id="FfJ-Ye-3q3"/>
+                                    <constraint firstItem="Dgp-w1-eoN" firstAttribute="leading" secondItem="qEI-Ir-4Y8" secondAttribute="leading" id="LxE-gX-dMb"/>
+                                    <constraint firstItem="Dgp-w1-eoN" firstAttribute="top" secondItem="qEI-Ir-4Y8" secondAttribute="top" id="azd-bT-hbz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -456,7 +537,10 @@
                             <constraint firstItem="OJz-uC-3E3" firstAttribute="leading" secondItem="rhG-bG-HwL" secondAttribute="leadingMargin" id="AEJ-D8-wsQ"/>
                             <constraint firstItem="bAi-Y2-Ayo" firstAttribute="leading" secondItem="rhG-bG-HwL" secondAttribute="leadingMargin" id="Eh4-i1-7eu"/>
                             <constraint firstItem="OJz-uC-3E3" firstAttribute="trailing" secondItem="rhG-bG-HwL" secondAttribute="trailingMargin" id="Fa8-Ik-UR5"/>
+                            <constraint firstItem="qEI-Ir-4Y8" firstAttribute="trailing" secondItem="rhG-bG-HwL" secondAttribute="trailingMargin" id="IEA-LW-g5G"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qEI-Ir-4Y8" secondAttribute="bottom" constant="64" id="OMY-Oy-fmJ"/>
                             <constraint firstItem="3sw-xJ-rvX" firstAttribute="trailing" secondItem="rhG-bG-HwL" secondAttribute="trailingMargin" id="Oa7-i1-Khl"/>
+                            <constraint firstItem="qEI-Ir-4Y8" firstAttribute="leading" secondItem="rhG-bG-HwL" secondAttribute="leadingMargin" id="SXr-lB-YcJ"/>
                             <constraint firstItem="bAi-Y2-Ayo" firstAttribute="trailing" secondItem="rhG-bG-HwL" secondAttribute="trailingMargin" id="Vh4-Bh-gTG"/>
                             <constraint firstItem="bAi-Y2-Ayo" firstAttribute="top" secondItem="OJz-uC-3E3" secondAttribute="bottom" constant="8" id="eh8-TS-OwA"/>
                             <constraint firstItem="3sw-xJ-rvX" firstAttribute="leading" secondItem="rhG-bG-HwL" secondAttribute="leadingMargin" id="l5S-cC-iul"/>

@@ -60,7 +60,7 @@ public class TipController {
             consistent_dayParts += practices.get(i).compareDayParts(practices.get(i+1));
         }
 
-        return new Tip().getTip(speed, correctie, consistent, (consistent_dayParts/practices.size()));
+        return new Tip().getTip(speed, correctie, consistent, (consistent_dayParts/practices.size()), practices.size());
     }
 
     @RequestMapping(method = RequestMethod.POST)

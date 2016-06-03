@@ -11,6 +11,7 @@ import UIKit
 
 class AgendaViewController: ViewController, PiechartDelegate {
     
+    @IBOutlet weak var Table: UITableView!
     @IBOutlet weak var piechart1: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()

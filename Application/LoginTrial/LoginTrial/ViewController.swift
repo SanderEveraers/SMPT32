@@ -56,6 +56,7 @@ class ViewController: UIViewController {
             let passWord = jsonData.valueForKey("password") as? String
             let lastLIMillis = jsonData.valueForKey("lastLoggedIn") as? Int
             var lastLoggedIn: NSDate?
+            
             if (lastLIMillis != nil){
                 lastLoggedIn = NSDate(timeIntervalSince1970:Double(lastLIMillis!) / 1000.0)
             }
@@ -74,7 +75,10 @@ class ViewController: UIViewController {
         
         if loggedInPupil != nil
         {
-            lblErrorMessage.text = "Inloggen gelukt\(loggedInPupil?.lastLoggedIn)"
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+            let str = dateFormatter.stringFromDate((loggedInPupil?.lastLoggedIn)!)
+            lblErrorMessage.text = "Inloggen gelukt\(str)"
             loggedInPupil = nil
         }
         else{

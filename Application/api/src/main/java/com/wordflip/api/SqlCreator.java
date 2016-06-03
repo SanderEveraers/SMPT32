@@ -9,7 +9,9 @@ import com.wordflip.api.models.Pupil;
 import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import java.util.ArrayList;
+import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.List;
 
@@ -27,6 +29,17 @@ public class SqlCreator {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public DataSource createDataSource(){
+        try {
+            DBConfiguration db = new DBConfiguration();
+            DataSource ds = db.dataSource();
+            return ds;
+        } catch (SQLException e) {
+            e.getMessage();
+        }
+        return null;
     }
 
     public boolean testDataSource() {
@@ -93,6 +106,7 @@ public class SqlCreator {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         Pupil p = null;
+        PreparedStatement stmt2 = null;
 
         try {
             con = (Connection) ds.getConnection();
@@ -100,18 +114,25 @@ public class SqlCreator {
             stmt.setString(1, username);
             stmt.setString(2, password);
             rs = stmt.executeQuery();
+            Calendar c = Calendar.getInstance();
 
             while(rs.next()){
-                Calendar c = Calendar.getInstance();
                 c.setTime(rs.getTimestamp("Laatstingelogd"));
                 p = new Pupil(rs.getInt("ID"), rs.getString("Gebruikersnaam"), rs.getString("Wachtwoord"), c);
             }
+
+            stmt2 = (PreparedStatement) con.prepareStatement("UPDATE LEERLING SET LaatstIngelogd = ? WHERE ID = ?");
+            c = Calendar.getInstance();
+            stmt2.setTimestamp(1, new Timestamp(c.getTimeInMillis()));
+            stmt2.setInt(2, p.getId());
+            stmt2.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally{
             try {
                 if(rs != null) rs.close();
                 if(stmt != null) stmt.close();
+                if(stmt2 != null) stmt2.close();
                 if(con != null) con.close();
             } catch (SQLException e) {
                 e.printStackTrace();

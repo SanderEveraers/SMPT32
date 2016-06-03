@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72be85b5-a860-463e-b454-8a24f7e3b7fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/api_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/api_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api.iml" afterPath="$PROJECT_DIR$/api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Question.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../LoginTrial/LoginTrial/ViewController.swift" afterPath="$PROJECT_DIR$/../LoginTrial/LoginTrial/ViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/ViewController.swift" afterPath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/ViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/PieChart/Piechart.swift" afterPath="$PROJECT_DIR$/../WordFlip/PieChart/Piechart.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/AgendaViewController.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/AgendaViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/Main.storyboard" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" />
     </list>
     <ignored path="api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="TipController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="82" column="6" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2596#2597#0" expanded="true" />
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tip.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tip.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#169#170#0" expanded="true" />
                 <element signature="e#204#205#0" expanded="true" />
@@ -64,34 +64,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Practice.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Practice.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
               <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SqlCreator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="169" column="52" selection-start-line="169" selection-start-column="52" selection-end-line="169" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1464894330000" expanded="true" signature="1023:1045" ph="select * FRO... leerling" />
-                <marker date="1464894330000" expanded="true" signature="1836:1869" ph="select * FRO... leerling" />
-                <marker date="1464894330000" expanded="true" signature="2640:2706" ph="SELECT * FRO... leerling" />
-                <marker date="1464894330000" expanded="true" signature="3804:3886" ph="INSERT INTO oefenmoment... " />
-                <marker date="1464894330000" expanded="true" signature="3804:3887" ph="INSERT INTO oefenmoment... " />
-                <marker date="1464894330000" expanded="true" signature="3804:3905" ph="INSERT INTO oefenmoment... " />
-                <marker date="1464894330000" expanded="true" signature="4862:4887" ph="SELECT * FRO... oefenmoment" />
-                <marker date="1464894330000" expanded="true" signature="4862:4911" ph="SELECT * FRO... oefenmoment" />
-                <marker date="1464894330000" expanded="true" signature="4862:4913" ph="SELECT * FRO... oefenmoment" />
               </folding>
             </state>
           </provider>
@@ -124,15 +103,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/GreetingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PupilController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/practiceController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
         <option value="$MAVEN_REPOSITORY$/joda-time/joda-time/2.8.2/joda-time-2.8.2.jar!/org/joda/time/Days.class" />
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java" />
       </list>
     </option>
   </component>
@@ -236,10 +215,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -324,88 +299,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TipController.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="practiceController.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -981,11 +874,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31555000" />
+    <option name="totallyTimeSpent" value="31739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -998,9 +891,9 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25981873" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25981873" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1009,7 +902,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1155,7 +1048,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/practiceController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -1215,7 +1108,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/practiceController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1347,14 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/practiceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/joda-time/joda-time/2.8.2/joda-time-2.8.2.jar!/org/joda/time/ReadableInstant.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-63">
@@ -1379,21 +1264,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="169" column="52" selection-start-line="169" selection-start-column="52" selection-end-line="169" selection-end-column="52" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1464943121000" expanded="true" signature="1332:1354" ph="select * FRO... leerling" />
+            <marker date="1464943121000" expanded="true" signature="2145:2178" ph="select * FRO... leerling" />
+            <marker date="1464943121000" expanded="true" signature="2989:3055" ph="SELECT * FRO... leerling" />
+            <marker date="1464943121000" expanded="true" signature="3509:3560" ph="UPDATE LEERL... " />
+            <marker date="1464943121000" expanded="true" signature="4502:4584" ph="INSERT INTO oefenmoment... " />
+            <marker date="1464943121000" expanded="true" signature="4502:4585" ph="INSERT INTO oefenmoment... " />
+            <marker date="1464943121000" expanded="true" signature="4502:4603" ph="INSERT INTO oefenmoment... " />
+            <marker date="1464943121000" expanded="true" signature="5560:5585" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1464943121000" expanded="true" signature="5560:5609" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1464943121000" expanded="true" signature="5560:5611" ph="SELECT * FRO... oefenmoment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="82" column="6" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1464894330000" expanded="true" signature="1023:1045" ph="select * FRO... leerling" />
-            <marker date="1464894330000" expanded="true" signature="1836:1869" ph="select * FRO... leerling" />
-            <marker date="1464894330000" expanded="true" signature="2640:2706" ph="SELECT * FRO... leerling" />
-            <marker date="1464894330000" expanded="true" signature="3804:3886" ph="INSERT INTO oefenmoment... " />
-            <marker date="1464894330000" expanded="true" signature="3804:3887" ph="INSERT INTO oefenmoment... " />
-            <marker date="1464894330000" expanded="true" signature="3804:3905" ph="INSERT INTO oefenmoment... " />
-            <marker date="1464894330000" expanded="true" signature="4862:4887" ph="SELECT * FRO... oefenmoment" />
-            <marker date="1464894330000" expanded="true" signature="4862:4911" ph="SELECT * FRO... oefenmoment" />
-            <marker date="1464894330000" expanded="true" signature="4862:4913" ph="SELECT * FRO... oefenmoment" />
+            <element signature="e#2596#2597#0" expanded="true" />
+            <element signature="e#2658#2659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+          <folding>
+            <marker date="1464943158000" expanded="true" signature="1471:1526" ph="CALL `getToe... " />
           </folding>
         </state>
       </provider>
@@ -1404,29 +1322,6 @@
           <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2596#2597#0" expanded="true" />
-            <element signature="e#2658#2659#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="e#169#170#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
           </folding>
         </state>
       </provider>

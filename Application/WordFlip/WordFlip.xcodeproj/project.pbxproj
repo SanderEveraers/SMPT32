@@ -21,6 +21,8 @@
 		F503AE1E1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */; };
 		F503AE351CF8454900DA3F45 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503AE341CF8454900DA3F45 /* AgendaViewController.swift */; };
 		F5A198431CF850C60042703C /* Piechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A198411CF850C60042703C /* Piechart.swift */; };
+		F5A9A66C1D01706C00CAF718 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9A66B1D01706C00CAF718 /* LoginController.swift */; };
+		F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9A66D1D01732E00CAF718 /* Pupil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		F503AE341CF8454900DA3F45 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		F5A198411CF850C60042703C /* Piechart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Piechart.swift; path = ../PieChart/Piechart.swift; sourceTree = "<group>"; };
+		F5A9A66B1D01706C00CAF718 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		F5A9A66D1D01732E00CAF718 /* Pupil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pupil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,17 +129,19 @@
 		20C04ECB1CEF1BE300B09717 /* WordFlip */ = {
 			isa = PBXGroup;
 			children = (
-				F5A198411CF850C60042703C /* Piechart.swift */,
-				F503AE191CF8367000DA3F45 /* logo.png */,
-				20C04ECC1CEF1BE300B09717 /* AppDelegate.swift */,
-				20C04ECE1CEF1BE300B09717 /* ViewController.swift */,
-				20C04ED01CEF1BE300B09717 /* Main.storyboard */,
-				20D80CAB1CF7046D004DD75E /* SplashViewController.swift */,
-				20C04ED61CEF1BE300B09717 /* Assets.xcassets */,
-				20C04ED81CEF1BE300B09717 /* LaunchScreen.storyboard */,
-				20C04EDB1CEF1BE300B09717 /* Info.plist */,
-				20C04ED31CEF1BE300B09717 /* WordFlip.xcdatamodeld */,
 				F503AE341CF8454900DA3F45 /* AgendaViewController.swift */,
+				20C04ECC1CEF1BE300B09717 /* AppDelegate.swift */,
+				20C04ED61CEF1BE300B09717 /* Assets.xcassets */,
+				20C04EDB1CEF1BE300B09717 /* Info.plist */,
+				20C04ED81CEF1BE300B09717 /* LaunchScreen.storyboard */,
+				F5A9A66B1D01706C00CAF718 /* LoginController.swift */,
+				F503AE191CF8367000DA3F45 /* logo.png */,
+				20C04ED01CEF1BE300B09717 /* Main.storyboard */,
+				F5A198411CF850C60042703C /* Piechart.swift */,
+				F5A9A66D1D01732E00CAF718 /* Pupil.swift */,
+				20D80CAB1CF7046D004DD75E /* SplashViewController.swift */,
+				20C04ECE1CEF1BE300B09717 /* ViewController.swift */,
+				20C04ED31CEF1BE300B09717 /* WordFlip.xcdatamodeld */,
 			);
 			path = WordFlip;
 			sourceTree = "<group>";
@@ -305,12 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */,
 				20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */,
 				20C04ECD1CEF1BE300B09717 /* AppDelegate.swift in Sources */,
 				20C04ED51CEF1BE300B09717 /* WordFlip.xcdatamodeld in Sources */,
 				F503AE351CF8454900DA3F45 /* AgendaViewController.swift in Sources */,
 				F5A198431CF850C60042703C /* Piechart.swift in Sources */,
 				20D80CAC1CF7046D004DD75E /* SplashViewController.swift in Sources */,
+				F5A9A66C1D01706C00CAF718 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

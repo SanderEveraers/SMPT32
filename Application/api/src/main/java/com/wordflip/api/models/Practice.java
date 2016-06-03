@@ -50,6 +50,12 @@ public class Practice {
         return Days.daysBetween(date, otherDate).getDays();
     }
 
+    public int compareDayParts(Practice o) {
+        DateTime date = new DateTime(timeOfPractice.getTime());
+        DateTime otherDate = new DateTime(o.getTimeOfPractice().getTime());
+        return Math.abs(date.getHourOfDay() - otherDate.getHourOfDay());
+    }
+
     public int compareSpeed() {
         int speed = duration/amountOfWords;
 

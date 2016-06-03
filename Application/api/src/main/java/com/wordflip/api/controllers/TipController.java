@@ -43,6 +43,8 @@ public class TipController {
         int speed = 0;
         int correctie = 0;
         int consistent = 0;
+        int consistent_dayParts = 0;
+
         //int others = 0;
 
         for(int i = 0; i < practices.size(); i++) {
@@ -55,9 +57,10 @@ public class TipController {
             if(practices.get(i).compareDates(practices.get(i+1)) > 2) {
                 consistent++;
             }
+            consistent_dayParts += practices.get(i).compareDayParts(practices.get(i+1));
         }
 
-        return new Tip().getTip(speed, correctie, consistent);
+        return new Tip().getTip(speed, correctie, consistent, (consistent_dayParts/practices.size()));
     }
 
     @RequestMapping(method = RequestMethod.POST)

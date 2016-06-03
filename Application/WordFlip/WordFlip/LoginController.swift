@@ -69,9 +69,12 @@ class LoginController: UIViewController {
 //            lblErrorMessage.text = "Inloggen gelukt\(str)"
             
             let preferences = NSUserDefaults.standardUserDefaults()
-            let currentUserKey = "currentUser"
+            let currentUserKey = "currentUserName"
             let currentUser = loggedInPupil!.userName
+            let currentPasswordKey = "currentPassWord"
+            let currentPassword = loggedInPupil!.passWord
             preferences.setValue(currentUser, forKeyPath: currentUserKey)
+            preferences.setValue(currentPassword, forKeyPath: currentPasswordKey)
             let didSave = preferences.synchronize()
             if !didSave{
                 lblErrorMessage.hidden = false

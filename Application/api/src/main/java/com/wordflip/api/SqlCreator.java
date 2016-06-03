@@ -28,6 +28,17 @@ public class SqlCreator {
         }
     }
 
+    public DataSource createDataSource(){
+        try {
+            DBConfiguration db = new DBConfiguration();
+            DataSource ds = db.dataSource();
+            return ds;
+        } catch (SQLException e) {
+            e.getMessage();
+        }
+        return null;
+    }
+
     public boolean testDataSource() {
 
         Connection con = null;

@@ -53,13 +53,10 @@ public class TipController {
         System.out.println(duration);
         System.out.println(userId);
 
-<<<<<<< Updated upstream
         Timestamp t = new Timestamp(1000L);
 //        t.
 //        System.out.println(t);
 
-=======
->>>>>>> Stashed changes
         creator = new SqlCreator();
         validateUser(userId);
         creator.addPractice(new Practice(date, duration, amount, correct), userId);

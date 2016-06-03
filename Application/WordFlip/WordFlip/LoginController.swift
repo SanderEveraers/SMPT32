@@ -1,34 +1,23 @@
 //
-//  ViewController.swift
-//  LoginTrial
+//  LoginController.swift
+//  WordFlip
 //
-//  Created by Fhict on 02-06-16.
-//  Copyright © 2016 Fontys. All rights reserved.
+//  Created by Fhict on 03-06-16.
+//  Copyright © 2016 FHICT. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    @IBOutlet weak var tfUsername: UITextField!
-    @IBOutlet weak var tfPassword: UITextField!
+class LoginController: UIViewController {
+    @IBOutlet weak var tfUserName: UITextField!
+    @IBOutlet weak var tfPassWord: UITextField!
     @IBOutlet weak var lblErrorMessage: UILabel!
     
     var loggedInPupil: Pupil?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func loadJsonData()
     {
-        let url = NSURL(string: "http://localhost:8080/login?name=\(tfUsername.text!)&password=\(tfPassword.text!)")
+        let url = NSURL(string: "http://localhost:8080/login?name=\(tfUserName.text!)&password=\(tfPassWord.text!)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
@@ -68,22 +57,36 @@ class ViewController: UIViewController {
             }
         }
     }
-
-    @IBAction func btnLoginClick(sender: AnyObject) {
+    
+    @IBAction func loginAction(sender: AnyObject) {
         loadJsonData()
         
         if loggedInPupil != nil
         {
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-            let str = dateFormatter.stringFromDate((loggedInPupil?.lastLoggedIn)!)
-            lblErrorMessage.text = "Inloggen gelukt\(str)"
-            loggedInPupil = nil
+//            let dateFormatter = NSDateFormatter()
+//            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+//            let str = dateFormatter.stringFromDate((loggedInPupil?.lastLoggedIn)!)
+//            lblErrorMessage.text = "Inloggen gelukt\(str)"
+            
+            let preferences = NSUserDefaults.standardUserDefaults()
+            let currentUserKey = "currentUserName"
+            let currentUser = loggedInPupil!.userName
+            let currentPasswordKey = "currentPassWord"
+            let currentPassword = loggedInPupil!.passWord
+            preferences.setValue(currentUser, forKeyPath: currentUserKey)
+            preferences.setValue(currentPassword, forKeyPath: currentPasswordKey)
+            let didSave = preferences.synchronize()
+            if !didSave{
+                lblErrorMessage.hidden = false
+                lblErrorMessage.text = "Inloggegevens opslaan is mislukt"
+            }
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle:nil).instantiateViewControllerWithIdentifier("TabBarController")
+            self.presentViewController(viewController, animated: true, completion: nil)
         }
-        else{
-            lblErrorMessage.text = "Inloggen niet gelukt"
+        else
+        {
+            lblErrorMessage.hidden = false
+            lblErrorMessage.text = "Gebruikersnaam of wachtwoord is onjuist"
         }
     }
-
 }
-

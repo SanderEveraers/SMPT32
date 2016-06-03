@@ -1,5 +1,6 @@
 package com.wordflip.api.controllers;
 
+import com.wordflip.api.SqlCreator;
 import com.wordflip.api.models.Pupil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -22,20 +23,14 @@ public class PupilController {
     @Autowired
     private JdbcTemplate jt;
 
+    private SqlCreator sqlCreator;
+
     @RequestMapping("/login")
     public Pupil greeting(@RequestParam(value="name", defaultValue="World") String name, @RequestParam(value="password", defaultValue = "World") String password) {
         jt.getQueryTimeout();
 
-        Pupil p = jt.queryForObject("SELECT * FROM LEERLING WHERE GEBRUIKERSNAAM = ? AND WACHTWOORD = ?", new Object[]{name, password}, new RowMapper<Pupil>() {
-            @Override
-            public Pupil mapRow(ResultSet resultSet, int i) throws SQLException {
-                Calendar c = Calendar.getInstance();
-                c.setTime(resultSet.getTimestamp("Laatstingelogd"));
-                Pupil p = new Pupil(resultSet.getInt("ID"), resultSet.getString("Gebruikersnaam"), resultSet.getString("Wachtwoord"), c);
-                return p;
-            }
-        });
-
+        sqlCreator = new SqlCreator();
+        Pupil p = sqlCreator.loginPupil(name, password);
 
 
         return p;

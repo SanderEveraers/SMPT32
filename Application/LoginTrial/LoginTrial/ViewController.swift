@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     
     func loadJsonData()
     {
-//        let urlString = "http://localhost:8080/login?name=\(tfUsername.text!)&password=\(tfPassword.text!)"
         let url = NSURL(string: "http://localhost:8080/login?name=\(tfUsername.text!)&password=\(tfPassword.text!)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()

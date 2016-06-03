@@ -8,15 +8,7 @@
     <customFonts key="customFonts">
         <mutableArray key="Roboto-Light.ttf">
             <string>Roboto-Light</string>
-        </mutableArray>
-        <mutableArray key="Roboto-LightItalic.ttf">
-            <string>Roboto-LightItalic</string>
-            <string>Roboto-LightItalic</string>
-            <string>Roboto-LightItalic</string>
-            <string>Roboto-LightItalic</string>
-            <string>Roboto-LightItalic</string>
-            <string>Roboto-LightItalic</string>
-            <string>Roboto-LightItalic</string>
+            <string>Roboto-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -69,7 +61,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLd-SC-Nyc">
                                         <rect key="frame" x="0.0" y="3" width="181" height="30"/>
-                                        <state key="normal" title="Register">
+                                        <state key="normal" title="Registreer">
                                             <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
                                     </button>
@@ -93,7 +85,9 @@
                                             <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="f5t-dB-idX" kind="presentation" id="eUL-n8-LGc"/>
+                                            <segue destination="Tro-yN-4VR" kind="popoverPresentation" popoverAnchorView="WMl-gL-alu" id="w7H-1u-JMn">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -129,6 +123,80 @@
             </objects>
             <point key="canvasLocation" x="452" y="316"/>
         </scene>
+        <!--Login Controller-->
+        <scene sceneID="fjG-cx-iGh">
+            <objects>
+                <viewController id="Tro-yN-4VR" customClass="LoginController" customModule="WordFlip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RGg-eR-1R3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ojf-or-ge5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vk6-ye-9eB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gebruikersnaam" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYu-ZQ-cKz">
+                                <rect key="frame" x="20" y="68" width="280" height="30"/>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wachtwoord" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="395-Xz-00s">
+                                <rect key="frame" x="20" y="122" width="280" height="30"/>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4j8-h2-RDm">
+                                <rect key="frame" x="70" y="208" width="181" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mu-Tt-eax">
+                                        <rect key="frame" x="0.0" y="3" width="181" height="30"/>
+                                        <state key="normal" title="Inloggen">
+                                            <color key="titleColor" red="0.99607849120000003" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginAction:" destination="Tro-yN-4VR" eventType="touchUpInside" id="k9Y-9w-jTb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="6mu-Tt-eax" firstAttribute="leading" secondItem="4j8-h2-RDm" secondAttribute="leading" id="AMe-TL-r2z"/>
+                                    <constraint firstAttribute="trailing" secondItem="6mu-Tt-eax" secondAttribute="trailing" id="Gcz-NR-5T6"/>
+                                    <constraint firstAttribute="bottom" secondItem="6mu-Tt-eax" secondAttribute="bottom" id="r3i-FP-6R9"/>
+                                    <constraint firstItem="6mu-Tt-eax" firstAttribute="top" secondItem="4j8-h2-RDm" secondAttribute="top" id="sMl-PP-E9L"/>
+                                    <constraint firstAttribute="height" constant="35" id="vol-T4-pTR"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSl-PZ-sz4">
+                                <rect key="frame" x="20" y="170" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KSl-PZ-sz4" firstAttribute="trailing" secondItem="Vk6-ye-9eB" secondAttribute="trailingMargin" id="3qT-EM-jbm"/>
+                            <constraint firstItem="395-Xz-00s" firstAttribute="trailing" secondItem="Vk6-ye-9eB" secondAttribute="trailingMargin" id="Bz9-tc-3x9"/>
+                            <constraint firstItem="4j8-h2-RDm" firstAttribute="leading" secondItem="Vk6-ye-9eB" secondAttribute="leadingMargin" constant="70" id="Nnz-XF-lDb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4j8-h2-RDm" secondAttribute="trailing" constant="70" id="URi-7A-tBd"/>
+                            <constraint firstItem="KSl-PZ-sz4" firstAttribute="leading" secondItem="Vk6-ye-9eB" secondAttribute="leadingMargin" id="YY1-A0-hkh"/>
+                            <constraint firstItem="395-Xz-00s" firstAttribute="leading" secondItem="Vk6-ye-9eB" secondAttribute="leadingMargin" id="iag-Ju-jNo"/>
+                            <constraint firstItem="QYu-ZQ-cKz" firstAttribute="trailing" secondItem="Vk6-ye-9eB" secondAttribute="trailingMargin" id="r5W-FJ-2YC"/>
+                            <constraint firstItem="QYu-ZQ-cKz" firstAttribute="leading" secondItem="Vk6-ye-9eB" secondAttribute="leadingMargin" id="uXd-g4-X0k"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="lblErrorMessage" destination="KSl-PZ-sz4" id="GOM-KY-YCJ"/>
+                        <outlet property="tfPassWord" destination="395-Xz-00s" id="WHW-rV-wqw"/>
+                        <outlet property="tfUserName" destination="QYu-ZQ-cKz" id="OAK-he-Nr9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QLT-RD-GvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="902"/>
+        </scene>
         <!--Agenda-->
         <scene sceneID="Xfc-GR-URB">
             <objects>
@@ -146,8 +214,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip van de dag:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fO-LX-UYq">
                                         <rect key="frame" x="8" y="8" width="264" height="32"/>
-                                        <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8nC-oi-Svw">
@@ -156,8 +224,8 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Probeer iedere keer minstens 7 woordjes te oefenen." textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="snf-Uq-GYf">
                                                 <rect key="frame" x="0.0" y="0.0" width="264" height="85"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="16"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -240,8 +308,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Engels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZa-NL-OrX">
                                         <rect key="frame" x="8" y="8" width="264" height="32"/>
-                                        <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJ1-a5-dRw">
@@ -266,8 +334,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Frans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAt-Ib-NtT">
                                         <rect key="frame" x="8" y="8" width="264" height="32"/>
-                                        <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5Q-JM-B3v">
@@ -292,8 +360,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Duits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7q-pQ-DLH">
                                         <rect key="frame" x="8" y="8" width="264" height="32"/>
-                                        <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ts2-Np-JIi">
@@ -374,13 +442,32 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Engels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnc-kL-lff">
                                         <rect key="frame" x="8" y="8" width="264" height="32"/>
-                                        <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XYM-Ae-VXd">
                                         <rect key="frame" x="20" y="43" width="240" height="56"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2WR-NZ-iGC">
+                                                <rect key="frame" x="45" y="46" width="150" height="2"/>
+                                                <color key="progressTintColor" red="0.1137254902" green="0.41568627450000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uG-YJ-YnR">
+                                                <rect key="frame" x="97" y="8" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Hoofdstuk 12">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="2WR-NZ-iGC" firstAttribute="leading" secondItem="XYM-Ae-VXd" secondAttribute="leading" constant="70" id="PcY-Jk-u2k"/>
+                                            <constraint firstAttribute="trailing" secondItem="2uG-YJ-YnR" secondAttribute="trailing" id="gRH-Mc-0XM"/>
+                                            <constraint firstAttribute="trailing" secondItem="2WR-NZ-iGC" secondAttribute="trailing" constant="70" id="lKD-Kg-c3S"/>
+                                            <constraint firstItem="2uG-YJ-YnR" firstAttribute="leading" secondItem="XYM-Ae-VXd" secondAttribute="leading" id="rwp-B5-opp"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.64705882349999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -400,13 +487,32 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Frans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6Y-qp-4vx">
                                         <rect key="frame" x="8" y="8" width="264" height="32"/>
-                                        <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3WD-23-OqH">
                                         <rect key="frame" x="20" y="48" width="240" height="56"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nBM-hh-Q5A">
+                                                <rect key="frame" x="45" y="46" width="150" height="2"/>
+                                                <color key="progressTintColor" red="0.1137254902" green="0.41568627450000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEQ-Qa-1o7">
+                                                <rect key="frame" x="97" y="8" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Hoofdstuk 17">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="fEQ-Qa-1o7" secondAttribute="trailing" id="6Ia-vM-BuQ"/>
+                                            <constraint firstItem="nBM-hh-Q5A" firstAttribute="leading" secondItem="3WD-23-OqH" secondAttribute="leading" constant="70" id="b4i-ZS-1Wk"/>
+                                            <constraint firstItem="fEQ-Qa-1o7" firstAttribute="leading" secondItem="3WD-23-OqH" secondAttribute="leading" id="g99-Qu-GAj"/>
+                                            <constraint firstAttribute="trailing" secondItem="nBM-hh-Q5A" secondAttribute="trailing" constant="70" id="x7S-zl-2kU"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.64705882349999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -426,13 +532,32 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Duits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gl8-BC-LGo">
                                         <rect key="frame" x="8" y="8" width="264" height="32"/>
-                                        <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22d-fY-Vv5">
                                         <rect key="frame" x="20" y="48" width="240" height="56"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hxh-ac-kHb">
+                                                <rect key="frame" x="45" y="46" width="150" height="2"/>
+                                                <color key="progressTintColor" red="0.1137254902" green="0.41568627450000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCL-6a-9kK">
+                                                <rect key="frame" x="97" y="8" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Hoofdstuk 5">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="hCL-6a-9kK" firstAttribute="leading" secondItem="22d-fY-Vv5" secondAttribute="leading" id="BNP-jQ-42C"/>
+                                            <constraint firstItem="Hxh-ac-kHb" firstAttribute="leading" secondItem="22d-fY-Vv5" secondAttribute="leading" constant="70" id="Nku-Db-VSl"/>
+                                            <constraint firstAttribute="trailing" secondItem="hCL-6a-9kK" secondAttribute="trailing" id="OOx-qh-102"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hxh-ac-kHb" secondAttribute="trailing" constant="70" id="hP4-wa-Bhj"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.64705882349999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -449,16 +574,24 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="113" id="pl1-xM-PZt"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgp-w1-eoN">
+                                <rect key="frame" x="39" y="393" width="242" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Oefen Nu!"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Dgp-w1-eoN" firstAttribute="leading" secondItem="rhG-bG-HwL" secondAttribute="leadingMargin" constant="20" id="6mr-gN-Fdg"/>
                             <constraint firstItem="OJz-uC-3E3" firstAttribute="top" secondItem="qzu-Sa-FwB" secondAttribute="bottom" constant="29" id="ADD-8O-wtm"/>
                             <constraint firstItem="OJz-uC-3E3" firstAttribute="leading" secondItem="rhG-bG-HwL" secondAttribute="leadingMargin" id="AEJ-D8-wsQ"/>
                             <constraint firstItem="bAi-Y2-Ayo" firstAttribute="leading" secondItem="rhG-bG-HwL" secondAttribute="leadingMargin" id="Eh4-i1-7eu"/>
                             <constraint firstItem="OJz-uC-3E3" firstAttribute="trailing" secondItem="rhG-bG-HwL" secondAttribute="trailingMargin" id="Fa8-Ik-UR5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dgp-w1-eoN" secondAttribute="trailing" constant="20" id="LW0-2k-kgi"/>
                             <constraint firstItem="3sw-xJ-rvX" firstAttribute="trailing" secondItem="rhG-bG-HwL" secondAttribute="trailingMargin" id="Oa7-i1-Khl"/>
                             <constraint firstItem="bAi-Y2-Ayo" firstAttribute="trailing" secondItem="rhG-bG-HwL" secondAttribute="trailingMargin" id="Vh4-Bh-gTG"/>
                             <constraint firstItem="bAi-Y2-Ayo" firstAttribute="top" secondItem="OJz-uC-3E3" secondAttribute="bottom" constant="8" id="eh8-TS-OwA"/>
+                            <constraint firstItem="W26-M3-BSo" firstAttribute="top" secondItem="Dgp-w1-eoN" secondAttribute="bottom" constant="64" id="fiy-JV-WLi"/>
                             <constraint firstItem="3sw-xJ-rvX" firstAttribute="leading" secondItem="rhG-bG-HwL" secondAttribute="leadingMargin" id="l5S-cC-iul"/>
                             <constraint firstItem="3sw-xJ-rvX" firstAttribute="top" secondItem="bAi-Y2-Ayo" secondAttribute="bottom" constant="8" id="osJ-6R-KJQ"/>
                         </constraints>

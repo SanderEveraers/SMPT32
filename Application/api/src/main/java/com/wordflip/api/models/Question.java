@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 public class Question implements Serializable {
     private int id;
-    private String quenstion;
+    private String question;
     private String answer;
     private String sentence;
 
@@ -19,12 +19,12 @@ public class Question implements Serializable {
         this.id = id;
     }
 
-    public String getQuenstion() {
-        return quenstion;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setQuenstion(String quenstion) {
-        this.quenstion = quenstion;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     public String getAnswer() {
@@ -43,9 +43,9 @@ public class Question implements Serializable {
         this.sentence = sentence;
     }
 
-    public Question(int id, String quenstion, String answer, String sentence) {
+    public Question(int id, String question, String answer, String sentence) {
         this.id = id;
-        this.quenstion = quenstion;
+        this.question = question;
         this.answer = answer;
         this.sentence = sentence;
     }

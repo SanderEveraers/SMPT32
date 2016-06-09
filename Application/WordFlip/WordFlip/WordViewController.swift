@@ -17,6 +17,8 @@ class WordViewController: UIViewController {
     @IBOutlet weak var lbAnswer: UILabel!
     @IBOutlet weak var tbTranslation: UITextField!
 
+    
+    
     var word = Word(id: 1000, question: ".", answer:",", sentence: "';'")
     
     var words:[Word] = []
@@ -129,6 +131,11 @@ class WordViewController: UIViewController {
         //        }
     }
     
+    @IBAction func btReady(sender: UIButton) {
+    //
+        self.lbAantalWoorden.text = "."
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(aantalWoorden)
@@ -239,7 +246,7 @@ class WordViewController: UIViewController {
     //JSON parsing
     func loadJsonData()
     {
-        let url = NSURL(string: "http://145.93.106.100:8080/practice?userid=6&course=Engels")
+        let url = NSURL(string: "http://145.93.160.53:8080/practice?userid=6&course=Engels")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
@@ -263,13 +270,20 @@ class WordViewController: UIViewController {
         {
             for item in jsonData
             {
-                let newWord = Word (
-                    id: item.objectForKey("id") as! Int,
-                    question: item.objectForKey("question") as! String,
-                    answer: item.objectForKey("answer") as! String,
-                    sentence: item.objectForKey("sentence") as! String
-                )
-                words.append(newWord)
+                let id = item.objectForKey("id") as? NSInteger
+                let question = item.objectForKey("question") as? String
+                let answer = item.objectForKey("answer") as? String
+                let sentence = item.objectForKey("sentence") as? String
+                print("..")
+                if(id != nil && question != nil && answer != nil && sentence != nil) {
+                    let newWord = Word (
+                        id: id!,
+                        question: question!,
+                        answer: answer!,
+                        sentence: sentence!
+                    )
+                    words.append(newWord)
+                }
             }
         }
     }

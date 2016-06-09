@@ -28,7 +28,7 @@ public class PracticeController {
     private SqlCreator sqlCreator = new SqlCreator();
     private DataSource ds;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET) //http://localhost:8080/practice?userid=6&course=Engels
     public ResponseEntity<ArrayList<Question>> tip(@RequestParam(value="course", defaultValue="Engels") String course,
                                                    @RequestParam(value="userid", defaultValue="0") String userID) {
         ds = sqlCreator.createDataSource();

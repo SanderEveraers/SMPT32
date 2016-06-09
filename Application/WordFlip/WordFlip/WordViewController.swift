@@ -9,8 +9,10 @@
 import UIKit
 import Foundation
 import AVFoundation
+import CoreData
 
 class WordViewController: UIViewController {
+    var managedObjectContext: NSManagedObjectContext?
 
     @IBOutlet weak var lbAantalWoorden: UILabel!
     @IBOutlet weak var lbQuestion: UILabel!
@@ -142,7 +144,6 @@ class WordViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.loadJsonData()
         sleep(1)
-        
         
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(WordViewController.handleSwipes(_:)))
         //var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))

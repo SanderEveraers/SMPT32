@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72be85b5-a860-463e-b454-8a24f7e3b7fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Oplevering_9-06-2016.mov" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/VakkenViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Word.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/WordViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/LaunchScreen.storyboard" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/LaunchScreen.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/LoginController.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/LoginController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/SplashViewController.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/SplashViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api.iml" afterPath="$PROJECT_DIR$/api.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Question.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Question.java" />
     </list>
     <ignored path="api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,19 +58,19 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="514">
-              <caret line="209" column="5" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
+              <caret line="211" column="1" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1465473543000" expanded="true" signature="1332:1354" ph="select * FRO... leerling" />
-                <marker date="1465473543000" expanded="true" signature="2145:2178" ph="select * FRO... leerling" />
-                <marker date="1465473543000" expanded="true" signature="2989:3055" ph="SELECT * FRO... leerling" />
-                <marker date="1465473543000" expanded="true" signature="3509:3560" ph="UPDATE LEERL... " />
-                <marker date="1465473543000" expanded="true" signature="4572:4664" ph="INSERT INTO oefenmoment... " />
-                <marker date="1465473543000" expanded="true" signature="4572:4665" ph="INSERT INTO oefenmoment... " />
-                <marker date="1465473543000" expanded="true" signature="4572:4686" ph="INSERT INTO oefenmoment... " />
-                <marker date="1465473543000" expanded="true" signature="5681:5706" ph="SELECT * FRO... oefenmoment" />
-                <marker date="1465473543000" expanded="true" signature="5681:5730" ph="SELECT * FRO... oefenmoment" />
-                <marker date="1465473543000" expanded="true" signature="5681:5732" ph="SELECT * FRO... oefenmoment" />
+                <marker date="1465476664000" expanded="true" signature="1332:1354" ph="select * FRO... leerling" />
+                <marker date="1465476664000" expanded="true" signature="2145:2178" ph="select * FRO... leerling" />
+                <marker date="1465476664000" expanded="true" signature="2989:3055" ph="SELECT * FRO... leerling" />
+                <marker date="1465476664000" expanded="true" signature="3509:3585" ph="UPDATE LEERL... " />
+                <marker date="1465476664000" expanded="true" signature="4597:4689" ph="INSERT INTO oefenmoment... " />
+                <marker date="1465476664000" expanded="true" signature="4597:4690" ph="INSERT INTO oefenmoment... " />
+                <marker date="1465476664000" expanded="true" signature="4597:4711" ph="INSERT INTO oefenmoment... " />
+                <marker date="1465476664000" expanded="true" signature="5706:5731" ph="SELECT * FRO... oefenmoment" />
+                <marker date="1465476664000" expanded="true" signature="5706:5755" ph="SELECT * FRO... oefenmoment" />
+                <marker date="1465476664000" expanded="true" signature="5706:5757" ph="SELECT * FRO... oefenmoment" />
               </folding>
             </state>
           </provider>
@@ -82,9 +93,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-              <folding>
-                <marker date="1464943158000" expanded="true" signature="1471:1526" ph="CALL `getToe... " />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -345,6 +354,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -919,12 +942,12 @@
       <workItem from="1464845369370" duration="3648000" />
       <workItem from="1464853381927" duration="2670000" />
       <workItem from="1464950907706" duration="5858000" />
-      <workItem from="1465456706509" duration="7007000" />
+      <workItem from="1465456706509" duration="7242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47409000" />
+    <option name="totallyTimeSpent" value="47644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="6" />
@@ -1108,9 +1131,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <marker date="1464943158000" expanded="true" signature="1471:1526" ph="CALL `getToe... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,9 +1186,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1464943158000" expanded="true" signature="1471:1526" ph="CALL `getToe... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1323,28 +1342,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-          <folding>
-            <marker date="1464943158000" expanded="true" signature="1471:1526" ph="CALL `getToe... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
-          <caret line="209" column="5" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
+          <caret line="211" column="1" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1465473543000" expanded="true" signature="1332:1354" ph="select * FRO... leerling" />
-            <marker date="1465473543000" expanded="true" signature="2145:2178" ph="select * FRO... leerling" />
-            <marker date="1465473543000" expanded="true" signature="2989:3055" ph="SELECT * FRO... leerling" />
-            <marker date="1465473543000" expanded="true" signature="3509:3560" ph="UPDATE LEERL... " />
-            <marker date="1465473543000" expanded="true" signature="4572:4664" ph="INSERT INTO oefenmoment... " />
-            <marker date="1465473543000" expanded="true" signature="4572:4665" ph="INSERT INTO oefenmoment... " />
-            <marker date="1465473543000" expanded="true" signature="4572:4686" ph="INSERT INTO oefenmoment... " />
-            <marker date="1465473543000" expanded="true" signature="5681:5706" ph="SELECT * FRO... oefenmoment" />
-            <marker date="1465473543000" expanded="true" signature="5681:5730" ph="SELECT * FRO... oefenmoment" />
-            <marker date="1465473543000" expanded="true" signature="5681:5732" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1465476664000" expanded="true" signature="1332:1354" ph="select * FRO... leerling" />
+            <marker date="1465476664000" expanded="true" signature="2145:2178" ph="select * FRO... leerling" />
+            <marker date="1465476664000" expanded="true" signature="2989:3055" ph="SELECT * FRO... leerling" />
+            <marker date="1465476664000" expanded="true" signature="3509:3585" ph="UPDATE LEERL... " />
+            <marker date="1465476664000" expanded="true" signature="4597:4689" ph="INSERT INTO oefenmoment... " />
+            <marker date="1465476664000" expanded="true" signature="4597:4690" ph="INSERT INTO oefenmoment... " />
+            <marker date="1465476664000" expanded="true" signature="4597:4711" ph="INSERT INTO oefenmoment... " />
+            <marker date="1465476664000" expanded="true" signature="5706:5731" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1465476664000" expanded="true" signature="5706:5755" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1465476664000" expanded="true" signature="5706:5757" ph="SELECT * FRO... oefenmoment" />
           </folding>
         </state>
       </provider>

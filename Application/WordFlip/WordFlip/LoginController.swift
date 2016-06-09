@@ -17,7 +17,7 @@ class LoginController: UIViewController {
     
     func loadJsonData()
     {
-        let url = NSURL(string: "http://145.93.160.45:8080/login?name=\(tfUserName.text!)&password=\(tfPassWord.text!)")
+        let url = NSURL(string: "http://145.93.160.53:8080/login?name=\(tfUserName.text!)&password=\(tfPassWord.text!)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
@@ -60,6 +60,7 @@ class LoginController: UIViewController {
     
     @IBAction func loginAction(sender: AnyObject) {
         loadJsonData()
+        sleep(1)
         
         dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { // 1
             let overlayImage = self.faceOverlayImageFromImage(self.image)

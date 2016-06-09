@@ -60,6 +60,7 @@ class LoginController: UIViewController {
     
     @IBAction func loginAction(sender: AnyObject) {
         loadJsonData()
+        sleep(1)
         
         if loggedInPupil != nil
         {

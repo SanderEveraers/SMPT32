@@ -41,7 +41,7 @@ public class PracticeController {
             stmt = (Statement) con.createStatement();
             rs = stmt.executeQuery("CALL `getToetsvragen`('" + course + "', " + userID + ")");
             while(rs.next()){
-                Question q = new Question(rs.getInt("ID"), rs.getString("Vraag"), rs.getString("Antwoord"), rs.getString("ContextZin"));
+                Question q = new Question(rs.getInt("ID"), rs.getInt("Toets_ID"), rs.getString("Vraag"), rs.getString("Antwoord"), rs.getString("ContextZin"));
                 questions.add(q);
             }
         } catch (SQLException e) {

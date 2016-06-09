@@ -17,19 +17,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var lbUitkomst: UILabel!
     @IBOutlet weak var lbAantalWoorden: UILabel!
 
-    let w1 = Word(woord: "Independence",antwoord: "onafhankelijkheid")
-    let w2 = Word(woord: "City",antwoord: "stad")
-    let w3 = Word(woord: "Rhythm",antwoord: "ritme")
-    let w4 = Word(woord: "Joke",antwoord: "grapje")
+//    let w1 = Word(id: 1, question: "Independence", answer: "onafhankelijkheid", sentence: " ...")
+//    let w2 = Word(id: 2, question: "City", answer: "stad", sentence: "...")
+//    let w3 = Word(id: 3, question: "Rhythm", answer: "ritme", sentence: "...")
+//    let w4 = Word(id: 4, question: "Joke", answer: "grapje", sentence: "...")
     
-    var word = Word(woord: ".", antwoord:"." )
+    var word = Word(id: 1000, question: ".", answer:".", sentence: "';'")
     
     var words:[Word] = []
     
     var goodWords: [String:String] = [:]
     
-    var geoefendeWoorden: Int = 0
-    var aantalWoorden: Int = 7
+    var geoefendeWoorden: Int = 1
+    var aantalWoorden: Int = 0
     
     var timer = NSTimer()
     var timerInterrupt = NSTimer()
@@ -52,18 +52,18 @@ class ViewController: UIViewController {
         //timerInterrupt.invalidate()
         //repeatDing: repeat {
             forLoop: for (_, element) in words.enumerate() {
-                if(element.getWoord() == lbWoord.text!) {
-                word = Word(woord: element.getWoord(), antwoord: element.getAntwoord())
+                if(element.getQuestion() == lbWoord.text!) {
+                    word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence())
                 
                 if(!isGoed) {
-            if(element.getWoord() == lbWoord.text! && element.getAntwoord() == vertaling) {
+            if(element.getQuestion() == lbWoord.text! && element.getAnswer() == vertaling) {
                 
-                self.hetAntWoord = element.getAntwoord()
+                self.hetAntWoord = element.getAnswer()
                 var index: Int = Int(arc4random_uniform(UInt32(words.count)))
                 var randomVal = Array(words)[index]
                 var bool = false
                 while(!bool) {
-                    if(randomVal.getWoord() == lbWoord.text!) {
+                    if(randomVal.getQuestion() == lbWoord.text!) {
                         index = Int(arc4random_uniform(UInt32(words.count)))
                         randomVal = Array(words)[index]
                     } else {
@@ -73,10 +73,10 @@ class ViewController: UIViewController {
                 lbWoord.text = ""
                 tbVertaling.text = ""
                 lbUitkomst.text = ""
-                lbWoord.text = randomVal.getWoord()
+                lbWoord.text = randomVal.getQuestion()
                 self.geoefendeWoorden += 1
                 isGoed = true
-                self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(aantalWoorden)
+                self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count)
                 continue //repeatDing
             } else {
                 //lbUitkomst.text = "Probeer het later opnieuw."
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         }
         
         //}while(geoefendeWoorden < aantalWoorden)
-        if(geoefendeWoorden >= aantalWoorden) {
+        if(geoefendeWoorden >= words.count) {
         self.lbWoord.text = "Je bent klaar"
         var disableMyButton = sender as? UIButton
         disableMyButton!.enabled = false
@@ -136,12 +136,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(aantalWoorden)
+        //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(aantalWoorden)
         // Do any additional setup after loading the view, typically from a nib.
-        words.append(w1)
-        words.append(w2)
-        words.append(w3)
-        words.append(w4)
+        self.loadJsonData()
+        sleep(1)
         
         
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleSwipes(_:)))
@@ -152,13 +150,16 @@ class ViewController: UIViewController {
         
         view.addGestureRecognizer(leftSwipe)
         //view.addGestureRecognizer(rightSwipe)
+        
+        performSelector(#selector(loadData), withObject: nil, afterDelay: 1)
+        
     }
     
     func handleSwipes(sender:UISwipeGestureRecognizer) {
         if (sender.direction == .Left) {
             forLoop: for (_, element) in words.enumerate() {
-                if(element.getWoord() == lbWoord.text!) {
-                    word = Word(woord: element.getWoord(), antwoord: element.getAntwoord())
+                if(element.getQuestion() == lbWoord.text!) {
+                    word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence())
                 }
             }
             timerSwipe = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(timerSwipeAction), userInfo: word, repeats: false)
@@ -201,7 +202,7 @@ class ViewController: UIViewController {
         // Something cool
         timer.invalidate()
         //let word = timer.userInfo as! Word
-        self.lbUitkomst.text = word.getAntwoord()
+        self.lbUitkomst.text = word.getAnswer()
         lbUitkomst.textColor = UIColor.redColor()
     }
     
@@ -209,7 +210,7 @@ class ViewController: UIViewController {
         // Something cool
         timerSwipe.invalidate()
         //let word = timer.userInfo as! Word
-        self.lbUitkomst.text = word.getAntwoord()
+        self.lbUitkomst.text = word.getAnswer()
         lbUitkomst.textColor = UIColor.redColor()
     }
     
@@ -224,13 +225,56 @@ class ViewController: UIViewController {
         var randomVal = Array(words)[index]
         var bool = false
         while(!bool) {
-            if(randomVal.getWoord() == lbWoord.text!) {
+            if(randomVal.getQuestion() == lbWoord.text!) {
                 index = Int(arc4random_uniform(UInt32(words.count)))
                 randomVal = Array(words)[index]
             } else {
                 bool = true
-                lbWoord.text = randomVal.getWoord()
+                lbWoord.text = randomVal.getQuestion()
                 lbUitkomst.text = ""
+            }
+        }
+    }
+    
+    func loadData() {
+        nextWord()
+        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count)
+    }
+    
+    //JSON parsing
+    func loadJsonData()
+    {
+        let url = NSURL(string: "http://145.93.106.100:8080/practice?userid=6&course=Engels")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    self.parseJSONData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
+    func parseJSONData(jsonObject:AnyObject) {
+        if let jsonData = jsonObject as? NSArray
+        {
+            for item in jsonData
+            {
+                let newWord = Word (
+                    id: item.objectForKey("id") as! Int,
+                    question: item.objectForKey("question") as! String,
+                    answer: item.objectForKey("answer") as! String,
+                    sentence: item.objectForKey("sentence") as! String
+                )
+                words.append(newWord)
             }
         }
     }

@@ -10,20 +10,32 @@ import Foundation
 
 class Word
 {
-    var woord:String
-    var antwoord:String
+    var id:Int
+    var question:String
+    var answer:String
+    var sentence:String
     
-    init(woord:String, antwoord:String){
-        self.woord = woord
-        self.antwoord = antwoord
+    init(id:Int, question:String, answer:String, sentence:String){
+        self.id = id
+        self.question = question
+        self.answer = answer
+        self.sentence = sentence
     }
     
-    func getWoord() -> String {
-        return self.woord
+    func getID() -> Int {
+        return self.id
     }
     
-    func getAntwoord() -> String {
-        return self.antwoord
+    func getQuestion() -> String {
+        return self.question
+    }
+    
+    func getAnswer() -> String {
+        return self.answer.lowercaseString
+    }
+    
+    func getSentence() -> String {
+        return self.sentence
     }
     
 }

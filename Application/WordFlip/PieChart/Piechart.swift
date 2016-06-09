@@ -50,7 +50,6 @@ public class Piechart: UIControl {
     public var title: String = "title" {
         didSet {
             titleLabel.text = title
-            titleLabel.font = UIFont(name: "Roboto-LightItalic", size: 17)
         }
     }
     

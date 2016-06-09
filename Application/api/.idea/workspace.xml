@@ -2,8 +2,148 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72be85b5-a860-463e-b454-8a24f7e3b7fa" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/AppIcon.appiconset/Icon-Settings@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/AppIcon.appiconset/Icon-Settings@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/AppIcon.appiconset/Icon-Spotlight-iPhone-4-5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/AppIcon.appiconset/Icon-Spotlight-iPhone-6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/AppIcon.appiconset/Icon-Spotlight.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/AppIcon.appiconset/Icon-Spotlight@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/artwork-1024.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/artwork-512.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/btn_stat_notify_icon/drawable-hdpi/btn_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/btn_stat_notify_icon/drawable-ldpi/btn_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/btn_stat_notify_icon/drawable-mdpi/btn_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/btn_stat_notify_icon/drawable-xhdpi/btn_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_dialog_icon/drawable-hdpi/ic_dialog_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_dialog_icon/drawable-ldpi/ic_dialog_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_dialog_icon/drawable-mdpi/ic_dialog_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_launcher_icon/drawable-hdpi/ic_launcher_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_launcher_icon/drawable-ldpi/ic_launcher_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_launcher_icon/drawable-mdpi/ic_launcher_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_launcher_icon/drawable-xhdpi/ic_launcher_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_list_icon/drawable-hdpi/ic_list_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_list_icon/drawable-ldpi/ic_list_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_list_icon/drawable-mdpi/ic_list_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-hdpi/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-hdpi_v11/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-hdpi_v9/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-ldpi/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-ldpi_v11/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-ldpi_v9/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-mdpi/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-mdpi_v11/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-mdpi_v9/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-xhdpi/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-xhdpi_v11/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_menu_icon/drawable-xhdpi_v9/ic_menu_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-hdpi/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-hdpi_v11/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-hdpi_v9/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-ldpi/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-ldpi_v11/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-ldpi_v9/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-mdpi/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-mdpi_v11/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-mdpi_v9/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-xhdpi/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-xhdpi_v11/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_stat_notify_icon/drawable-xhdpi_v9/ic_stat_notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_tab_icon/drawable-hdpi/ic_tab_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_tab_icon/drawable-hdpi_v5/ic_tab_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_tab_icon/drawable-ldpi/ic_tab_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_tab_icon/drawable-ldpi_v5/ic_tab_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_tab_icon/drawable-mdpi/ic_tab_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/ic_tab_icon/drawable-mdpi_v5/ic_tab_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/android/market_icon/drawable-xhdpi/market_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/artwork-source.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-App-iPad-Pro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-App-iPad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-App-iPad@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-App.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-App@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-App@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Settings@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Settings@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Spotlight-iPhone-4-5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Spotlight-iPhone-6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Spotlight.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Spotlight@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Spotlight@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Tab-Bar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Tab-Bar@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Tab-Bar@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Toolbar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Toolbar@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Toolbar@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Web-App-iPad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Web-App-iPad@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Web-App.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Web-App@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/Icon-Web-App@3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/iTunesArtwork.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/ios/iTunesArtwork@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-1024.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-114.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-120.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-144.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-152.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-167.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-18.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-180.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-19.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-20.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-22.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-24.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-25.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-29.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-30.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-320.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-35.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-36.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-44.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-48.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-50.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-512.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-57.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-58.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-60.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-64.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-640.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-66.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-75.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-76.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-80.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-87.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/sizes/icon-96.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Assets.xcassets/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images-2.xcassets/Brand Assets.launchimage/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/AppIcon.appiconset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/Brand Assets.launchimage/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/LoginController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Pupil.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../icon/READ_ME.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../LoginTrial/LoginTrial/ViewController.swift" afterPath="$PROJECT_DIR$/../LoginTrial/LoginTrial/ViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/Info.plist" afterPath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/ViewController.swift" afterPath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/ViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/Word.swift" afterPath="$PROJECT_DIR$/../ProofOfConcept/PoC - Words/PoC - Words/Word.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/PieChart/Piechart.swift" afterPath="$PROJECT_DIR$/../WordFlip/PieChart/Piechart.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/AgendaViewController.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/AgendaViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/Info.plist" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Info.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Question.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Question.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java" />
     </list>
     <ignored path="api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +172,8 @@
       <file leaf-file-name="TipController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="867">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,8 +185,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+              <folding>
+                <element signature="e#4919#4920#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,7 +197,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="901">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -294,6 +436,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -868,16 +1024,16 @@
       <workItem from="1464845369370" duration="3648000" />
       <workItem from="1464853381927" duration="2670000" />
       <workItem from="1464944508838" duration="3675000" />
-      <workItem from="1465456942037" duration="425000" />
+      <workItem from="1465456942037" duration="528000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35839000" />
+    <option name="totallyTimeSpent" value="35942000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -900,7 +1056,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22949003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24600638" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24600638" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -983,7 +1139,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#4919#4920#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1257,7 +1415,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1267,15 +1425,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="e#4919#4920#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="867">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

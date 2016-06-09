@@ -119,7 +119,8 @@ public class SqlCreator {
                 p = new Pupil(rs.getInt("ID"), rs.getString("Gebruikersnaam"), rs.getString("Wachtwoord"), c);
             }
 
-            stmt2 = (PreparedStatement) con.prepareStatement("UPDATE LEERLING SET LaatstIngelogd = ? WHERE ID = ?");
+            stmt2 = (PreparedStatement) con.prepareStatement("UPDATE L" +
+                    "EERLING SET LaatstIngelogd = ? WHERE ID = ?");
             c = Calendar.getInstance();
             stmt2.setTimestamp(1, new Timestamp(c.getTimeInMillis()));
             stmt2.setInt(2, p.getId());

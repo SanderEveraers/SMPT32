@@ -153,12 +153,8 @@ class WordViewController: UIViewController {
         self.loadJsonData()
         sleep(1)
         
-<<<<<<< HEAD
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(WordViewController.handleSwipes(_:)))
-=======
         
         self.leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(WordViewController.handleSwipes(_:)))
->>>>>>> origin/master
         //var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
         
         leftSwipe.direction = .Left

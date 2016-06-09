@@ -97,6 +97,7 @@ class WordViewController: UIViewController {
             //disableMyButton!.enabled = false
             btWoordDoorgeven.hidden = true
             btReady.hidden = false
+            tbTranslation.hidden = true
         }
         
         //        if(words[vertaling!] != nil) {

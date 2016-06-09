@@ -16,6 +16,8 @@
 		20C04EE51CEF1BE400B09717 /* WordFlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04EE41CEF1BE400B09717 /* WordFlipTests.swift */; };
 		20C04EF01CEF1BE400B09717 /* WordFlipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C04EEF1CEF1BE400B09717 /* WordFlipUITests.swift */; };
 		20D80CAC1CF7046D004DD75E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D80CAB1CF7046D004DD75E /* SplashViewController.swift */; };
+		F502334D1D073C8700E4275D /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502334C1D073C8700E4275D /* Word.swift */; };
+		F502334F1D073E8F00E4275D /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502334E1D073E8F00E4275D /* WordViewController.swift */; };
 		F503AE1A1CF8367000DA3F45 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F503AE191CF8367000DA3F45 /* logo.png */; };
 		F503AE1D1CF83CCA00DA3F45 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F503AE1B1CF83CCA00DA3F45 /* Roboto-Light.ttf */; };
 		F503AE1E1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */; };
@@ -100,6 +102,8 @@
 		20C04EEF1CEF1BE400B09717 /* WordFlipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFlipUITests.swift; sourceTree = "<group>"; };
 		20C04EF11CEF1BE400B09717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D80CAB1CF7046D004DD75E /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F502334C1D073C8700E4275D /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		F502334E1D073E8F00E4275D /* WordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 		F503AE191CF8367000DA3F45 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		F503AE1B1CF83CCA00DA3F45 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				20D80CAB1CF7046D004DD75E /* SplashViewController.swift */,
 				20C04ECE1CEF1BE300B09717 /* ViewController.swift */,
 				20C04ED31CEF1BE300B09717 /* WordFlip.xcdatamodeld */,
+				F502334C1D073C8700E4275D /* Word.swift */,
+				F502334E1D073E8F00E4275D /* WordViewController.swift */,
 			);
 			path = WordFlip;
 			sourceTree = "<group>";
@@ -437,6 +443,8 @@
 			files = (
 				F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */,
 				20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */,
+				F502334F1D073E8F00E4275D /* WordViewController.swift in Sources */,
+				F502334D1D073C8700E4275D /* Word.swift in Sources */,
 				20C04ECD1CEF1BE300B09717 /* AppDelegate.swift in Sources */,
 				20C04ED51CEF1BE300B09717 /* WordFlip.xcdatamodeld in Sources */,
 				F503AE351CF8454900DA3F45 /* AgendaViewController.swift in Sources */,

@@ -61,6 +61,16 @@ class LoginController: UIViewController {
     @IBAction func loginAction(sender: AnyObject) {
         loadJsonData()
         
+        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { // 1
+            let overlayImage = self.faceOverlayImageFromImage(self.image)
+            dispatch_async(dispatch_get_main_queue()) { // 2
+                self.fadeInNewImage(overlayImage) // 3
+            }
+        }
+        
+        
+        sleep(1)
+        
         if loggedInPupil != nil
         {
 //            let dateFormatter = NSDateFormatter()

@@ -141,7 +141,7 @@ public class SqlCreator {
         return p;
     }
 
-    public void addPractice(Practice practice, String userId) {
+    public void addPractice(Practice practice, String userId, String toetsId) {
 
         Connection con = null;
         PreparedStatement stmt = null;
@@ -150,12 +150,14 @@ public class SqlCreator {
         try {
             con = (Connection) ds.getConnection();
             int id = Integer.parseInt(userId);
+            int toets_id = Integer.parseInt(toetsId);
 
-            stmt = (PreparedStatement) con.prepareStatement("INSERT INTO oefenmoment(Tijdstip, Tijdsduur, Leerling_ID, Aantal, fouten) VALUES ( Now(), ?, ?, ?, ?)");
+            stmt = (PreparedStatement) con.prepareStatement("INSERT INTO oefenmoment(Tijdstip, Tijdsduur, Leerling_ID, Aantal, fouten, toets_ID) VALUES ( Now(), ?, ?, ?, ?, ?)");
             stmt.setInt(1, practice.getDuration());
             stmt.setInt(2, id);
             stmt.setInt(3, practice.getAmountOfWords());
             stmt.setInt(4, practice.getMistakes());
+            stmt.setInt(5, toets_id);
             stmt.execute();
 
         } catch (SQLException e) {

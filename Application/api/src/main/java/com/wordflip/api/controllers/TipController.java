@@ -22,9 +22,9 @@ import java.util.List;
 @RequestMapping("/{userId}/tip")
 public class TipController {
 
-    private SqlCreator creator = new SqlCreator();
+	private SqlCreator creator = new SqlCreator();
 
-    @RequestMapping(value = "/practice", method = RequestMethod.GET)
+	@RequestMapping(value = "/practice", method = RequestMethod.GET)
     public ResponseEntity<List<Practice>> allPractices(@PathVariable String userId) {
 
         creator = new SqlCreator();
@@ -65,14 +65,49 @@ public class TipController {
 
     @RequestMapping(method = RequestMethod.POST)
     public void addPractice(@PathVariable String userId,
+                            @RequestParam(value="toets_id", defaultValue="1") String toets_id,
                       @RequestParam(value="amount", defaultValue="8") int amount,
                       @RequestParam(value="mistakes", defaultValue="0") int mistakes,
                       @RequestParam(value="duration", defaultValue="120") int duration) throws ParseException {
 
         creator = new SqlCreator();
         validateUser(userId);
-        creator.addPractice(new Practice(duration, amount, mistakes), userId);
+        creator.addPractice(new Practice(duration, amount, mistakes), userId, toets_id);
     }
+
+	//momenten geleerd volgens de de app met aantal wel en niet
+	@RequestMapping(value = "/moments", method = RequestMethod.POST)
+	public void getMoments(@PathVariable String userId) throws ParseException {
+		creator = new SqlCreator();
+		validateUser(userId);
+
+		List<Practice> practices = creator.getPractices(userId);
+
+	}
+
+	//welke dag van de tijd geleerd en aantal
+	@RequestMapping(value = "/times", method = RequestMethod.POST)
+	public void getTimes(@PathVariable String userId) throws ParseException {
+		creator = new SqlCreator();
+		validateUser(userId);
+
+
+	}
+
+	//Snelheid van de geleerde woordjes met aantal binnen welke snelheid
+	@RequestMapping(value = "/subjects", method = RequestMethod.POST)
+	public void getSubjects(@PathVariable String userId) throws ParseException {
+		creator = new SqlCreator();
+		validateUser(userId);
+	}
+
+	//Aantal leermomenten voor elke woorden met aantal
+	@RequestMapping(value = "/speed", method = RequestMethod.POST)
+	public void getSpeed(@PathVariable String userId) throws ParseException {
+		creator = new SqlCreator();
+		validateUser(userId);
+	}
+
 
     private void validateUser(String userId) {
         creator = new SqlCreator();
@@ -80,6 +115,8 @@ public class TipController {
             throw new UserNotFoundException(userId);
         }
     }
+
+
 }
 
 @ResponseStatus(HttpStatus.NOT_FOUND)

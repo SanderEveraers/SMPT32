@@ -19,11 +19,14 @@ class WordViewController: UIViewController {
     @IBOutlet weak var lbAnswer: UILabel!
     @IBOutlet weak var tbTranslation: UITextField!
 
-    
+    @IBOutlet weak var btReady: UIButton!
+    @IBOutlet weak var btWoordDoorgeven: UIButton!
     
     var word = Word(id: 1000, question: ".", answer:",", sentence: "';'")
     
     var words:[Word] = []
+    
+    var leftSwipe = UISwipeGestureRecognizer()
     
     var goodWords: [String:String] = [:]
     
@@ -91,10 +94,15 @@ class WordViewController: UIViewController {
         }
         
         //}while(geoefendeWoorden < aantalWoorden)
-        if(geoefendeWoorden >= words.count) {
+        if(geoefendeWoorden > words.count) {
             self.lbQuestion.text = "Je bent klaar"
-            var disableMyButton = sender as? UIButton
-            disableMyButton!.enabled = false
+            //var disableMyButton = sender as? UIButton
+            //disableMyButton!.enabled = false
+            lbAantalWoorden.text = ""
+            btWoordDoorgeven.hidden = true
+            btReady.hidden = false
+            tbTranslation.hidden = true
+            self.leftSwipe.enabled = false
         }
         
         //        if(words[vertaling!] != nil) {
@@ -134,8 +142,8 @@ class WordViewController: UIViewController {
     }
     
     @IBAction func btReady(sender: UIButton) {
-    //
-        self.lbAantalWoorden.text = "."
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle:nil).instantiateViewControllerWithIdentifier("TabBarController")
+        self.presentViewController(viewController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -145,7 +153,12 @@ class WordViewController: UIViewController {
         self.loadJsonData()
         sleep(1)
         
+<<<<<<< HEAD
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(WordViewController.handleSwipes(_:)))
+=======
+        
+        self.leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(WordViewController.handleSwipes(_:)))
+>>>>>>> origin/master
         //var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
         
         leftSwipe.direction = .Left

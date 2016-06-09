@@ -46,6 +46,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.34" />
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.8.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

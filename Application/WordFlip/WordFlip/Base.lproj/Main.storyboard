@@ -578,6 +578,9 @@
                                 <rect key="frame" x="39" y="393" width="242" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Oefen Nu!"/>
+                                <connections>
+                                    <segue destination="bEW-Aw-qxC" kind="presentation" id="gjy-ha-9zg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -651,51 +654,66 @@
         <!--Word View Controller-->
         <scene sceneID="fxm-ey-Fm1">
             <objects>
-                <viewController id="bEW-Aw-qxC" customClass="WordViewController" sceneMemberID="viewController">
+                <viewController id="bEW-Aw-qxC" customClass="WordViewController" customModule="WordFlip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UsG-rX-7KF"/>
                         <viewControllerLayoutGuide type="bottom" id="cac-z4-iKU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vh8-Ae-EMw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAH-Jb-tRn">
-                                <rect key="frame" x="114" y="41" width="42" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="btReady" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-jL-7yT">
+                                <rect key="frame" x="87" y="320" width="85" height="30"/>
+                                <state key="normal" title="Ga terug"/>
+                                <connections>
+                                    <action selector="btReady:" destination="bEW-Aw-qxC" eventType="touchUpInside" id="9nZ-8w-5Ce"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-DG-Fjf">
+                                <rect key="frame" x="87" y="259" width="85" height="30"/>
+                                <state key="normal" title="Controleer"/>
+                                <connections>
+                                    <action selector="btWoordDoorgeven:" destination="bEW-Aw-qxC" eventType="touchUpInside" id="vdO-lU-0iC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="lbAantalWoorden" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fc-db-9OU">
+                                <rect key="frame" x="78" y="37" width="94" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spi-Pp-WOp">
-                                <rect key="frame" x="114" y="103" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="lbQuestion" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlc-ek-dUm">
+                                <rect key="frame" x="78" y="101" width="94" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hps-my-jgG">
-                                <rect key="frame" x="114" y="168" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="lbAnswer" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-7Y-Kqe">
+                                <rect key="frame" x="78" y="149" width="94" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lie-b9-INu">
-                                <rect key="frame" x="87" y="208" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-BK-ftJ">
+                                <rect key="frame" x="78" y="201" width="131" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="lbAantalWoorden" destination="YAH-Jb-tRn" id="CwX-Je-jms"/>
-                        <outlet property="lbAnswer" destination="Hps-my-jgG" id="5XB-KR-4v5"/>
-                        <outlet property="lbQuestion" destination="Spi-Pp-WOp" id="6Pm-cX-MrW"/>
-                        <outlet property="tbTranslation" destination="lie-b9-INu" id="GGU-LX-QEa"/>
+                        <outlet property="lbAantalWoorden" destination="3fc-db-9OU" id="Vtc-3j-VBw"/>
+                        <outlet property="lbAnswer" destination="Sb9-7Y-Kqe" id="LO8-MW-m9h"/>
+                        <outlet property="lbQuestion" destination="Mlc-ek-dUm" id="7r9-b5-1In"/>
+                        <outlet property="tbTranslation" destination="Bwh-BK-ftJ" id="wuf-HE-JeA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUE-Zc-nhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3742" y="-410"/>
+            <point key="canvasLocation" x="1694" y="-1000"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ORj-sW-yli">

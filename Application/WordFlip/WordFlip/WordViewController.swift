@@ -24,6 +24,7 @@ class WordViewController: UIViewController {
     
     var words:[Word] = []
     
+    var leftSwipe = UISwipeGestureRecognizer()
     
     var goodWords: [String:String] = [:]
     
@@ -91,13 +92,15 @@ class WordViewController: UIViewController {
         }
         
         //}while(geoefendeWoorden < aantalWoorden)
-        if(geoefendeWoorden >= words.count) {
+        if(geoefendeWoorden > words.count) {
             self.lbQuestion.text = "Je bent klaar"
             //var disableMyButton = sender as? UIButton
             //disableMyButton!.enabled = false
+            lbAantalWoorden.text = ""
             btWoordDoorgeven.hidden = true
             btReady.hidden = false
             tbTranslation.hidden = true
+            self.leftSwipe.enabled = false
         }
         
         //        if(words[vertaling!] != nil) {
@@ -149,7 +152,7 @@ class WordViewController: UIViewController {
         sleep(1)
         
         
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(WordViewController.handleSwipes(_:)))
+        self.leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(WordViewController.handleSwipes(_:)))
         //var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
         
         leftSwipe.direction = .Left

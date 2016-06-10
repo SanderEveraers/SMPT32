@@ -59,11 +59,11 @@ public class Practice {
     public int compareSpeed() {
         int speed = duration/amountOfWords;
 
-        if(speed < 20) {
+        if(speed < 7) {
             return -1;
-        } else if(speed > 20 || speed < 40) {
+        } else if(speed > 7 || speed < 15) {
             return 0;
-        } else if(speed > 40) {
+        } else if(speed > 15) {
             return 1;
         }
         return 0;

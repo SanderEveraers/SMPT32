@@ -36,6 +36,7 @@ class WordViewController: UIViewController {
     var timer = NSTimer()
     var timerInterrupt = NSTimer()
     var timerSwipe = NSTimer()
+    var timerBug = NSTimer()
     
     var isGoed:Bool = false
     
@@ -235,6 +236,22 @@ class WordViewController: UIViewController {
         self.lbAnswer.text = ""
     }
     
+    func timerBugAction() {
+        var index: Int = Int(arc4random_uniform(UInt32(words.count)))
+        var randomVal = Array(words)[index]
+        var bool = false
+        while(!bool) {
+            if(randomVal.getCount() == 2) {
+                index = Int(arc4random_uniform(UInt32(words.count)))
+                randomVal = Array(words)[index]
+            }  else {
+                bool = true
+                lbQuestion.text = randomVal.getQuestion()
+                lbAnswer.text = ""
+            }
+        }
+    }
+    
     func nextWord() {
         var index: Int = Int(arc4random_uniform(UInt32(words.count)))
         var randomVal = Array(words)[index]
@@ -244,11 +261,13 @@ class WordViewController: UIViewController {
                 index = Int(arc4random_uniform(UInt32(words.count)))
                 print("x" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                 randomVal = Array(words)[index]
+                timerBug = NSTimer.scheduledTimerWithTimeInterval(10.5, target: self, selector: #selector(timerBugAction), userInfo: nil, repeats: false)
             } else {
                 bool = true
                 print(randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                 lbQuestion.text = randomVal.getQuestion()
                 lbAnswer.text = ""
+                timerBug.invalidate()
             }
         }
     }

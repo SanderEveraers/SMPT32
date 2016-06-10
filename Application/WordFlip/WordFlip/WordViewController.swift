@@ -9,8 +9,10 @@
 import UIKit
 import Foundation
 import AVFoundation
+import CoreData
 
 class WordViewController: UIViewController {
+    var managedObjectContext: NSManagedObjectContext?
 
     @IBOutlet weak var lbAantalWoorden: UILabel!
     @IBOutlet weak var lbQuestion: UILabel!
@@ -20,7 +22,7 @@ class WordViewController: UIViewController {
     @IBOutlet weak var btReady: UIButton!
     @IBOutlet weak var btWoordDoorgeven: UIButton!
     
-    var word = Word(id: 1000, question: ".", answer:",", sentence: "';'")
+    var word = Word(id: 1000, question: ".", answer:",", sentence: "';'", count: 0)
     
     var words:[Word] = []
     
@@ -53,7 +55,7 @@ class WordViewController: UIViewController {
         //repeatDing: repeat {
         forLoop: for (_, element) in words.enumerate() {
             if(element.getQuestion() == lbQuestion.text!) {
-                word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence())
+                word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence(), count: element.getCount())
                 
                 if(!isGoed) {
                     if(element.getQuestion() == lbQuestion.text! && element.getAnswer() == vertaling) {
@@ -63,10 +65,12 @@ class WordViewController: UIViewController {
                         var randomVal = Array(words)[index]
                         var bool = false
                         while(!bool) {
-                            if(randomVal.getQuestion() == lbQuestion.text!) {
+                            if(randomVal.getQuestion() == lbQuestion.text! || randomVal.getCount() == 2) {
                                 index = Int(arc4random_uniform(UInt32(words.count)))
+                                print("opnieuw" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                                 randomVal = Array(words)[index]
                             } else {
+                                print("Z" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                                 bool = true
                             }
                         }
@@ -75,8 +79,9 @@ class WordViewController: UIViewController {
                         lbAnswer.text = ""
                         lbQuestion.text = randomVal.getQuestion()
                         self.geoefendeWoorden += 1
+                        element.setCount()
                         isGoed = true
-                        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count)
+                        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
                         continue //repeatDing
                     } else {
                         //lbUitkomst.text = "Probeer het later opnieuw."
@@ -92,7 +97,7 @@ class WordViewController: UIViewController {
         }
         
         //}while(geoefendeWoorden < aantalWoorden)
-        if(geoefendeWoorden > words.count) {
+        if(geoefendeWoorden > words.count*2) {
             self.lbQuestion.text = "Je bent klaar"
             //var disableMyButton = sender as? UIButton
             //disableMyButton!.enabled = false
@@ -169,7 +174,7 @@ class WordViewController: UIViewController {
         if (sender.direction == .Left) {
             forLoop: for (_, element) in words.enumerate() {
                 if(element.getQuestion() == lbQuestion.text!) {
-                    word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence())
+                    word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence(), count: element.getCount())
                 }
             }
             timerSwipe = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(timerSwipeAction), userInfo: word, repeats: false)
@@ -235,11 +240,13 @@ class WordViewController: UIViewController {
         var randomVal = Array(words)[index]
         var bool = false
         while(!bool) {
-            if(randomVal.getQuestion() == lbQuestion.text!) {
+            if(randomVal.getQuestion() == lbQuestion.text! || randomVal.getCount() == 2) {
                 index = Int(arc4random_uniform(UInt32(words.count)))
+                print("x" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                 randomVal = Array(words)[index]
             } else {
                 bool = true
+                print(randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                 lbQuestion.text = randomVal.getQuestion()
                 lbAnswer.text = ""
             }
@@ -248,13 +255,13 @@ class WordViewController: UIViewController {
     
     func loadData() {
         nextWord()
-        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count)
+        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
     }
     
     //JSON parsing
     func loadJsonData()
     {
-        let url = NSURL(string: "http://145.93.160.53:8080/practice?userid=6&course=Engels")
+        let url = NSURL(string: "http://145.93.160.26:8080/practice?userid=6&course=Engels")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
@@ -288,7 +295,8 @@ class WordViewController: UIViewController {
                         id: id!,
                         question: question!,
                         answer: answer!,
-                        sentence: sentence!
+                        sentence: sentence!,
+                        count: 0
                     )
                     words.append(newWord)
                 }

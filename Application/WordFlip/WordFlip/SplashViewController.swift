@@ -14,6 +14,10 @@ class SplashViewController: UIViewController {
     var userName = ""
     var passWord = ""
     
+    func getPupil() -> Int {
+        return (loggedInPupil?.id)!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,7 +44,7 @@ class SplashViewController: UIViewController {
     
     func loadJsonData()
     {
-        let url = NSURL(string: "http://145.93.160.53:8080/login?name=\(userName)&password=\(passWord)")
+        let url = NSURL(string: "http://145.93.160.26:8080/login?name=\(userName)&password=\(passWord)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in

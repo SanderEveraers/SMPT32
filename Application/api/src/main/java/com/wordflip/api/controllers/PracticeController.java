@@ -3,6 +3,7 @@ package com.wordflip.api.controllers;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 import com.wordflip.api.SqlCreator;
+import com.wordflip.api.models.Practice;
 import com.wordflip.api.models.Question;
 import javax.sql.DataSource;
 
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -36,14 +38,65 @@ public class PracticeController {
         ResultSet rs = null;
         Statement stmt = null;
         ArrayList<Question> questions = new ArrayList<>();
+        ArrayList<Practice> practices = new ArrayList<>();
         try {
             con = (Connection) ds.getConnection();
             stmt = (Statement) con.createStatement();
+            int toetsID = 0;
+            int aantalWoorden = 7;
+            int speed = 0;
+            int correctie = 0;
+
+            rs = stmt.executeQuery("CALL `getOefenmomenten`(" + userID + ", '" + course + "')");
+            while(rs.next()){
+                Practice p = new Practice(rs.getInt("Tijdsduur"), rs.getInt("aantal"), rs.getInt("fouten"), true);
+                practices.add(p);
+            }
+            if (practices.size() >= 2){
+                for(int i = 0; i < practices.size(); i++) {
+                    speed += practices.get(i).compareSpeed();
+                    correctie += practices.get(i).compareCorrect();
+                }
+
+                if (speed < 0 || correctie < 0) { //SNEL EN WEINIG FOUTEN
+                    aantalWoorden +=2;
+                }
+
+                if (speed > 0 || correctie > 0) { //TRAAG EN VEEL FOUTEN
+                    aantalWoorden -=2;
+                }
+
+                if (speed < 0 || correctie > 0) { //SNEL MAAR VEEL FOUTEN
+                    //aantalWoorden -=2;
+                }
+            }
+
             rs = stmt.executeQuery("CALL `getToetsvragen`('" + course + "', " + userID + ")");
             while(rs.next()){
                 Question q = new Question(rs.getInt("ID"), rs.getInt("Toets_ID"), rs.getString("Vraag"), rs.getString("Antwoord"), rs.getString("ContextZin"));
+                toetsID = rs.getInt("Toets_ID");
                 questions.add(q);
             }
+
+            rs = stmt.executeQuery("CALL `getLastProgress`('" + userID + "', " + toetsID + ")");
+            int lastProgress = 0;
+            while(rs.next()){
+                lastProgress = rs.getInt("Aantal");
+            }
+
+            //System.out.println(toetsID);
+
+            if ((lastProgress + aantalWoorden) > questions.size()){
+                int wordsInPart1 = questions.size() - lastProgress;
+                int wordsInPart2 = aantalWoorden - wordsInPart1;
+                List part1 = questions.subList(lastProgress, questions.size());
+                List part2 = questions.subList(0, wordsInPart2);
+                questions = new ArrayList<>(part1);
+                questions.addAll(part2);
+            }else{
+                questions = new ArrayList<>(questions.subList(lastProgress, lastProgress + aantalWoorden));
+            }
+            //System.out.println(toetsID);
         } catch (SQLException e) {
             e.printStackTrace();
         }finally{

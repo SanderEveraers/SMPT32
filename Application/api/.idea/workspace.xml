@@ -2,17 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72be85b5-a860-463e-b454-8a24f7e3b7fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/DayPart.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Subject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Toets.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Word.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/moment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/SpeakerIcon.imageset/speaker (1).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/SpeakerIcon.imageset/speaker (2).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/SpeakerIcon.imageset/speaker (3).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/speaker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/trophy_bronze.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/trophy_gold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/trophy_none.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/trophy_silver.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Images.xcassets/SpeakerIcon.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/TrophyChestController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/AgendaViewController.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/AgendaViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/LaunchScreen.storyboard" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/LaunchScreen.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/Main.storyboard" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/LoginController.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/LoginController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/SplashViewController.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/SplashViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/VakkenViewController.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/VakkenViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/Word.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Word.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/WordViewController.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/WordViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java" afterPath="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java" />
     </list>
     <ignored path="api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,35 +52,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TipController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6092#6098#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Toets.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Toets.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-              <folding>
-                <element signature="e#262#263#0" expanded="true" />
-                <element signature="e#280#281#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#327#328#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tip.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tip.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -79,26 +65,27 @@
       <file leaf-file-name="SqlCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="318" column="29" selection-start-line="318" selection-start-column="29" selection-end-line="318" selection-end-column="29" />
+            <state relative-caret-position="256">
+              <caret line="331" column="50" selection-start-line="331" selection-start-column="50" selection-end-line="331" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1465563597000" expanded="true" signature="1231:1253" ph="select * FRO... leerling" />
-                <marker date="1465563597000" expanded="true" signature="1850:1883" ph="select * FRO... leerling" />
-                <marker date="1465563597000" expanded="true" signature="2503:2569" ph="SELECT * FRO... leerling" />
-                <marker date="1465563597000" expanded="true" signature="2938:2999" ph="UPDATE LEERL... " />
-                <marker date="1465563597000" expanded="true" signature="3844:3945" ph="INSERT INTO oefenmoment... " />
-                <marker date="1465563597000" expanded="true" signature="3844:3946" ph="INSERT INTO oefenmoment... " />
-                <marker date="1465563597000" expanded="true" signature="3844:3970" ph="INSERT INTO oefenmoment... " />
-                <marker date="1465563597000" expanded="true" signature="4779:4804" ph="SELECT * FRO... oefenmoment" />
-                <marker date="1465563597000" expanded="true" signature="4779:4828" ph="SELECT * FRO... oefenmoment" />
-                <marker date="1465563597000" expanded="true" signature="4779:4830" ph="SELECT * FRO... oefenmoment" />
-                <marker date="1465563597000" expanded="true" signature="5814:5866" ph="SELECT * FRO... oefenmoment" />
-                <marker date="1465563597000" expanded="true" signature="6845:6863" ph="SELECT count... oefenmoment" />
-                <marker date="1465563597000" expanded="true" signature="6845:6980" ph="SELECT count... oefenmoment" />
-                <marker date="1465563597000" expanded="true" signature="6845:6984" ph="SELECT count... oefenmoment" />
-                <marker date="1465563597000" expanded="true" signature="7755:7856" ph="SELECT count... oefenmoment" />
-                <marker date="1465563597000" expanded="true" signature="7755:7857" ph="SELECT * FRO... oefenmoment" />
+                <marker date="1465566862000" expanded="true" signature="1108:1130" ph="select * FRO... leerling" />
+                <marker date="1465566862000" expanded="true" signature="1727:1760" ph="select * FRO... leerling" />
+                <marker date="1465566862000" expanded="true" signature="2380:2446" ph="SELECT * FRO... leerling" />
+                <marker date="1465566862000" expanded="true" signature="2815:2876" ph="UPDATE LEERL... " />
+                <marker date="1465566862000" expanded="true" signature="3721:3822" ph="INSERT INTO oefenmoment... " />
+                <marker date="1465566862000" expanded="true" signature="3721:3823" ph="INSERT INTO oefenmoment... " />
+                <marker date="1465566862000" expanded="true" signature="3721:3847" ph="INSERT INTO oefenmoment... " />
+                <marker date="1465566862000" expanded="true" signature="4656:4681" ph="SELECT * FRO... oefenmoment" />
+                <marker date="1465566862000" expanded="true" signature="4656:4705" ph="SELECT * FRO... oefenmoment" />
+                <marker date="1465566862000" expanded="true" signature="4656:4707" ph="SELECT * FRO... oefenmoment" />
+                <marker date="1465566862000" expanded="true" signature="5691:5743" ph="SELECT * FRO... oefenmoment" />
+                <marker date="1465566862000" expanded="true" signature="6722:6740" ph="SELECT count... oefenmoment" />
+                <marker date="1465566862000" expanded="true" signature="6722:6857" ph="SELECT count... oefenmoment" />
+                <marker date="1465566862000" expanded="true" signature="6722:6861" ph="SELECT count... oefenmoment" />
+                <marker date="1465566862000" expanded="true" signature="7589:7690" ph="SELECT count... oefenmoment" />
+                <marker date="1465566862000" expanded="true" signature="7589:7691" ph="SELECT * FRO... oefenmoment" />
+                <marker date="1465566862000" expanded="true" signature="8623:8678" ph="CALL `getToe... " />
               </folding>
             </state>
           </provider>
@@ -106,46 +93,16 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/config.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/DatabaseConnectie.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/GreetingController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PupilController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/practiceController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$MAVEN_REPOSITORY$/joda-time/joda-time/2.8.2/joda-time-2.8.2.jar!/org/joda/time/Days.class" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/DayPart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/moment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Word.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Subject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Moment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Toets.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java" />
       </list>
     </option>
   </component>
@@ -160,11 +117,6 @@
       <MavenGeneralSettings>
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -367,6 +319,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -375,16 +341,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../CitrusTimeTracking/citrustime" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
     <configuration default="false" name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -392,67 +349,6 @@
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wordflip.api.Application" />
       <module name="api" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="_api_2" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="53539" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -669,7 +565,6 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
-      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -834,74 +729,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="_api" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="53538" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -929,31 +757,15 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="72be85b5-a860-463e-b454-8a24f7e3b7fa" name="Default" comment="" />
-      <created>1464341029845</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1464341029845</updated>
-      <workItem from="1464341037827" duration="7773000" />
-      <workItem from="1464845369370" duration="3648000" />
-      <workItem from="1464853381927" duration="2670000" />
-      <workItem from="1464950907706" duration="5858000" />
-      <workItem from="1465456706509" duration="10848000" />
-      <workItem from="1465544316090" duration="12502000" />
-    </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63752000" />
+    <option name="totallyTimeSpent" value="3203000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -973,7 +785,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23111783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23111783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.48526523" order="0" side_tool="false" content_ui="combo" />
@@ -988,17 +800,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1101,7 +902,7 @@
           <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6092#6098#0" expanded="true" />
+            <element signature="e#6503#6509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1111,7 +912,7 @@
         <state relative-caret-position="69">
           <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1121,7 +922,7 @@
         <state relative-caret-position="135">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1139,7 +940,7 @@
           <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6092#6098#0" expanded="true" />
+            <element signature="e#6503#6509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1172,7 +973,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6092#6098#0" expanded="true" />
+            <element signature="e#6503#6509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1235,6 +1036,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-135">
           <caret line="23" column="193" selection-start-line="23" selection-start-column="193" selection-end-line="23" selection-end-column="193" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1289,21 +1091,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/DayPart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
           <folding>
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="false" />
+            <element signature="e#465#466#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1328,42 +1122,13 @@
         <state relative-caret-position="75">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding>
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="false" />
+            <element signature="e#283#284#0" expanded="false" />
+            <element signature="e#310#311#0" expanded="false" />
+            <element signature="e#330#331#0" expanded="false" />
+            <element signature="e#371#372#0" expanded="false" />
+            <element signature="e#399#400#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Moment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1380,40 +1145,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Moment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/SqlCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="318" column="29" selection-start-line="318" selection-start-column="29" selection-end-line="318" selection-end-column="29" />
+        <state relative-caret-position="256">
+          <caret line="331" column="50" selection-start-line="331" selection-start-column="50" selection-end-line="331" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1465563597000" expanded="true" signature="1231:1253" ph="select * FRO... leerling" />
-            <marker date="1465563597000" expanded="true" signature="1850:1883" ph="select * FRO... leerling" />
-            <marker date="1465563597000" expanded="true" signature="2503:2569" ph="SELECT * FRO... leerling" />
-            <marker date="1465563597000" expanded="true" signature="2938:2999" ph="UPDATE LEERL... " />
-            <marker date="1465563597000" expanded="true" signature="3844:3945" ph="INSERT INTO oefenmoment... " />
-            <marker date="1465563597000" expanded="true" signature="3844:3946" ph="INSERT INTO oefenmoment... " />
-            <marker date="1465563597000" expanded="true" signature="3844:3970" ph="INSERT INTO oefenmoment... " />
-            <marker date="1465563597000" expanded="true" signature="4779:4804" ph="SELECT * FRO... oefenmoment" />
-            <marker date="1465563597000" expanded="true" signature="4779:4828" ph="SELECT * FRO... oefenmoment" />
-            <marker date="1465563597000" expanded="true" signature="4779:4830" ph="SELECT * FRO... oefenmoment" />
-            <marker date="1465563597000" expanded="true" signature="5814:5866" ph="SELECT * FRO... oefenmoment" />
-            <marker date="1465563597000" expanded="true" signature="6845:6863" ph="SELECT count... oefenmoment" />
-            <marker date="1465563597000" expanded="true" signature="6845:6980" ph="SELECT count... oefenmoment" />
-            <marker date="1465563597000" expanded="true" signature="6845:6984" ph="SELECT count... oefenmoment" />
-            <marker date="1465563597000" expanded="true" signature="7755:7856" ph="SELECT count... oefenmoment" />
-            <marker date="1465563597000" expanded="true" signature="7755:7857" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1465566862000" expanded="true" signature="1108:1130" ph="select * FRO... leerling" />
+            <marker date="1465566862000" expanded="true" signature="1727:1760" ph="select * FRO... leerling" />
+            <marker date="1465566862000" expanded="true" signature="2380:2446" ph="SELECT * FRO... leerling" />
+            <marker date="1465566862000" expanded="true" signature="2815:2876" ph="UPDATE LEERL... " />
+            <marker date="1465566862000" expanded="true" signature="3721:3822" ph="INSERT INTO oefenmoment... " />
+            <marker date="1465566862000" expanded="true" signature="3721:3823" ph="INSERT INTO oefenmoment... " />
+            <marker date="1465566862000" expanded="true" signature="3721:3847" ph="INSERT INTO oefenmoment... " />
+            <marker date="1465566862000" expanded="true" signature="4656:4681" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1465566862000" expanded="true" signature="4656:4705" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1465566862000" expanded="true" signature="4656:4707" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1465566862000" expanded="true" signature="5691:5743" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1465566862000" expanded="true" signature="6722:6740" ph="SELECT count... oefenmoment" />
+            <marker date="1465566862000" expanded="true" signature="6722:6857" ph="SELECT count... oefenmoment" />
+            <marker date="1465566862000" expanded="true" signature="6722:6861" ph="SELECT count... oefenmoment" />
+            <marker date="1465566862000" expanded="true" signature="7589:7690" ph="SELECT count... oefenmoment" />
+            <marker date="1465566862000" expanded="true" signature="7589:7691" ph="SELECT * FRO... oefenmoment" />
+            <marker date="1465566862000" expanded="true" signature="8623:8678" ph="CALL `getToe... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        <state relative-caret-position="60">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6092#6098#0" expanded="true" />
+            <element signature="e#6503#6509#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/PracticeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="43" selection-end-column="53" />
+          <folding>
+            <marker date="1465565839000" expanded="true" signature="1773:1830" ph="CALL `getOef... " />
+            <marker date="1465565839000" expanded="true" signature="2723:2778" ph="CALL `getToe... " />
+            <marker date="1465565839000" expanded="true" signature="3106:3163" ph="CALL `getLas... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Tip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

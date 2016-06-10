@@ -69,11 +69,11 @@ public class Practice {
     public int compareSpeed() {
         int speed = duration/amountOfWords;
 
-        if(speed <= 20) {
+        if(speed < 7) {
             return -1;
-        } else if(speed >= 20 || speed <= 40) {
+        } else if(speed > 7 || speed < 15) {
             return 0;
-        } else if(speed >= 40) {
+        } else if(speed > 15) {
             return 1;
         }
         return 0;
@@ -91,6 +91,22 @@ public class Practice {
         }
         return 0;
     }
+
+	public int compareCorrectToets() {
+		double correct = mistakes/amountOfWords;
+
+		if(correct < 0.3) {
+			return 1;
+		} else if(correct > 0.3 || correct < 0.5) {
+			return 2;
+		} else if(correct > 0.5 || correct < 0.7) {
+			return 3;
+		} else if(correct > 0.7) {
+			return 4;
+		}
+		return 2;
+	}
+
 
 	public boolean isPlanned() {
 		return planned;

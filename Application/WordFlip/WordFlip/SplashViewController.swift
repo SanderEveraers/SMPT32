@@ -14,6 +14,10 @@ class SplashViewController: UIViewController {
     var userName = ""
     var passWord = ""
     
+    func getPupil() -> Int {
+        return (loggedInPupil?.id)!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

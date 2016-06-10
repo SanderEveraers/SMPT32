@@ -10,6 +10,11 @@ import UIKit
 
 class TrophyChestController: UIViewController {
 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
 
     @IBAction func logOutAction(sender: AnyObject) {
             let preferences = NSUserDefaults.standardUserDefaults()

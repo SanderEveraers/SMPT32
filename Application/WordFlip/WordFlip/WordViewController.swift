@@ -257,7 +257,7 @@ class WordViewController: UIViewController {
     //JSON parsing
     func loadJsonData()
     {
-        let url = NSURL(string: "http://145.93.160.53:8080/practice?userid=6&course=Engels")
+        let url = NSURL(string: "http://145.93.160.26:8080/practice?userid=6&course=Engels")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in

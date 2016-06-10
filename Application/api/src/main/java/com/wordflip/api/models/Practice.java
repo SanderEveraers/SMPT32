@@ -3,7 +3,9 @@ package com.wordflip.api.models;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * Created by robvangastel on 02/06/16.
@@ -14,18 +16,21 @@ public class Practice {
     private int amountOfWords;
     private int mistakes;
     private Calendar timeOfPractice;
+    private boolean planned;
 
-    public Practice(int duration, int amountOfWords, int mistakes) {
+    public Practice(int duration, int amountOfWords, int mistakes, boolean planned) {
         this.duration = duration;
         this.amountOfWords = amountOfWords;
         this.mistakes = mistakes;
+	    this.planned = planned;
     }
 
-    public Practice(int duration, int amountOfWords, int mistakes, Calendar timeOfPractice) {
+    public Practice(int duration, int amountOfWords, int mistakes, Calendar timeOfPractice, boolean planned) {
         this.duration = duration;
         this.amountOfWords = amountOfWords;
         this.mistakes = mistakes;
         this.timeOfPractice = timeOfPractice;
+	    this.planned = planned;
     }
 
     public int getAmountOfWords() {
@@ -56,14 +61,19 @@ public class Practice {
         return Math.abs(date.getHourOfDay() - otherDate.getHourOfDay());
     }
 
+	public int getHourOfDay() {
+		DateTime date = new DateTime(timeOfPractice.getTime());
+		return date.getHourOfDay();
+	}
+
     public int compareSpeed() {
         int speed = duration/amountOfWords;
 
-        if(speed < 20) {
+        if(speed <= 20) {
             return -1;
-        } else if(speed > 20 || speed < 40) {
+        } else if(speed >= 20 || speed <= 40) {
             return 0;
-        } else if(speed > 40) {
+        } else if(speed >= 40) {
             return 1;
         }
         return 0;
@@ -81,4 +91,12 @@ public class Practice {
         }
         return 0;
     }
+
+	public boolean isPlanned() {
+		return planned;
+	}
+
+	public void setPlanned(boolean planned) {
+		this.planned = planned;
+	}
 }

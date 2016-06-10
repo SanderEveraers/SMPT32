@@ -8,6 +8,8 @@ import java.util.Random;
 /**
  * Created by robvangastel on 03/06/16.
  */
+
+//besteed aandacht aan vakken meer/minder
 public class Tip {
 
     List<String> con_pos = Arrays.asList("Je leert elke dag houd dit vol!",
@@ -19,7 +21,7 @@ public class Tip {
 
     List<String> diff_neg = Arrays.asList("Kies een vast moment op de dag om je woordjes te leren.",
             "Je leert elke dag probeer nu nog een vast moment te kiezen.",
-            "Probeer op een vast moment van de dag woordjes te leren.");
+            "Probeer op een vast moment van de dag om woordjes te leren.");
 
     List<String> diff_pos = Arrays.asList("Blijf het volhouden om elke dag 1 moment te hebben om woordjes te leren.",
             "Als je dit volhoud kost het 1 week om je engels toets te leren.",
@@ -31,9 +33,9 @@ public class Tip {
 
     List<String> speed_neg = Arrays.asList("Probeer 2 minuutjes uit je dag te nemen om je woordjes te leren.",
             "Probeer rustig de tijd te nemen tijdens het leren van de woordjes.",
-            "Probeer te leren met geluid om het makkelijker te onthouden.");
+            "Probeer te leren met geluid om er makkelijker door heen te komen.");
 
-    public String getTip(int speed, int correctie, int consistent, int difference_hours, int practices) {
+    public String getTip(int speed, int correctie, int consistent, int difference_hours, int practices, int speedOther, int correctieOther) {
 
         //correctie
         //Negatieve snelheid betekend dat hij weinig fouten had
@@ -58,11 +60,10 @@ public class Tip {
 
         if(practices > 2) {
             if (consistent == 0) {
-
                 //Je leert elke dag goed bezig
                 tips.add(con_pos.get(rdm.nextInt(3)));
 
-                if (difference_hours < 8) {
+                if (difference_hours < 4) {
 
                     tips.add(diff_pos.get(rdm.nextInt(3)));
                     //Probeer een moment te kiezen om aan je leren te werken

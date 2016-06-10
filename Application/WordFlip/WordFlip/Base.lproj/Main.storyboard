@@ -623,38 +623,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="lbAantalWoorden" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fc-db-9OU">
-                                <rect key="frame" x="74" y="102" width="94" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" restorationIdentifier="lbAantalWoorden" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fc-db-9OU">
+                                <rect key="frame" x="20" y="102" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="lbQuestion" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlc-ek-dUm">
-                                <rect key="frame" x="74" y="166" width="157" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" restorationIdentifier="lbQuestion" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlc-ek-dUm">
+                                <rect key="frame" x="20" y="166" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="lbAnswer" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-7Y-Kqe">
-                                <rect key="frame" x="74" y="214" width="157" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" restorationIdentifier="lbAnswer" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-7Y-Kqe">
+                                <rect key="frame" x="20" y="214" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-DG-Fjf">
-                                <rect key="frame" x="83" y="331" width="85" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-DG-Fjf">
+                                <rect key="frame" x="20" y="331" width="280" height="30"/>
                                 <state key="normal" title="Controleer"/>
                                 <connections>
                                     <action selector="btWoordDoorgeven:" destination="bEW-Aw-qxC" eventType="touchUpInside" id="vdO-lU-0iC"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-BK-ftJ">
-                                <rect key="frame" x="74" y="273" width="131" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-BK-ftJ">
+                                <rect key="frame" x="20" y="273" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="btReady" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-jL-7yT">
-                                <rect key="frame" x="83" y="331" width="85" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="btReady" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-jL-7yT">
+                                <rect key="frame" x="20" y="331" width="280" height="30"/>
                                 <state key="normal" title="Ga terug"/>
                                 <connections>
                                     <action selector="btReady:" destination="bEW-Aw-qxC" eventType="touchUpInside" id="9nZ-8w-5Ce"/>
@@ -662,6 +662,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bwh-BK-ftJ" firstAttribute="trailing" secondItem="Vh8-Ae-EMw" secondAttribute="trailingMargin" id="4HF-BX-1Ik"/>
+                            <constraint firstItem="B6l-DG-Fjf" firstAttribute="trailing" secondItem="Vh8-Ae-EMw" secondAttribute="trailingMargin" id="8WJ-7I-BlG"/>
+                            <constraint firstItem="Mlc-ek-dUm" firstAttribute="leading" secondItem="Vh8-Ae-EMw" secondAttribute="leadingMargin" id="B6j-J6-xyX"/>
+                            <constraint firstItem="gdP-jL-7yT" firstAttribute="trailing" secondItem="Vh8-Ae-EMw" secondAttribute="trailingMargin" id="FHS-Yk-ZrT"/>
+                            <constraint firstItem="Sb9-7Y-Kqe" firstAttribute="trailing" secondItem="Vh8-Ae-EMw" secondAttribute="trailingMargin" id="Xpu-Fp-UUg"/>
+                            <constraint firstItem="Mlc-ek-dUm" firstAttribute="trailing" secondItem="Vh8-Ae-EMw" secondAttribute="trailingMargin" id="YMA-zZ-KNo"/>
+                            <constraint firstItem="3fc-db-9OU" firstAttribute="leading" secondItem="Vh8-Ae-EMw" secondAttribute="leadingMargin" id="ZPZ-1b-XuE"/>
+                            <constraint firstItem="B6l-DG-Fjf" firstAttribute="leading" secondItem="Vh8-Ae-EMw" secondAttribute="leadingMargin" id="bJE-jL-7GG"/>
+                            <constraint firstItem="gdP-jL-7yT" firstAttribute="leading" secondItem="Vh8-Ae-EMw" secondAttribute="leadingMargin" id="cA2-o0-8Lt"/>
+                            <constraint firstItem="3fc-db-9OU" firstAttribute="trailing" secondItem="Vh8-Ae-EMw" secondAttribute="trailingMargin" id="czm-5V-BiQ"/>
+                            <constraint firstItem="Sb9-7Y-Kqe" firstAttribute="leading" secondItem="Vh8-Ae-EMw" secondAttribute="leadingMargin" id="mgs-gu-xgV"/>
+                            <constraint firstItem="Bwh-BK-ftJ" firstAttribute="leading" secondItem="Vh8-Ae-EMw" secondAttribute="leadingMargin" id="vdU-Xz-GLb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fBP-Jd-3mS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

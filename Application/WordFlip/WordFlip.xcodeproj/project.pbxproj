@@ -52,6 +52,10 @@
 		F554AEAD1D01790A00A80443 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F554AEAC1D01790A00A80443 /* Images.xcassets */; };
 		F554AEAF1D01797600A80443 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F554AEAE1D01797600A80443 /* Images-2.xcassets */; };
 		F5578ED41D0ACC2200169AFB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5578ED31D0ACC2200169AFB /* AVFoundation.framework */; };
+		F5578ED91D0AD66E00169AFB /* trophy_bronze.png in Resources */ = {isa = PBXBuildFile; fileRef = F5578ED51D0AD66E00169AFB /* trophy_bronze.png */; };
+		F5578EDA1D0AD66E00169AFB /* trophy_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = F5578ED61D0AD66E00169AFB /* trophy_gold.png */; };
+		F5578EDB1D0AD66E00169AFB /* trophy_none.png in Resources */ = {isa = PBXBuildFile; fileRef = F5578ED71D0AD66E00169AFB /* trophy_none.png */; };
+		F5578EDC1D0AD66E00169AFB /* trophy_silver.png in Resources */ = {isa = PBXBuildFile; fileRef = F5578ED81D0AD66E00169AFB /* trophy_silver.png */; };
 		F58336051D0982A600FEF409 /* VakkenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58336041D0982A600FEF409 /* VakkenViewController.swift */; };
 		F594B1131D0AAFE4006034BA /* TrophyChestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594B1121D0AAFE4006034BA /* TrophyChestController.swift */; };
 		F594B1151D0AC5F6006034BA /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = F594B1141D0AC5F6006034BA /* speaker.png */; };
@@ -142,6 +146,10 @@
 		F554AEAC1D01790A00A80443 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F554AEAE1D01797600A80443 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		F5578ED31D0ACC2200169AFB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F5578ED51D0AD66E00169AFB /* trophy_bronze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_bronze.png; sourceTree = "<group>"; };
+		F5578ED61D0AD66E00169AFB /* trophy_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_gold.png; sourceTree = "<group>"; };
+		F5578ED71D0AD66E00169AFB /* trophy_none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_none.png; sourceTree = "<group>"; };
+		F5578ED81D0AD66E00169AFB /* trophy_silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_silver.png; sourceTree = "<group>"; };
 		F58336041D0982A600FEF409 /* VakkenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VakkenViewController.swift; sourceTree = "<group>"; };
 		F594B1121D0AAFE4006034BA /* TrophyChestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrophyChestController.swift; sourceTree = "<group>"; };
 		F594B1141D0AC5F6006034BA /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
@@ -255,7 +263,6 @@
 		F554AEAB1D0178E200A80443 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				F594B1141D0AC5F6006034BA /* speaker.png */,
 				F554AE751D0178DB00A80443 /* Icon-App-iPad-Pro.png */,
 				F554AE761D0178DB00A80443 /* Icon-App-iPad.png */,
 				F554AE771D0178DB00A80443 /* Icon-App-iPad@2x.png */,
@@ -283,6 +290,11 @@
 				F554AE8D1D0178DB00A80443 /* Icon-Web-App@3x.png */,
 				F554AE8E1D0178DB00A80443 /* iTunesArtwork.png */,
 				F554AE8F1D0178DB00A80443 /* iTunesArtwork@2x.png */,
+				F594B1141D0AC5F6006034BA /* speaker.png */,
+				F5578ED51D0AD66E00169AFB /* trophy_bronze.png */,
+				F5578ED61D0AD66E00169AFB /* trophy_gold.png */,
+				F5578ED71D0AD66E00169AFB /* trophy_none.png */,
+				F5578ED81D0AD66E00169AFB /* trophy_silver.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -406,15 +418,18 @@
 				F503AE1E1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf in Resources */,
 				F554AE9B1D0178DB00A80443 /* Icon-Spotlight.png in Resources */,
 				F554AEA21D0178DB00A80443 /* Icon-Toolbar@2x.png in Resources */,
+				F5578EDA1D0AD66E00169AFB /* trophy_gold.png in Resources */,
 				F554AEAD1D01790A00A80443 /* Images.xcassets in Resources */,
 				F554AE9A1D0178DB00A80443 /* Icon-Spotlight-iPhone-6.png in Resources */,
 				F554AE9F1D0178DB00A80443 /* Icon-Tab-Bar@2x.png in Resources */,
 				F554AEAA1D0178DB00A80443 /* iTunesArtwork@2x.png in Resources */,
+				F5578EDB1D0AD66E00169AFB /* trophy_none.png in Resources */,
 				F554AEA31D0178DB00A80443 /* Icon-Toolbar@3x.png in Resources */,
 				F554AE9C1D0178DB00A80443 /* Icon-Spotlight@2x.png in Resources */,
 				F503AE1D1CF83CCA00DA3F45 /* Roboto-Light.ttf in Resources */,
 				20C04ED71CEF1BE300B09717 /* icon.zip in Resources */,
 				F554AE991D0178DB00A80443 /* Icon-Spotlight-iPhone-4-5.png in Resources */,
+				F5578EDC1D0AD66E00169AFB /* trophy_silver.png in Resources */,
 				F554AE9D1D0178DB00A80443 /* Icon-Spotlight@3x.png in Resources */,
 				F554AEA41D0178DB00A80443 /* Icon-Web-App-iPad.png in Resources */,
 				F554AE961D0178DB00A80443 /* Icon-Settings.png in Resources */,
@@ -424,6 +439,7 @@
 				F554AE901D0178DB00A80443 /* Icon-App-iPad-Pro.png in Resources */,
 				F554AE911D0178DB00A80443 /* Icon-App-iPad.png in Resources */,
 				F554AE981D0178DB00A80443 /* Icon-Settings@3x.png in Resources */,
+				F5578ED91D0AD66E00169AFB /* trophy_bronze.png in Resources */,
 				F554AE951D0178DB00A80443 /* Icon-App@3x.png in Resources */,
 				F554AEA11D0178DB00A80443 /* Icon-Toolbar.png in Resources */,
 				F554AE931D0178DB00A80443 /* Icon-App.png in Resources */,

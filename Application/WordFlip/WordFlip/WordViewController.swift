@@ -65,10 +65,12 @@ class WordViewController: UIViewController {
                         var randomVal = Array(words)[index]
                         var bool = false
                         while(!bool) {
-                            if(randomVal.getQuestion() == lbQuestion.text! && randomVal.getCount() < 3) {
+                            if(randomVal.getQuestion() == lbQuestion.text! && randomVal.getCount() < 2) {
                                 index = Int(arc4random_uniform(UInt32(words.count)))
+                                print(randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                                 randomVal = Array(words)[index]
                             } else {
+                                print("FOUT" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                                 bool = true
                             }
                         }
@@ -95,7 +97,7 @@ class WordViewController: UIViewController {
         }
         
         //}while(geoefendeWoorden < aantalWoorden)
-        if(geoefendeWoorden > words.count) {
+        if(geoefendeWoorden > words.count*2) {
             self.lbQuestion.text = "Je bent klaar"
             //var disableMyButton = sender as? UIButton
             //disableMyButton!.enabled = false

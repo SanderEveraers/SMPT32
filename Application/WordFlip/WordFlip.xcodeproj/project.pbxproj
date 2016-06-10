@@ -51,8 +51,10 @@
 		F554AEAA1D0178DB00A80443 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F554AE8F1D0178DB00A80443 /* iTunesArtwork@2x.png */; };
 		F554AEAD1D01790A00A80443 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F554AEAC1D01790A00A80443 /* Images.xcassets */; };
 		F554AEAF1D01797600A80443 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F554AEAE1D01797600A80443 /* Images-2.xcassets */; };
+		F5578ED41D0ACC2200169AFB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5578ED31D0ACC2200169AFB /* AVFoundation.framework */; };
 		F58336051D0982A600FEF409 /* VakkenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58336041D0982A600FEF409 /* VakkenViewController.swift */; };
 		F594B1131D0AAFE4006034BA /* TrophyChestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594B1121D0AAFE4006034BA /* TrophyChestController.swift */; };
+		F594B1151D0AC5F6006034BA /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = F594B1141D0AC5F6006034BA /* speaker.png */; };
 		F5A198431CF850C60042703C /* Piechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A198411CF850C60042703C /* Piechart.swift */; };
 		F5A9A66C1D01706C00CAF718 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9A66B1D01706C00CAF718 /* LoginController.swift */; };
 		F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9A66D1D01732E00CAF718 /* Pupil.swift */; };
@@ -139,8 +141,10 @@
 		F554AE8F1D0178DB00A80443 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "../icon/ios/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		F554AEAC1D01790A00A80443 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F554AEAE1D01797600A80443 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		F5578ED31D0ACC2200169AFB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F58336041D0982A600FEF409 /* VakkenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VakkenViewController.swift; sourceTree = "<group>"; };
 		F594B1121D0AAFE4006034BA /* TrophyChestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrophyChestController.swift; sourceTree = "<group>"; };
+		F594B1141D0AC5F6006034BA /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
 		F5A198411CF850C60042703C /* Piechart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Piechart.swift; path = ../PieChart/Piechart.swift; sourceTree = "<group>"; };
 		F5A9A66B1D01706C00CAF718 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F5A9A66D1D01732E00CAF718 /* Pupil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pupil.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5578ED41D0ACC2200169AFB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +179,7 @@
 		20C04EC01CEF1BE300B09717 = {
 			isa = PBXGroup;
 			children = (
+				F5578ED31D0ACC2200169AFB /* AVFoundation.framework */,
 				F554AEAB1D0178E200A80443 /* Icons */,
 				F503AE1F1CF83CCF00DA3F45 /* Fonts */,
 				20C04ECB1CEF1BE300B09717 /* WordFlip */,
@@ -249,6 +255,7 @@
 		F554AEAB1D0178E200A80443 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				F594B1141D0AC5F6006034BA /* speaker.png */,
 				F554AE751D0178DB00A80443 /* Icon-App-iPad-Pro.png */,
 				F554AE761D0178DB00A80443 /* Icon-App-iPad.png */,
 				F554AE771D0178DB00A80443 /* Icon-App-iPad@2x.png */,
@@ -413,6 +420,7 @@
 				F554AE961D0178DB00A80443 /* Icon-Settings.png in Resources */,
 				F554AEAF1D01797600A80443 /* Images-2.xcassets in Resources */,
 				F554AE9E1D0178DB00A80443 /* Icon-Tab-Bar.png in Resources */,
+				F594B1151D0AC5F6006034BA /* speaker.png in Resources */,
 				F554AE901D0178DB00A80443 /* Icon-App-iPad-Pro.png in Resources */,
 				F554AE911D0178DB00A80443 /* Icon-App-iPad.png in Resources */,
 				F554AE981D0178DB00A80443 /* Icon-Settings@3x.png in Resources */,

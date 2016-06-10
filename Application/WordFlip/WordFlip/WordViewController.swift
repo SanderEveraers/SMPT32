@@ -22,6 +22,9 @@ class WordViewController: UIViewController {
     @IBOutlet weak var btReady: UIButton!
     @IBOutlet weak var btWoordDoorgeven: UIButton!
     
+    let synth = AVSpeechSynthesizer()
+    var myUtterance = AVSpeechUtterance(string: "")
+    
     var word = Word(id: 1000, question: ".", answer:",", sentence: "';'", count: 0)
     
     var words:[Word] = []
@@ -321,6 +324,15 @@ class WordViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func speechWord(sender: AnyObject) {
+        myUtterance = AVSpeechUtterance(string: lbQuestion.text!)
+        //Snelheid
+        myUtterance.rate = 0.5
+        myUtterance.voice = AVSpeechSynthesisVoice(language: "en-UK")
+        synth.speakUtterance(myUtterance)
+        myUtterance = AVSpeechUtterance(string: "")
     }
     
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -261,7 +261,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Agenda" id="7Ld-ny-HON"/>
-                    <navigationItem key="navigationItem" id="lkb-AQ-14V"/>
+                    <navigationItem key="navigationItem" id="lkb-AQ-14V">
+                        <barButtonItem key="leftBarButtonItem" title="Uitloggen" id="U75-zs-ri1">
+                            <connections>
+                                <action selector="logOutAction:" destination="xLK-2U-Z8T" id="elX-pd-d81"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7A3-Jj-bxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,7 +294,7 @@
         <!--Prijzenkast-->
         <scene sceneID="cxp-0f-cCn">
             <objects>
-                <viewController id="NbD-EC-jgz" sceneMemberID="viewController">
+                <viewController id="NbD-EC-jgz" customClass="TrophyChestController" customModule="WordFlip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uJj-1S-hXL"/>
                         <viewControllerLayoutGuide type="bottom" id="iXY-3F-hlk"/>
@@ -387,7 +393,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Prijzenkast" id="8Ou-bu-JQ3"/>
-                    <navigationItem key="navigationItem" id="W0E-Ar-yYe"/>
+                    <navigationItem key="navigationItem" id="W0E-Ar-yYe">
+                        <barButtonItem key="leftBarButtonItem" title="Uitloggen" id="kGn-Nb-F8q">
+                            <connections>
+                                <action selector="logOutAction:" destination="NbD-EC-jgz" id="18h-I1-Ob9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJF-qn-CuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -583,7 +595,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Vakken" id="Kap-l7-g9C"/>
-                    <navigationItem key="navigationItem" id="LI3-Hm-PT8"/>
+                    <navigationItem key="navigationItem" id="LI3-Hm-PT8">
+                        <barButtonItem key="leftBarButtonItem" title="Uitloggen" id="r3U-8X-clI">
+                            <connections>
+                                <action selector="logOutAction:" destination="zAZ-UJ-cUG" id="61j-AO-srr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="OefenButton" destination="Dgp-w1-eoN" id="WFe-Pg-XD1"/>

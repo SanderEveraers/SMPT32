@@ -65,12 +65,12 @@ class WordViewController: UIViewController {
                         var randomVal = Array(words)[index]
                         var bool = false
                         while(!bool) {
-                            if(randomVal.getQuestion() == lbQuestion.text! && randomVal.getCount() < 2) {
+                            if(randomVal.getQuestion() == lbQuestion.text! || randomVal.getCount() == 2) {
                                 index = Int(arc4random_uniform(UInt32(words.count)))
-                                print(randomVal.getQuestion() + " - " + String(randomVal.getCount()))
+                                print("opnieuw" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                                 randomVal = Array(words)[index]
                             } else {
-                                print("FOUT" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
+                                print("Z" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                                 bool = true
                             }
                         }
@@ -240,11 +240,13 @@ class WordViewController: UIViewController {
         var randomVal = Array(words)[index]
         var bool = false
         while(!bool) {
-            if(randomVal.getQuestion() == lbQuestion.text! && randomVal.getCount() < 3) {
+            if(randomVal.getQuestion() == lbQuestion.text! || randomVal.getCount() == 2) {
                 index = Int(arc4random_uniform(UInt32(words.count)))
+                print("x" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                 randomVal = Array(words)[index]
             } else {
                 bool = true
+                print(randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                 lbQuestion.text = randomVal.getQuestion()
                 lbAnswer.text = ""
             }

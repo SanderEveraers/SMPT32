@@ -46,6 +46,7 @@ class WordViewController: UIViewController {
     var hetAntWoord = ""
     
     @IBAction func btWoordDoorgeven(sender: UIButton) {
+        
         let vertaling = tbTranslation.text?.lowercaseString
         isGoed = false
         lbAnswer.text = ""
@@ -55,6 +56,33 @@ class WordViewController: UIViewController {
         if(timerInterrupt.valid) {
             timerInterrupt.invalidate()
         }
+        
+        //Extra state
+        if(geoefendeWoorden == ((words.count*2)-1)) {
+            
+            if(vertaling == words.last?.getAnswer()) {
+                lbQuestion.text = words.first?.getQuestion()
+                print("ITWORK")
+                self.geoefendeWoorden += 1
+                self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
+                tbTranslation.text = ""
+            }
+            return
+            
+        }
+        if(geoefendeWoorden == ((words.count*2))) {
+            if(vertaling == words.first?.getAnswer()) {
+                self.lbQuestion.text = "Je bent klaar"
+                //var disableMyButton = sender as? UIButton
+                //disableMyButton!.enabled = false
+                lbAantalWoorden.text = ""
+                btWoordDoorgeven.hidden = true
+                btReady.hidden = false
+                tbTranslation.hidden = true
+                self.leftSwipe.enabled = false
+            }
+        }
+        print("FKDUP")
         //timerInterrupt.invalidate()
         //repeatDing: repeat {
         forLoop: for (_, element) in words.enumerate() {
@@ -74,7 +102,7 @@ class WordViewController: UIViewController {
                                 print("opnieuw" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                                 randomVal = Array(words)[index]
                             } else {
-                                print("Z" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
+                                print("Legit  " + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                                 bool = true
                             }
                         }
@@ -86,6 +114,9 @@ class WordViewController: UIViewController {
                         element.setCount()
                         isGoed = true
                         self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
+                        if(geoefendeWoorden == ((words.count*2)-1)) {
+                            lbQuestion.text = words.last?.getQuestion()
+                        }
                         continue //repeatDing
                     } else {
                         //lbUitkomst.text = "Probeer het later opnieuw."
@@ -101,7 +132,7 @@ class WordViewController: UIViewController {
         }
         
         //}while(geoefendeWoorden < aantalWoorden)
-        if(geoefendeWoorden > words.count*2) {
+        if(geoefendeWoorden >= words.count*2) {
             self.lbQuestion.text = "Je bent klaar"
             //var disableMyButton = sender as? UIButton
             //disableMyButton!.enabled = false
@@ -262,15 +293,11 @@ class WordViewController: UIViewController {
         while(!bool) {
             if(randomVal.getQuestion() == lbQuestion.text! || randomVal.getCount() == 2) {
                 index = Int(arc4random_uniform(UInt32(words.count)))
-                print("x" + randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                 randomVal = Array(words)[index]
-                timerBug = NSTimer.scheduledTimerWithTimeInterval(10.5, target: self, selector: #selector(timerBugAction), userInfo: nil, repeats: false)
             } else {
                 bool = true
-                print(randomVal.getQuestion() + " - " + String(randomVal.getCount()))
                 lbQuestion.text = randomVal.getQuestion()
                 lbAnswer.text = ""
-                timerBug.invalidate()
             }
         }
     }

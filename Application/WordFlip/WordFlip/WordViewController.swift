@@ -22,7 +22,7 @@ class WordViewController: UIViewController {
     @IBOutlet weak var btReady: UIButton!
     @IBOutlet weak var btWoordDoorgeven: UIButton!
     
-    var word = Word(id: 1000, question: ".", answer:",", sentence: "';'")
+    var word = Word(id: 1000, question: ".", answer:",", sentence: "';'", count: 0)
     
     var words:[Word] = []
     
@@ -55,7 +55,7 @@ class WordViewController: UIViewController {
         //repeatDing: repeat {
         forLoop: for (_, element) in words.enumerate() {
             if(element.getQuestion() == lbQuestion.text!) {
-                word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence())
+                word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence(), count: element.getCount())
                 
                 if(!isGoed) {
                     if(element.getQuestion() == lbQuestion.text! && element.getAnswer() == vertaling) {
@@ -65,7 +65,7 @@ class WordViewController: UIViewController {
                         var randomVal = Array(words)[index]
                         var bool = false
                         while(!bool) {
-                            if(randomVal.getQuestion() == lbQuestion.text!) {
+                            if(randomVal.getQuestion() == lbQuestion.text! && randomVal.getCount() < 3) {
                                 index = Int(arc4random_uniform(UInt32(words.count)))
                                 randomVal = Array(words)[index]
                             } else {
@@ -77,8 +77,9 @@ class WordViewController: UIViewController {
                         lbAnswer.text = ""
                         lbQuestion.text = randomVal.getQuestion()
                         self.geoefendeWoorden += 1
+                        element.setCount()
                         isGoed = true
-                        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count)
+                        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
                         continue //repeatDing
                     } else {
                         //lbUitkomst.text = "Probeer het later opnieuw."
@@ -171,7 +172,7 @@ class WordViewController: UIViewController {
         if (sender.direction == .Left) {
             forLoop: for (_, element) in words.enumerate() {
                 if(element.getQuestion() == lbQuestion.text!) {
-                    word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence())
+                    word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence(), count: element.getCount())
                 }
             }
             timerSwipe = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(timerSwipeAction), userInfo: word, repeats: false)
@@ -237,7 +238,7 @@ class WordViewController: UIViewController {
         var randomVal = Array(words)[index]
         var bool = false
         while(!bool) {
-            if(randomVal.getQuestion() == lbQuestion.text!) {
+            if(randomVal.getQuestion() == lbQuestion.text! && randomVal.getCount() < 3) {
                 index = Int(arc4random_uniform(UInt32(words.count)))
                 randomVal = Array(words)[index]
             } else {
@@ -250,7 +251,7 @@ class WordViewController: UIViewController {
     
     func loadData() {
         nextWord()
-        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count)
+        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
     }
     
     //JSON parsing
@@ -290,7 +291,8 @@ class WordViewController: UIViewController {
                         id: id!,
                         question: question!,
                         answer: answer!,
-                        sentence: sentence!
+                        sentence: sentence!,
+                        count: 0
                     )
                     words.append(newWord)
                 }

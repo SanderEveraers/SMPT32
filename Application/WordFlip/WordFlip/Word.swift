@@ -14,12 +14,14 @@ class Word
     var question:String
     var answer:String
     var sentence:String
+    var count:Int
     
-    init(id:Int, question:String, answer:String, sentence:String){
+    init(id:Int, question:String, answer:String, sentence:String, count:Int){
         self.id = id
         self.question = question
         self.answer = answer
         self.sentence = sentence
+        self.count = count
     }
     
     func getID() -> Int {
@@ -36,6 +38,14 @@ class Word
     
     func getSentence() -> String {
         return self.sentence
+    }
+    
+    func getCount() -> Int {
+        return self.count
+    }
+    
+    func setCount() {
+        self.count = count+1
     }
     
 }

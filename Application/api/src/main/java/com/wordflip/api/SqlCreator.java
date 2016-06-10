@@ -3,10 +3,7 @@ package com.wordflip.api;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
-import com.wordflip.api.models.Practice;
-import com.wordflip.api.models.Pupil;
-import com.wordflip.api.models.Subject;
-import com.wordflip.api.models.Toets;
+import com.wordflip.api.models.*;
 
 import javax.sql.DataSource;
 import java.sql.ResultSet;
@@ -283,7 +280,7 @@ public class SqlCreator {
 		return subjects;
 	}
 
-	public List<Practice> getToetsPractices(String toets_id) {
+	public List<Practice> getToetsPractices(int toets_id) {
 
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -292,10 +289,9 @@ public class SqlCreator {
 
 		try {
 			con = (Connection) ds.getConnection();
-			int id = Integer.parseInt(toets_id);
 
 			stmt = (PreparedStatement) con.prepareStatement("SELECT * FROM oefenmoment o, klas k, toets t WHERE k.ID = t.Klas_ID AND o.toets_ID = t.ID AND t.ID = ?");
-			stmt.setInt(1, id);
+			stmt.setInt(1, toets_id);
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
@@ -317,6 +313,41 @@ public class SqlCreator {
 			}
 		}
 		return toetsPractices;
+	}
+
+
+
+
+	public int getToetsId(String course, int userId) {
+
+		Connection con = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		int toetsId = 1;
+
+		System.out.println(course);
+		System.out.println(userId);
+
+		try {
+			con = (Connection) ds.getConnection();
+			stmt = (Statement) con.createStatement();
+			rs = stmt.executeQuery("CALL `getToetsvragen`('" + course + "', " + userId + ")");
+			while(rs.next()){
+				toetsId = rs.getInt("Toets_ID");
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) rs.close();
+				if (stmt != null) stmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return toetsId;
 	}
 
 }

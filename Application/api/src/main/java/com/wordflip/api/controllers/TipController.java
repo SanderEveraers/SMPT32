@@ -14,6 +14,8 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.StrictMath.ceil;
+
 /**
  * Created by robvangastel on 27/05/16.
  */
@@ -33,15 +35,21 @@ public class TipController {
         return new ResponseEntity<List<Practice>>(practices, HttpStatus.OK);
     }
 
-	@RequestMapping(value = "rating", method = RequestMethod.GET)
-	public ResponseEntity<List<Toets>> getToetsRating(@PathVariable String userId) {
+	@RequestMapping(value = "/rating", method = RequestMethod.GET)
+	public int getToetsRating(@PathVariable String userId,
+	                          @RequestParam(value="course", defaultValue="Engels") String course) {
 		creator = new SqlCreator();
 		validateUser(userId);
+		int correctie = 0;
 
-		List<Practice> ratings = creator.getToetsPractices(userId);
-		
+		int toetsId = creator.getToetsId(course, Integer.parseInt(userId));
+		List<Practice> practices = creator.getToetsPractices(toetsId);
+		for(int i = 0; i < practices.size(); i++) {
+			correctie += practices.get(i).compareCorrectToets();
+		}
 
-		return new ResponseEntity<List<Toets>>(ratings, HttpStatus.OK);
+		double rating = correctie/practices.size();
+		return (int) ceil(rating);
 	}
 
     @RequestMapping( method = RequestMethod.GET)
@@ -77,7 +85,8 @@ public class TipController {
             consistent_dayParts += practices.get(i).compareDayParts(practices.get(i+1));
         }
 
-        return new Tip().getTip(speed, correctie, consistent, (consistent_dayParts/practices.size()), practices.size(), speedOther, correctieOther);
+        return new Tip().getTip((speed/practices.size()), (correctie/practices.size()), consistent, (consistent_dayParts/practices.size()),
+		        practices.size(), (speedOther/practicesOther.size()), (correctieOther/practices.size()));
     }
 
     @RequestMapping(method = RequestMethod.POST)

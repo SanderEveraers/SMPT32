@@ -780,6 +780,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWW-tX-wBV">
+                                <rect key="frame" x="40" y="83" width="243" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -811,6 +814,7 @@
                         <outlet property="lbAantalWoorden" destination="3fc-db-9OU" id="Vtc-3j-VBw"/>
                         <outlet property="lbAnswer" destination="Sb9-7Y-Kqe" id="LO8-MW-m9h"/>
                         <outlet property="lbQuestion" destination="Mlc-ek-dUm" id="7r9-b5-1In"/>
+                        <outlet property="pbWords" destination="SWW-tX-wBV" id="zcc-ti-d9i"/>
                         <outlet property="tbTranslation" destination="Bwh-BK-ftJ" id="wuf-HE-JeA"/>
                     </connections>
                 </viewController>

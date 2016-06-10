@@ -14,6 +14,7 @@ import CoreData
 class WordViewController: UIViewController {
     var managedObjectContext: NSManagedObjectContext?
 
+    @IBOutlet weak var pbWords: UIProgressView!
     @IBOutlet weak var lbAantalWoorden: UILabel!
     @IBOutlet weak var lbQuestion: UILabel!
     @IBOutlet weak var lbAnswer: UILabel!
@@ -64,7 +65,13 @@ class WordViewController: UIViewController {
                 lbQuestion.text = words.first?.getQuestion()
                 print("ITWORK")
                 self.geoefendeWoorden += 1
-                self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    //self.pbWords.setProgress(Float(self.geoefendeWoorden/self.words.count), animated: false)
+                    self.pbWords.progress = Float(self.geoefendeWoorden) / Float(self.words.count*2)
+                }
+                
+                //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
                 tbTranslation.text = ""
             }
             return
@@ -72,6 +79,7 @@ class WordViewController: UIViewController {
         }
         if(geoefendeWoorden == ((words.count*2))) {
             if(vertaling == words.first?.getAnswer()) {
+                pbWords.progress = Float(geoefendeWoorden/words.count)
                 self.lbQuestion.text = "Je bent klaar"
                 //var disableMyButton = sender as? UIButton
                 //disableMyButton!.enabled = false
@@ -111,9 +119,15 @@ class WordViewController: UIViewController {
                         lbAnswer.text = ""
                         lbQuestion.text = randomVal.getQuestion()
                         self.geoefendeWoorden += 1
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            //self.pbWords.setProgress(Float(self.geoefendeWoorden/self.words.count), animated: false)
+                            self.pbWords.progress = Float(self.geoefendeWoorden) / Float(self.words.count*2)
+                        }
+                        
                         element.setCount()
                         isGoed = true
-                        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
+                        //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
                         if(geoefendeWoorden == ((words.count*2)-1)) {
                             lbQuestion.text = words.last?.getQuestion()
                         }
@@ -202,6 +216,11 @@ class WordViewController: UIViewController {
         //view.addGestureRecognizer(rightSwipe)
         
         performSelector(#selector(loadData), withObject: nil, afterDelay: 1)
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            //self.pbWords.setProgress(Float(self.geoefendeWoorden/self.words.count), animated: false)
+            self.pbWords.progress = Float(self.geoefendeWoorden) / Float(self.words.count*2)
+        }
         
     }
     
@@ -304,7 +323,7 @@ class WordViewController: UIViewController {
     
     func loadData() {
         nextWord()
-        self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
+        //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
     }
     
     //JSON parsing

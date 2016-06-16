@@ -391,6 +391,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         self.btWoordDoorgeven( nil )
+        textField.becomeFirstResponder()
         return true
     }
     

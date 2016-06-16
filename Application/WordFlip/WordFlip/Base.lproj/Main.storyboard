@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -681,20 +681,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-DG-Fjf">
-                                <rect key="frame" x="20" y="331" width="280" height="30"/>
-                                <state key="normal" title="Controleer"/>
-                                <connections>
-                                    <action selector="btWoordDoorgeven:" destination="bEW-Aw-qxC" eventType="touchUpInside" id="vdO-lU-0iC"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-BK-ftJ">
                                 <rect key="frame" x="20" y="273" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="btReady" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-jL-7yT">
-                                <rect key="frame" x="20" y="331" width="280" height="30"/>
+                                <rect key="frame" x="20" y="318" width="280" height="30"/>
                                 <state key="normal" title="Ga terug"/>
                                 <connections>
                                     <action selector="btReady:" destination="bEW-Aw-qxC" eventType="touchUpInside" id="9nZ-8w-5Ce"/>
@@ -709,6 +702,13 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWW-tX-wBV">
                                 <rect key="frame" x="40" y="83" width="243" height="2"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-DG-Fjf">
+                                <rect key="frame" x="21" y="318" width="280" height="30"/>
+                                <state key="normal" title="Controleer"/>
+                                <connections>
+                                    <action selector="btWoordDoorgeven:" destination="bEW-Aw-qxC" eventType="touchUpInside" id="vdO-lU-0iC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -789,7 +789,7 @@
     <resources>
         <image name="Dashboard-50@2x.png" width="147" height="41"/>
         <image name="Literature-50@2x.png" width="147" height="41"/>
-        <image name="Medal-50.png" width="50" height="50"/>
+        <image name="Medal-50.png" width="25" height="25"/>
         <image name="SpeakerIcon" width="22" height="22"/>
         <image name="logo.png" width="147" height="41"/>
         <image name="trophy_bronze.png" width="256" height="256"/>

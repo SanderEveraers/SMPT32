@@ -11,12 +11,51 @@ import UIKit
 
 class AgendaViewController: ViewController, PiechartDelegate {
     
+    var tijden = [Int]()
+    
     @IBOutlet weak var Table: UITableView!
     @IBOutlet weak var piechart1: UIView!
     @IBOutlet weak var lbTipOfDay: UILabel!
+//    
+//    func loadJsonData()
+//    {
+//        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/speed")
+//        let request = NSURLRequest(URL: url!)
+//        let session = NSURLSession.sharedSession()
+//        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+//            do
+//            {
+//                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+//                {
+//                    self.parseJSONData(jsonObject)
+//                }
+//            }
+//            catch
+//            {
+//                print("Error parsing JSON data")
+//            }
+//        }
+//        dataTask.resume();
+//    }
+//    
+//    func parseJSONData(jsonObject:AnyObject){
+//        if let jsonData = jsonObject as? NSObject
+//        {
+//            
+//            for item in jsonData
+//            {
+//                let jName = item.valueForKey("name") as? NSString
+//                let jAmount = item.valueForKey("amount") as? Int
+//                tijden.append(jAmount)
+//            }
+//        }
+//    }
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadJsonData()
         
         
         let color1 = UIColor(netHex: 0x42A5F5)
@@ -30,7 +69,6 @@ class AgendaViewController: ViewController, PiechartDelegate {
         
         
         //Uitgevoerd
-         //var url = api.url + "/" + api.user.id + "/tip/speed";
         var uitgevoerd = Piechart.Slice()
         uitgevoerd.value = 15
         uitgevoerd.color = color1

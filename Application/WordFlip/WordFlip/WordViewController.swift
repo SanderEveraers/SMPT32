@@ -146,6 +146,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
             btReady.hidden = false
             tbTranslation.hidden = true
             self.leftSwipe.enabled = false
+            sendRequest()
         }
 
     }
@@ -348,5 +349,30 @@ class WordViewController: UIViewController, UITextFieldDelegate {
     //      Aantal fouten                   int
     //      Duratie in sec                  int
     //      Gepland door app                bool
+    
+    func sendRequest() {
+        let request: NSMutableURLRequest =
+            NSMutableURLRequest(URL: NSURL(string: api.url + "/" + String(api.user.id) + "/tip")!)
+        request.HTTPMethod = "POST"
+        
+        let postString = "toets_id=1&amount=10&mistakes=4&duration=120&planned=true"
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            guard error == nil && data != nil else {                                                          // check for fundamental networking error
+                print("error=\(error)")
+                return
+            }
+            
+            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {           // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print("responseString = \(responseString)")
+        }
+        task.resume()
+
+    }
     
 }

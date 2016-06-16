@@ -61,11 +61,6 @@ class LoginController: UIViewController {
     @IBAction func loginAction(sender: AnyObject) {
         loadJsonData()
         sleep(1)
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> origin/master
         if loggedInPupil != nil
         {
 //            let dateFormatter = NSDateFormatter()

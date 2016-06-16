@@ -33,6 +33,7 @@ class SplashViewController: UIViewController {
             userName = preferences.objectForKey(currentUserName) as! String
             passWord = preferences.objectForKey(currentPassWord) as! String
             loadJsonData()
+            sleep(1)
             if (loggedInPupil != nil){
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle:nil).instantiateViewControllerWithIdentifier("TabBarController")
                 self.presentViewController(viewController, animated: true, completion: nil)

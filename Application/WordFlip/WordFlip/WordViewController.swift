@@ -37,6 +37,9 @@ class WordViewController: UIViewController, UITextFieldDelegate {
     var geoefendeWoorden: Int = 1
     var aantalWoorden: Int = 0
     
+    var timerAll = NSTimer()
+    var secondsPassed:Int = 0
+    
     var timer = NSTimer()
     var timerInterrupt = NSTimer()
     var timerSwipe = NSTimer()
@@ -45,6 +48,8 @@ class WordViewController: UIViewController, UITextFieldDelegate {
     var isGoed:Bool = false
     
     var hetAntWoord = ""
+    
+    var mistakes:Int = 0
     
     
     @IBAction func btWoordDoorgeven(sender: AnyObject?) {
@@ -86,6 +91,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
                 btReady.hidden = false
                 tbTranslation.hidden = true
                 self.leftSwipe.enabled = false
+
             }
         }
 
@@ -132,6 +138,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
                         timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(timerAction), userInfo: word, repeats: false)
                         timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: true)
                         tbTranslation.text = ""
+                        self.mistakes += 1
                         performSelector(#selector(nextWord), withObject: nil, afterDelay: 2)
                     }
                 }
@@ -146,6 +153,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
             btReady.hidden = false
             tbTranslation.hidden = true
             self.leftSwipe.enabled = false
+            timerAll.invalidate()
             sendRequest()
         }
 
@@ -160,6 +168,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(aantalWoorden)
         // Do any additional setup after loading the view, typically from a nib.
+        timerAll = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: Selector("countSeconds"), userInfo: nil, repeats: true)
         tbTranslation.delegate = self
         self.loadJsonData()
         sleep(1)
@@ -190,6 +199,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
                     word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence(), count: element.getCount())
                 }
             }
+            self.mistakes += 1
             timerSwipe = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(timerSwipeAction), userInfo: word, repeats: false)
             
             timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: false)
@@ -355,7 +365,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
             NSMutableURLRequest(URL: NSURL(string: api.url + "/" + String(api.user!.id) + "/tip")!)
         request.HTTPMethod = "POST"
         
-        let postString = "toets_id=1&amount=10&mistakes=4&duration=120&planned=true"
+        let postString = "toets_id=1&amount=\(words.count)&mistakes=\(self.mistakes)&duration=\(self.secondsPassed)&planned=true"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
@@ -373,6 +383,10 @@ class WordViewController: UIViewController, UITextFieldDelegate {
         }
         task.resume()
 
+    }
+    
+    func countSeconds() {
+        secondsPassed += 1
     }
     
 }

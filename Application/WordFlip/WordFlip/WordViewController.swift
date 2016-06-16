@@ -90,7 +90,7 @@ class WordViewController: UIViewController {
                 self.leftSwipe.enabled = false
             }
         }
-        print("FKDUP")
+
         //timerInterrupt.invalidate()
         //repeatDing: repeat {
         forLoop: for (_, element) in words.enumerate() {
@@ -118,6 +118,7 @@ class WordViewController: UIViewController {
                         tbTranslation.text = ""
                         lbAnswer.text = ""
                         lbQuestion.text = randomVal.getQuestion()
+                        self.lbQuestion.slideInFromLeft()
                         self.geoefendeWoorden += 1
                         
                         dispatch_async(dispatch_get_main_queue()) {
@@ -228,6 +229,7 @@ class WordViewController: UIViewController {
         if (sender.direction == .Left) {
             forLoop: for (_, element) in words.enumerate() {
                 if(element.getQuestion() == lbQuestion.text!) {
+                    
                     word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence(), count: element.getCount())
                 }
             }
@@ -315,6 +317,7 @@ class WordViewController: UIViewController {
                 randomVal = Array(words)[index]
             } else {
                 bool = true
+                self.lbQuestion.slideInFromRight()
                 lbQuestion.text = randomVal.getQuestion()
                 lbAnswer.text = ""
             }
@@ -329,7 +332,7 @@ class WordViewController: UIViewController {
     //JSON parsing
     func loadJsonData()
     {
-        let url = NSURL(string: "http://145.93.160.26:8080/practice?userid=6&course=Engels")
+        let url = NSURL(string: "http://145.93.160.48:8080/practice?userid=6&course=Engels")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in

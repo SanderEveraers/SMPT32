@@ -22,6 +22,7 @@
 		F503AE1D1CF83CCA00DA3F45 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F503AE1B1CF83CCA00DA3F45 /* Roboto-Light.ttf */; };
 		F503AE1E1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */; };
 		F503AE351CF8454900DA3F45 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503AE341CF8454900DA3F45 /* AgendaViewController.swift */; };
+		F52A4B141D129222000D5B6A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52A4B131D129222000D5B6A /* UIViewExtensions.swift */; };
 		F554AE901D0178DB00A80443 /* Icon-App-iPad-Pro.png in Resources */ = {isa = PBXBuildFile; fileRef = F554AE751D0178DB00A80443 /* Icon-App-iPad-Pro.png */; };
 		F554AE911D0178DB00A80443 /* Icon-App-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F554AE761D0178DB00A80443 /* Icon-App-iPad.png */; };
 		F554AE921D0178DB00A80443 /* Icon-App-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F554AE771D0178DB00A80443 /* Icon-App-iPad@2x.png */; };
@@ -116,6 +117,7 @@
 		F503AE1B1CF83CCA00DA3F45 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		F503AE341CF8454900DA3F45 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
+		F52A4B131D129222000D5B6A /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		F554AE751D0178DB00A80443 /* Icon-App-iPad-Pro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-iPad-Pro.png"; path = "../icon/ios/Icon-App-iPad-Pro.png"; sourceTree = "<group>"; };
 		F554AE761D0178DB00A80443 /* Icon-App-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-iPad.png"; path = "../icon/ios/Icon-App-iPad.png"; sourceTree = "<group>"; };
 		F554AE771D0178DB00A80443 /* Icon-App-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-iPad@2x.png"; path = "../icon/ios/Icon-App-iPad@2x.png"; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				20C04ED31CEF1BE300B09717 /* WordFlip.xcdatamodeld */,
 				F502334C1D073C8700E4275D /* Word.swift */,
 				F502334E1D073E8F00E4275D /* WordViewController.swift */,
+				F52A4B131D129222000D5B6A /* UIViewExtensions.swift */,
 				F58336041D0982A600FEF409 /* VakkenViewController.swift */,
 				F594B1121D0AAFE4006034BA /* TrophyChestController.swift */,
 			);
@@ -474,6 +477,7 @@
 				F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */,
 				20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */,
 				F502334F1D073E8F00E4275D /* WordViewController.swift in Sources */,
+				F52A4B141D129222000D5B6A /* UIViewExtensions.swift in Sources */,
 				F502334D1D073C8700E4275D /* Word.swift in Sources */,
 				F58336051D0982A600FEF409 /* VakkenViewController.swift in Sources */,
 				20C04ECD1CEF1BE300B09717 /* AppDelegate.swift in Sources */,

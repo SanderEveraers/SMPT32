@@ -177,49 +177,49 @@ class AgendaViewController: ViewController, PiechartDelegate {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func loadJsonData()
-    {
-        let url = NSURL(string: api.url + "/login?name=\(tfUserName.text!)&password=\(tfPassWord.text!)")
-        let request = NSURLRequest(URL: url!)
-        let session = NSURLSession.sharedSession()
-        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
-            do
-            {
-                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
-                {
-                    self.parseJSONData(jsonObject)
-                }
-            }
-            catch
-            {
-                print("Error parsing JSON data")
-            }
-        }
-        dataTask.resume();
-    }
-    
-    func parseJSONData(jsonObject:AnyObject){
-        if let jsonData = jsonObject as? NSObject
-        {
-            let id = jsonData.valueForKey("id") as? NSInteger
-            let userName = jsonData.valueForKey("username") as? String
-            let passWord = jsonData.valueForKey("password") as? String
-            let lastLIMillis = jsonData.valueForKey("lastLoggedIn") as? Int
-            var lastLoggedIn: NSDate?
-            
-            if (lastLIMillis != nil){
-                lastLoggedIn = NSDate(timeIntervalSince1970:Double(lastLIMillis!) / 1000.0)
-            }
-            if (id != nil && userName != nil && passWord != nil && lastLoggedIn != nil){
-                loggedInPupil = Pupil (
-                    id: id!,
-                    userName: userName!,
-                    passWord: passWord!,
-                    lastLoggedIn: lastLoggedIn!)
-            }
-        }
-    }
-    
+//    func loadJsonData()
+//    {
+//        let url = NSURL(string: api.url + "/login?name=\(tfUserName.text!)&password=\(tfPassWord.text!)")
+//        let request = NSURLRequest(URL: url!)
+//        let session = NSURLSession.sharedSession()
+//        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+//            do
+//            {
+//                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+//                {
+//                    self.parseJSONData(jsonObject)
+//                }
+//            }
+//            catch
+//            {
+//                print("Error parsing JSON data")
+//            }
+//        }
+//        dataTask.resume();
+//    }
+//    
+//    func parseJSONData(jsonObject:AnyObject){
+//        if let jsonData = jsonObject as? NSObject
+//        {
+//            let id = jsonData.valueForKey("id") as? NSInteger
+//            let userName = jsonData.valueForKey("username") as? String
+//            let passWord = jsonData.valueForKey("password") as? String
+//            let lastLIMillis = jsonData.valueForKey("lastLoggedIn") as? Int
+//            var lastLoggedIn: NSDate?
+//            
+//            if (lastLIMillis != nil){
+//                lastLoggedIn = NSDate(timeIntervalSince1970:Double(lastLIMillis!) / 1000.0)
+//            }
+//            if (id != nil && userName != nil && passWord != nil && lastLoggedIn != nil){
+//                loggedInPupil = Pupil (
+//                    id: id!,
+//                    userName: userName!,
+//                    passWord: passWord!,
+//                    lastLoggedIn: lastLoggedIn!)
+//            }
+//        }
+//    }
+//    
     
     func logout() -> Void{
         let preferences = NSUserDefaults.standardUserDefaults()

@@ -33,6 +33,7 @@ class SplashViewController: UIViewController {
             userName = preferences.objectForKey(currentUserName) as! String
             passWord = preferences.objectForKey(currentPassWord) as! String
             loadJsonData()
+            sleep(1)
             if (loggedInPupil != nil){
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle:nil).instantiateViewControllerWithIdentifier("TabBarController")
                 self.presentViewController(viewController, animated: true, completion: nil)
@@ -51,7 +52,7 @@ class SplashViewController: UIViewController {
     
     func loadJsonData()
     {
-        let url = NSURL(string: "http://145.93.160.48:8080/login?name=\(userName)&password=\(passWord)")
+        let url = NSURL(string: "\(api.url)/login?name=\(userName)&password=\(passWord)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in

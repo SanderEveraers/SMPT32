@@ -1,12 +1,14 @@
 package com.wordflip.api.controllers;
 
 import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 import com.wordflip.api.SqlCreator;
 import com.wordflip.api.models.Practice;
 import com.wordflip.api.models.Question;
 import javax.sql.DataSource;
 
+import com.wordflip.api.models.Toets;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,12 +27,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("/practice")
+//@RequestMapping("/practice")
 public class PracticeController {
     private SqlCreator sqlCreator = new SqlCreator();
     private DataSource ds;
 
-    @RequestMapping(method = RequestMethod.GET) //http://localhost:8080/practice?userid=6&course=Engels
+    @RequestMapping(value = "/practice", method = RequestMethod.GET) //http://localhost:8080/practice?userid=6&course=Engels
     public ResponseEntity<ArrayList<Question>> tip(@RequestParam(value="course", defaultValue="Engels") String course,
                                                    @RequestParam(value="userid", defaultValue="0") String userID) {
         ds = sqlCreator.createDataSource();
@@ -57,6 +59,9 @@ public class PracticeController {
                     speed += practices.get(i).compareSpeed();
                     correctie += practices.get(i).compareCorrect();
                 }
+
+                correctie = correctie / practices.size();
+                speed = speed / practices.size();
 
                 if (speed < 0 || correctie < 0) { //SNEL EN WEINIG FOUTEN
                     aantalWoorden +=2;
@@ -111,4 +116,53 @@ public class PracticeController {
         }
         return null;
     }
+
+    @RequestMapping(value = "/toetsrating", method = RequestMethod.GET) //http://localhost:8080/toetsrating?toetsid=1
+    public ResponseEntity<Toets> toetslevel(@RequestParam(value="toetsid", defaultValue="0") int toetsID) {
+        ds = sqlCreator.createDataSource();
+        Connection con = null;
+        ResultSet rs = null;
+        PreparedStatement stmt = null;
+        ArrayList<Practice> practices = new ArrayList<>();
+        Toets toets = new Toets("Engels", 0);
+        try {
+            con = (Connection) ds.getConnection();
+
+            stmt = (PreparedStatement) con.prepareStatement("SELECT * FROM oefenmoment o, klas k, toets t WHERE k.ID = t.Klas_ID AND o.toets_ID = t.ID AND t.ID = ?");
+            stmt.setInt(1, toetsID);
+            rs = stmt.executeQuery();
+
+            while(rs.next()){
+                Practice p = new Practice(rs.getInt("Tijdsduur"), rs.getInt("aantal"), rs.getInt("fouten"), true);
+                practices.add(p);
+            }
+
+            int correctie = 0;
+            if (practices.size() >= 2){
+                for(int i = 0; i < practices.size(); i++) {
+                    correctie += practices.get(i).compareCorrectToets();
+                }
+
+                correctie = correctie / practices.size();
+
+                toets.setRating(correctie);
+
+            }
+            System.out.println(correctie);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            try {
+                if(rs != null) rs.close();
+                if(stmt != null) stmt.close();
+                if(con != null) con.close();
+                return new ResponseEntity<>(toets, HttpStatus.OK);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+
 }

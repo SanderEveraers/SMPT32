@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -278,7 +278,7 @@
         <scene sceneID="9Lr-Bs-bRH">
             <objects>
                 <navigationController title="Prijzenlast" id="EKM-7r-Nhw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Prijzenkast" id="hoF-Rr-QGc"/>
+                    <tabBarItem key="tabBarItem" title="Prijzenkast" image="Medal-50.png" id="hoF-Rr-QGc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6aa-cq-jIc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -456,7 +456,7 @@
         <scene sceneID="K3E-JO-Dfp">
             <objects>
                 <navigationController storyboardIdentifier="VakkenNaviagtion" title="Vakken" id="V7Y-UL-Av4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Vakken" id="YhT-tb-eL3"/>
+                    <tabBarItem key="tabBarItem" title="Vakken" image="Literature-50@2x.png" id="YhT-tb-eL3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V1L-dh-qT8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -681,20 +681,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-DG-Fjf">
-                                <rect key="frame" x="20" y="331" width="280" height="30"/>
-                                <state key="normal" title="Controleer"/>
-                                <connections>
-                                    <action selector="btWoordDoorgeven:" destination="bEW-Aw-qxC" eventType="touchUpInside" id="vdO-lU-0iC"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-BK-ftJ">
                                 <rect key="frame" x="20" y="273" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="btReady" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-jL-7yT">
-                                <rect key="frame" x="20" y="331" width="280" height="30"/>
+                                <rect key="frame" x="20" y="318" width="280" height="30"/>
                                 <state key="normal" title="Ga terug"/>
                                 <connections>
                                     <action selector="btReady:" destination="bEW-Aw-qxC" eventType="touchUpInside" id="9nZ-8w-5Ce"/>
@@ -709,6 +702,13 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWW-tX-wBV">
                                 <rect key="frame" x="40" y="83" width="243" height="2"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-DG-Fjf">
+                                <rect key="frame" x="21" y="318" width="280" height="30"/>
+                                <state key="normal" title="Controleer"/>
+                                <connections>
+                                    <action selector="btWoordDoorgeven:" destination="bEW-Aw-qxC" eventType="touchUpInside" id="vdO-lU-0iC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -753,14 +753,14 @@
             <objects>
                 <tabBarController storyboardIdentifier="TabBarController" id="f5t-dB-idX" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="qet-uY-xYS">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" layoutMarginsFollowReadableWidth="YES" id="qet-uY-xYS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="V7Y-UL-Av4" kind="relationship" relationship="viewControllers" id="VgB-Xm-M5O"/>
                         <segue destination="eGQ-xM-YXE" kind="relationship" relationship="viewControllers" id="gSg-Gy-n4B"/>
+                        <segue destination="V7Y-UL-Av4" kind="relationship" relationship="viewControllers" id="VgB-Xm-M5O"/>
                         <segue destination="EKM-7r-Nhw" kind="relationship" relationship="viewControllers" id="6lB-8f-d1o"/>
                     </connections>
                 </tabBarController>
@@ -772,7 +772,7 @@
         <scene sceneID="Tnm-6s-XnC">
             <objects>
                 <navigationController id="eGQ-xM-YXE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="UrN-0y-HFA"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="Dashboard-50@2x.png" id="UrN-0y-HFA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="orD-h6-a12">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -787,6 +787,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Dashboard-50@2x.png" width="147" height="41"/>
+        <image name="Literature-50@2x.png" width="147" height="41"/>
+        <image name="Medal-50.png" width="25" height="25"/>
         <image name="SpeakerIcon" width="22" height="22"/>
         <image name="logo.png" width="147" height="41"/>
         <image name="trophy_bronze.png" width="256" height="256"/>

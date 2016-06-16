@@ -26,5 +26,6 @@ class Pupil
         self.id = id
         self.userName = userName
         self.passWord = passWord
+        self.lastLoggedIn = NSDate()
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 import AVFoundation
 import CoreData
 
-class WordViewController: UIViewController {
+class WordViewController: UIViewController, UITextFieldDelegate {
     var managedObjectContext: NSManagedObjectContext?
 
     @IBOutlet weak var pbWords: UIProgressView!
@@ -46,7 +46,8 @@ class WordViewController: UIViewController {
     
     var hetAntWoord = ""
     
-    @IBAction func btWoordDoorgeven(sender: UIButton) {
+    
+    @IBAction func btWoordDoorgeven(sender: AnyObject?) {
         
         let vertaling = tbTranslation.text?.lowercaseString
         isGoed = false
@@ -62,6 +63,7 @@ class WordViewController: UIViewController {
         if(geoefendeWoorden == ((words.count*2)-1)) {
             
             if(vertaling == words.last?.getAnswer()) {
+                self.lbQuestion.slideInFromLeft()
                 lbQuestion.text = words.first?.getQuestion()
                 print("ITWORK")
                 self.geoefendeWoorden += 1
@@ -203,6 +205,7 @@ class WordViewController: UIViewController {
         super.viewDidLoad()
         //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(aantalWoorden)
         // Do any additional setup after loading the view, typically from a nib.
+        tbTranslation.delegate = self
         self.loadJsonData()
         sleep(1)
         
@@ -384,5 +387,11 @@ class WordViewController: UIViewController {
         myUtterance = AVSpeechUtterance(string: "")
     }
     
+    //For the return key
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.btWoordDoorgeven( nil )
+        return true
+    }
     
 }

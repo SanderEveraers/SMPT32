@@ -35,7 +35,7 @@ public class Tip {
             "Probeer rustig de tijd te nemen tijdens het leren van de woordjes.",
             "Probeer te leren met geluid om er makkelijker door heen te komen.");
 
-    public String getTip(int speed, int correctie, int consistent, int difference_hours, int practices, int speedOther, int correctieOther) {
+    public String getTip(int speed, int correctie, int consistent, int difference_hours, int practices) {
 
         //correctie
         //Negatieve snelheid betekend dat hij weinig fouten had

@@ -61,16 +61,16 @@ public class TipController {
 	    List<Practice> practicesOther = creator.getOtherPractices(userId);
 
         int speed = 0;
-	    int speedOther = 1;
+//	    int speedOther = 1;
         int correctie = 0;
-	    int correctieOther = 1;
+//	    int correctieOther = 1;
         int consistent = 0;
         int consistent_dayParts = 0;
 
-	    for(int i = 0; i < practicesOther.size(); i++) {
-		    speedOther += practicesOther.get(i).compareSpeed();
-		    correctieOther += practicesOther.get(i).compareCorrect();
-	    }
+//	    for(int i = 0; i < practicesOther.size(); i++) {
+//		    speedOther += practicesOther.get(i).compareSpeed();
+//		    correctieOther += practicesOther.get(i).compareCorrect();
+//	    }
 
         for(int i = 0; i < practices.size(); i++) {
             speed += practices.get(i).compareSpeed();
@@ -86,7 +86,8 @@ public class TipController {
         }
 
         return new Tip().getTip((speed/practices.size()), (correctie/practices.size()), consistent, (consistent_dayParts/practices.size()),
-		        practices.size(), (speedOther/practicesOther.size()), (correctieOther/practices.size()));
+		        practices.size());
+	    //(speedOther/practicesOther.size()), (correctieOther/practices.size())
     }
 
     @RequestMapping(method = RequestMethod.POST)

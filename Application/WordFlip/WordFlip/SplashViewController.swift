@@ -10,13 +10,8 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
-    var loggedInPupil: Pupil?
     var userName = ""
     var passWord = ""
-    
-    func getPupil() -> Int {
-        return (loggedInPupil?.id)!
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +29,7 @@ class SplashViewController: UIViewController {
             passWord = preferences.objectForKey(currentPassWord) as! String
             loadJsonData()
             sleep(1)
-            if (loggedInPupil != nil){
+            if (api.user != nil){
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle:nil).instantiateViewControllerWithIdentifier("TabBarController")
                 self.presentViewController(viewController, animated: true, completion: nil)
             }
@@ -84,7 +79,7 @@ class SplashViewController: UIViewController {
                 lastLoggedIn = NSDate(timeIntervalSince1970:Double(lastLIMillis!) / 1000.0)
             }
             if (id != nil && userName != nil && passWord != nil && lastLoggedIn != nil){
-                loggedInPupil = Pupil (
+                api.user = Pupil (
                     id: id!,
                     userName: userName!,
                     passWord: passWord!,

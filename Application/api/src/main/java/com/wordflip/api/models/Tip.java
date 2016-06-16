@@ -15,7 +15,7 @@ public class Tip {
     List<String> con_pos = Arrays.asList("Je leert elke dag houd dit vol!",
             "Je hebt een goede start houd dit vol.", "Ga zo door je hebt nog geen dag laten vallen.");
 
-    List<String> con_neg = Arrays.asList("probeer een vast moment te kiezen om elke dag een paar woordjes te leren.",
+    List<String> con_neg = Arrays.asList("Probeer een vast moment te kiezen om elke dag een paar woordjes te leren.",
             "Probeer bijvoorbeeld na het eten 2 minuten te nemen om woordjes te leren.",
             "Probeer elke dag een aantal woordjes te leren.");
 

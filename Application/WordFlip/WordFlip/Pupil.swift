@@ -21,4 +21,10 @@ class Pupil
         self.passWord = passWord
         self.lastLoggedIn = lastLoggedIn
     }
+    
+    init(id: Int, userName: String, passWord: String){
+        self.id = id
+        self.userName = userName
+        self.passWord = passWord
+    }
 }

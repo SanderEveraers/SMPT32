@@ -9,11 +9,16 @@
 import UIKit
 import CoreData
 
+struct api {
+    static var url = "http://145.93.160.26:8080"
+    var user = Pupil(id: 6, userName: "Sander", passWord: "Sanderiscool")
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

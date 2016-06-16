@@ -104,7 +104,7 @@ public class Practice {
 		} else if(correct > 0.7) {
 			return 4;
 		}
-		return 2;
+		return 0;
 	}
 
 

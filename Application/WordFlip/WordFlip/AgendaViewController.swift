@@ -187,8 +187,6 @@ class AgendaViewController: ViewController, PiechartDelegate {
             {
                 if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
                 {
-                    print(jsonObject)
-                    //self.parseJSONData(jsonObject)
                 }
             }
             catch
@@ -220,7 +218,6 @@ class AgendaViewController: ViewController, PiechartDelegate {
 //            }
 //        }
 //    }
-    
     
     func logout() -> Void{
         let preferences = NSUserDefaults.standardUserDefaults()

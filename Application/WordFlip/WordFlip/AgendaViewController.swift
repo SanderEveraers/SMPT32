@@ -177,27 +177,28 @@ class AgendaViewController: ViewController, PiechartDelegate {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-//    func loadJsonData()
-//    {
-//        let url = NSURL(string: api.url + "/login?name=\(tfUserName.text!)&password=\(tfPassWord.text!)")
-//        let request = NSURLRequest(URL: url!)
-//        let session = NSURLSession.sharedSession()
-//        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
-//            do
-//            {
-//                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
-//                {
-//                    self.parseJSONData(jsonObject)
-//                }
-//            }
-//            catch
-//            {
-//                print("Error parsing JSON data")
-//            }
-//        }
-//        dataTask.resume();
-//    }
-//    
+    func loadJsonData()
+    {
+        let url = NSURL(string: api.url + "/" + String(api.user.id) + "/tip")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    print(jsonObject)
+                    //self.parseJSONData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
 //    func parseJSONData(jsonObject:AnyObject){
 //        if let jsonData = jsonObject as? NSObject
 //        {
@@ -219,7 +220,7 @@ class AgendaViewController: ViewController, PiechartDelegate {
 //            }
 //        }
 //    }
-//    
+    
     
     func logout() -> Void{
         let preferences = NSUserDefaults.standardUserDefaults()

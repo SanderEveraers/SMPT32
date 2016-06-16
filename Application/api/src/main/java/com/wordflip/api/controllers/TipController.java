@@ -53,7 +53,7 @@ public class TipController {
 	}
 
     @RequestMapping( method = RequestMethod.GET)
-    public String tip(@PathVariable String userId) {
+    public TipVanDeDag tip(@PathVariable String userId) {
 
         creator = new SqlCreator();
         validateUser(userId);

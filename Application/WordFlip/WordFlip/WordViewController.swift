@@ -352,7 +352,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
     
     func sendRequest() {
         let request: NSMutableURLRequest =
-            NSMutableURLRequest(URL: NSURL(string: api.url + "/" + String(api.user.id) + "/tip")!)
+            NSMutableURLRequest(URL: NSURL(string: api.url + "/" + String(api.user!.id) + "/tip")!)
         request.HTTPMethod = "POST"
         
         let postString = "toets_id=1&amount=10&mistakes=4&duration=120&planned=true"

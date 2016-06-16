@@ -30,6 +30,7 @@ class AgendaViewController: ViewController, PiechartDelegate {
         
         
         //Uitgevoerd
+         //var url = api.url + "/" + api.user.id + "/tip/speed";
         var uitgevoerd = Piechart.Slice()
         uitgevoerd.value = 15
         uitgevoerd.color = color1

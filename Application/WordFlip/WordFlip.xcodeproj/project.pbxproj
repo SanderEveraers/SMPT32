@@ -61,6 +61,7 @@
 		F58330891D12A8D900F5C6E0 /* Dashboard-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F58330861D12A8D900F5C6E0 /* Dashboard-50@2x.png */; };
 		F583308A1D12A8D900F5C6E0 /* Literature-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F58330871D12A8D900F5C6E0 /* Literature-50@2x.png */; };
 		F583308B1D12A8D900F5C6E0 /* Medal-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F58330881D12A8D900F5C6E0 /* Medal-50@2x.png */; };
+		F583308F1D12C53400F5C6E0 /* VakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F583308E1D12C53400F5C6E0 /* VakViewController.swift */; };
 		F58336051D0982A600FEF409 /* VakkenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58336041D0982A600FEF409 /* VakkenViewController.swift */; };
 		F594B1131D0AAFE4006034BA /* TrophyChestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594B1121D0AAFE4006034BA /* TrophyChestController.swift */; };
 		F594B1151D0AC5F6006034BA /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = F594B1141D0AC5F6006034BA /* speaker.png */; };
@@ -160,6 +161,7 @@
 		F58330861D12A8D900F5C6E0 /* Dashboard-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dashboard-50@2x.png"; path = "../Dashboard-50@2x.png"; sourceTree = "<group>"; };
 		F58330871D12A8D900F5C6E0 /* Literature-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Literature-50@2x.png"; path = "../Literature-50@2x.png"; sourceTree = "<group>"; };
 		F58330881D12A8D900F5C6E0 /* Medal-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Medal-50@2x.png"; path = "../Medal-50@2x.png"; sourceTree = "<group>"; };
+		F583308E1D12C53400F5C6E0 /* VakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VakViewController.swift; sourceTree = "<group>"; };
 		F58336041D0982A600FEF409 /* VakkenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VakkenViewController.swift; sourceTree = "<group>"; };
 		F594B1121D0AAFE4006034BA /* TrophyChestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrophyChestController.swift; sourceTree = "<group>"; };
 		F594B1141D0AC5F6006034BA /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				F52A4B131D129222000D5B6A /* UIViewExtensions.swift */,
 				F58336041D0982A600FEF409 /* VakkenViewController.swift */,
 				F594B1121D0AAFE4006034BA /* TrophyChestController.swift */,
+				F583308E1D12C53400F5C6E0 /* VakViewController.swift */,
 			);
 			path = WordFlip;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */,
+				F583308F1D12C53400F5C6E0 /* VakViewController.swift in Sources */,
 				20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */,
 				F502334F1D073E8F00E4275D /* WordViewController.swift in Sources */,
 				F52A4B141D129222000D5B6A /* UIViewExtensions.swift in Sources */,

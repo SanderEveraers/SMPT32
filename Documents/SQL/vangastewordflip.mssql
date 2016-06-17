@@ -1,0 +1,181 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.3.1
+-- http://www.phpmyadmin.net
+--
+-- Host: mysql4.mijnhostingpartner.nl
+-- Generation Time: Jun 17, 2016 at 12:15 PM
+-- Server version: 5.1.56-community-log
+-- PHP Version: 7.0.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `vangastewordflip`
+--
+
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`VangasteWordFlip`@`%` PROCEDURE `getLastProgress` (IN `p_userid` INT, IN `p_toetsid` INT)  BEGIN
+	SELECT o.aantal
+	FROM oefenmoment o 
+    WHERE o.toets_ID = p_toetsid
+    AND o.Leerling_ID = p_userid
+	AND o.Tijdstip = (SELECT MAX(o2.Tijdstip) FROM oefenmoment o2 WHERE o2.toets_ID = p_toetsid
+    AND o2.Leerling_ID = p_userid)
+    LIMIT 1;
+END$$
+
+CREATE DEFINER=`VangasteWordFlip`@`%` PROCEDURE `getOefenmomenten` (IN `p_userid` INT, IN `p_vak` VARCHAR(255))  BEGIN
+ SELECT * FROM OEFENMOMENT o
+WHERE o.TOETS_ID IN (SELECT t.ID FROM TOETS t, KLAS k, LEERLING_KLAS lk, LEERLING l
+WHERE t.KLAS_ID = k.ID
+AND k.ID = lk.KLAS_ID
+AND lk.LEERLING_ID = l.ID
+AND k.GEGEVENVAK = p_vak
+AND l.ID = p_userid)
+AND o.LEERLING_ID = p_userid;
+END$$
+
+CREATE DEFINER=`VangasteWordFlip`@`%` PROCEDURE `getToetsvragen` (IN `p_vak` VARCHAR(255), IN `p_leerling_ID` INT)  BEGIN
+        SELECT *
+		FROM vraag v, toets_vraag tv, toets t, klas k, leerling_klas lk
+		WHERE v.ID = tv.Vraag_ID
+		AND tv.Toets_ID = t.ID
+		AND t.Klas_ID = k.ID
+		AND k.ID = lk.Klas_ID
+		AND lk.Leerling_ID = p_leerling_ID
+		AND k.GegevenVak = p_vak
+		And t.Toetsdatum = (SELECT MIN(t2.Toetsdatum) FROM toets t2);
+END$$
+
+DELIMITER ;
+
+--
+-- Dumping data for table `klas`
+--
+
+INSERT INTO `klas` (`ID`, `GegevenVak`) VALUES
+(1, 'Engels'),
+(2, 'Frans'),
+(3, 'Duits');
+
+--
+-- Dumping data for table `leerling`
+--
+
+INSERT INTO `leerling` (`ID`, `Gebruikersnaam`, `Wachtwoord`, `LaatstIngelogd`) VALUES
+(6, 'Sander', 'sanderiscool', '2016-06-17 09:32:56'),
+(7, 'Bram', 'bramiscool', '2016-06-17 12:14:22'),
+(8, 'Rob', 'robiscool', '2016-06-17 09:33:37'),
+(9, 'Stan', 'staniscool', '2016-06-17 12:09:48'),
+(10, 'Joris', 'jorisiscool', '2016-06-17 10:03:53');
+
+--
+-- Dumping data for table `leerling_klas`
+--
+
+INSERT INTO `leerling_klas` (`Leerling_ID`, `Klas_ID`) VALUES
+(6, 1),
+(7, 1),
+(8, 1),
+(9, 1),
+(10, 1);
+
+--
+-- Dumping data for table `oefenmoment`
+--
+
+INSERT INTO `oefenmoment` (`ID`, `toets_ID`, `Leerling_ID`, `Tijdsduur`, `Tijdstip`, `aantal`, `fouten`, `planned`) VALUES
+(13, 1, 6, 60, '2016-06-10 10:34:55', 17, 2, 1),
+(14, 3, 7, 120, '2016-06-09 08:58:44', 10, 4, 0),
+(15, 4, 7, 140, '2016-06-10 07:48:15', 10, 3, 1),
+(16, 5, 7, 160, '2016-06-09 08:58:49', 10, 3, 0),
+(17, 1, 7, 160, '2016-06-10 08:02:06', 10, 3, 1),
+(18, 1, 10, 200, '2016-06-10 12:52:29', 7, 1, 0),
+(19, 1, 10, 200, '2016-06-10 12:52:37', 7, 1, 0),
+(22, 1, 6, 120, '2016-06-16 11:44:15', 10, 4, 1),
+(23, 1, 6, 120, '2016-06-16 11:46:15', 10, 4, 1),
+(24, 1, 6, 120, '2016-06-16 11:47:46', 10, 4, 1),
+(25, 1, 10, 120, '2016-06-16 11:57:35', 10, 4, 1),
+(26, 1, 10, 120, '2016-06-16 12:24:11', 9, 9, 1),
+(27, 1, 9, 247, '2016-06-16 12:48:44', 7, 0, 1),
+(28, 1, 9, 247, '2016-06-16 12:48:44', 7, 0, 1),
+(29, 1, 9, 248, '2016-06-17 08:10:57', 9, 4, 1),
+(30, 1, 9, 248, '2016-06-17 08:11:05', 9, 4, 1),
+(31, 1, 9, 182, '2016-06-17 08:24:51', 9, 0, 1),
+(32, 1, 9, 102, '2016-06-17 10:11:30', 9, 2, 1);
+
+--
+-- Dumping data for table `toets`
+--
+
+INSERT INTO `toets` (`ID`, `Naam`, `Aanmaakdatum`, `Toetsdatum`, `Klas_ID`, `scheduled`) VALUES
+(1, 'Toets 1', '2016-05-27 12:02:07', '2016-05-30 11:00:00', 1, 0),
+(3, 'Toets 2', '2016-06-03 00:00:00', '2016-06-13 00:00:00', 1, 0),
+(4, 'Toets 3', '2016-06-04 00:00:00', '2016-06-24 00:00:00', 1, 0),
+(5, 'Toets 4', '2016-06-03 00:00:00', '2016-07-10 00:00:00', 1, 0);
+
+--
+-- Dumping data for table `toets_vraag`
+--
+
+INSERT INTO `toets_vraag` (`Toets_ID`, `Vraag_ID`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4),
+(1, 5),
+(1, 6),
+(1, 7),
+(1, 8),
+(1, 9),
+(1, 10),
+(1, 11),
+(1, 12),
+(1, 13),
+(1, 14),
+(1, 15),
+(1, 16),
+(1, 17),
+(1, 18),
+(1, 19),
+(1, 20);
+
+--
+-- Dumping data for table `vraag`
+--
+
+INSERT INTO `vraag` (`ID`, `Vraag`, `Antwoord`, `ContextZin`, `ContextAfb`) VALUES
+(1, 'Independence', 'onafhankelijkheid', 'a', NULL),
+(2, 'City', 'stad', 'Welcome to the city Amsterdam', NULL),
+(3, 'Rhythm', 'ritme', 'That music has nice rhythm', NULL),
+(4, 'Beer', 'Bier', 'Give me a beer, now!', NULL),
+(5, 'Retarded', 'Achterlijk', 'Are you retarded?', NULL),
+(6, 'Packaging', 'Verpakking', 'a', NULL),
+(7, 'Vulnerable\r\n', 'kwetsbaar', 'a', NULL),
+(8, 'Property\r\n', 'bezit', 'a', NULL),
+(9, 'Literal\r\n', 'letterlijk', 'a', NULL),
+(10, 'To estimate\r\n', 'schatten', 'a', NULL),
+(11, 'Riot\r\n', 'rel', 'a', NULL),
+(12, 'Physical', 'lichamelijk', 'a', NULL),
+(13, 'Substantial', 'aanzienlijk', 'a', NULL),
+(14, 'To reject', 'afwijzen', 'a', NULL),
+(15, 'Hostile', 'vijandig', 'a', NULL),
+(16, 'Twisted', 'gestoord', 'a', NULL),
+(17, 'Conviction\r\n', 'overtuiging', 'a', NULL),
+(18, 'Massive', 'enorm', 'a', NULL),
+(19, 'Excess', 'uitspatting', 'a', NULL),
+(20, 'Crude', 'grof', 'a', NULL);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

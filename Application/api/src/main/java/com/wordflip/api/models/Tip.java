@@ -12,28 +12,28 @@ import java.util.Random;
 //besteed aandacht aan vakken meer/minder
 public class Tip {
 
-    List<String> con_pos = Arrays.asList("Je leert elke dag houd dit vol!",
-            "Je hebt een goede start houd dit vol.", "Ga zo door je hebt nog geen dag laten vallen.");
+    List<String> con_pos = Arrays.asList("Je leert elke dag. Houd dit vol!",
+            "Je hebt een goede start, houd dit vol.", "Ga zo door! Je hebt nog geen dag laten vallen.");
 
     List<String> con_neg = Arrays.asList("Probeer een vast moment te kiezen om elke dag een paar woordjes te leren.",
-            "Probeer bijvoorbeeld na het eten 2 minuten te nemen om woordjes te leren.",
+            "Probeer bijvoorbeeld na het eten 2 minuten de tijd te nemen om woordjes te leren.",
             "Probeer elke dag een aantal woordjes te leren.");
 
     List<String> diff_neg = Arrays.asList("Kies een vast moment op de dag om je woordjes te leren.",
-            "Je leert elke dag probeer nu nog een vast moment te kiezen.",
+            "Je leert elke dag, probeer nu nog een vast moment te kiezen.",
             "Probeer op een vast moment van de dag om woordjes te leren.");
 
     List<String> diff_pos = Arrays.asList("Blijf het volhouden om elke dag 1 moment te hebben om woordjes te leren.",
-            "Als je dit volhoud kost het 1 week om je engels toets te leren.",
-            "Houd dit vol om op zijn minstens 1 vast moment van de dag te leren.");
+            "Als je dit zo volhoudt kost het 1 week om je Engels toets te leren.",
+            "Houd dit vol om op zijn minst 1 vast moment van de dag te leren.");
 
-    List<String> speed_pos = Arrays.asList("Je woordjes leren gaat vloeiend hou dit vol.",
-            "Ga zo door blijf elke dag woordjes leren.",
-            "Je bent goed bezig blijf elke dag zo door gaan.");
+    List<String> speed_pos = Arrays.asList("Het leren van woordjes gaat vloeiend, hou dit vol!",
+            "Ga zo door, blijf elke dag woordjes leren.",
+            "Je bent goed bezig, blijf elke dag zo door gaan.");
 
-    List<String> speed_neg = Arrays.asList("Probeer 2 minuutjes uit je dag te nemen om je woordjes te leren.",
+    List<String> speed_neg = Arrays.asList("Probeer 2 minuutjes van je dag te nemen om je woordjes te leren.",
             "Probeer rustig de tijd te nemen tijdens het leren van de woordjes.",
-            "Probeer te leren met geluid om er makkelijker door heen te komen.");
+            "Probeer te leren met muziek om er makkelijker door heen te komen.");
 
     public TipVanDeDag getTip(int speed, int correctie, int consistent, int difference_hours, int practices) {
 

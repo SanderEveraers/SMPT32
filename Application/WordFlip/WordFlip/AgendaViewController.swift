@@ -11,10 +11,51 @@ import UIKit
 
 class AgendaViewController: ViewController, PiechartDelegate {
     
+    var tijden = [Int]()
+    
     @IBOutlet weak var Table: UITableView!
     @IBOutlet weak var piechart1: UIView!
+    @IBOutlet weak var lbTipOfDay: UILabel!
+//    
+//    func loadJsonData()
+//    {
+//        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/speed")
+//        let request = NSURLRequest(URL: url!)
+//        let session = NSURLSession.sharedSession()
+//        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+//            do
+//            {
+//                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+//                {
+//                    self.parseJSONData(jsonObject)
+//                }
+//            }
+//            catch
+//            {
+//                print("Error parsing JSON data")
+//            }
+//        }
+//        dataTask.resume();
+//    }
+//    
+//    func parseJSONData(jsonObject:AnyObject){
+//        if let jsonData = jsonObject as? NSObject
+//        {
+//            
+//            for item in jsonData
+//            {
+//                let jName = item.valueForKey("name") as? NSString
+//                let jAmount = item.valueForKey("amount") as? Int
+//                tijden.append(jAmount)
+//            }
+//        }
+//    }
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadJsonData()
         
         
         let color1 = UIColor(netHex: 0x42A5F5)
@@ -140,7 +181,8 @@ class AgendaViewController: ViewController, PiechartDelegate {
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[tijdChart(==120)]-25-|", options: [], metrics: nil, views: views4))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-340-[tijdChart(==120)]", options: [], metrics: nil, views: views4))
         
-        
+        loadJsonData()
+        sleep(1)
 //        
 //        let pie = Piechart()
 //        pie.delegate = self
@@ -179,7 +221,7 @@ class AgendaViewController: ViewController, PiechartDelegate {
     
     func loadJsonData()
     {
-        let url = NSURL(string: api.url + "/" + String(api.user.id) + "/tip")
+        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
@@ -187,6 +229,7 @@ class AgendaViewController: ViewController, PiechartDelegate {
             {
                 if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
                 {
+                    self.parseJSONData(jsonObject)
                 }
             }
             catch
@@ -197,27 +240,16 @@ class AgendaViewController: ViewController, PiechartDelegate {
         dataTask.resume();
     }
     
-//    func parseJSONData(jsonObject:AnyObject){
-//        if let jsonData = jsonObject as? NSObject
-//        {
-//            let id = jsonData.valueForKey("id") as? NSInteger
-//            let userName = jsonData.valueForKey("username") as? String
-//            let passWord = jsonData.valueForKey("password") as? String
-//            let lastLIMillis = jsonData.valueForKey("lastLoggedIn") as? Int
-//            var lastLoggedIn: NSDate?
-//            
-//            if (lastLIMillis != nil){
-//                lastLoggedIn = NSDate(timeIntervalSince1970:Double(lastLIMillis!) / 1000.0)
-//            }
-//            if (id != nil && userName != nil && passWord != nil && lastLoggedIn != nil){
-//                loggedInPupil = Pupil (
-//                    id: id!,
-//                    userName: userName!,
-//                    passWord: passWord!,
-//                    lastLoggedIn: lastLoggedIn!)
-//            }
-//        }
-//    }
+    func parseJSONData(jsonObject:AnyObject){
+        if let jsonData = jsonObject as? NSObject
+        {
+            let tip = jsonData.valueForKey("tip") as? String
+            
+            if (tip != nil){
+                lbTipOfDay.text = tip
+            }
+        }
+    }
     
     func logout() -> Void{
         let preferences = NSUserDefaults.standardUserDefaults()

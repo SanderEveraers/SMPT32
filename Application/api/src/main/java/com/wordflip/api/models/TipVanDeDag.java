@@ -10,4 +10,8 @@ public class TipVanDeDag {
 	public TipVanDeDag(String tip) {
 		this.tip = tip;
 	}
+
+	public String getTip() {
+		return tip;
+	}
 }

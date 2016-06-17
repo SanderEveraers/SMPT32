@@ -13,8 +13,6 @@ class LoginController: UIViewController {
     @IBOutlet weak var tfPassWord: UITextField!
     @IBOutlet weak var lblErrorMessage: UILabel!
     
-    var loggedInPupil: Pupil?
-    
     func loadJsonData()
     {
         let url = NSURL(string: "\(api.url)/login?name=\(tfUserName.text!)&password=\(tfPassWord.text!)")
@@ -49,7 +47,7 @@ class LoginController: UIViewController {
                 lastLoggedIn = NSDate(timeIntervalSince1970:Double(lastLIMillis!) / 1000.0)
             }
             if (id != nil && userName != nil && passWord != nil && lastLoggedIn != nil){
-                loggedInPupil = Pupil (
+                api.user = Pupil (
                     id: id!,
                     userName: userName!,
                     passWord: passWord!,
@@ -61,7 +59,7 @@ class LoginController: UIViewController {
     @IBAction func loginAction(sender: AnyObject) {
         loadJsonData()
         sleep(1)
-        if loggedInPupil != nil
+        if api.user != nil
         {
 //            let dateFormatter = NSDateFormatter()
 //            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
@@ -70,9 +68,9 @@ class LoginController: UIViewController {
             
             let preferences = NSUserDefaults.standardUserDefaults()
             let currentUserKey = "currentUserName"
-            let currentUser = loggedInPupil!.userName
+            let currentUser = api.user!.userName
             let currentPasswordKey = "currentPassWord"
-            let currentPassword = loggedInPupil!.passWord
+            let currentPassword = api.user!.passWord
             preferences.setValue(currentUser, forKeyPath: currentUserKey)
             preferences.setValue(currentPassword, forKeyPath: currentPasswordKey)
             let didSave = preferences.synchronize()

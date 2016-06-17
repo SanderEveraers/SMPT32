@@ -22,10 +22,13 @@ class VakViewController: UITableViewController {
         switch currentRow{
         case 0:
             cell.labelVakName?.text = "Engels"
+            cell.labelDificulty?.textColor = UIColor.greenColor()
         case 1:
             cell.labelVakName?.text = "Frans"
+            cell.labelDificulty?.textColor = UIColor.redColor()
         case 2:
             cell.labelVakName?.text = "Duits"
+            cell.labelDificulty?.textColor = UIColor.orangeColor()
         default:
             cell.labelVakName?.text = "Nederlands"
         }

@@ -1,5 +1,5 @@
 //
-//  VakTableViewCell.swift
+//  TrophyTableViewCell.swift
 //  WordFlip
 //
 //  Created by Fhict on 17/06/16.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class VakTableViewCell: UITableViewCell {
+class TrophyTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var labelVakName: UILabel!
-    @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet var buttonToets: UIButton!
-    @IBOutlet weak var labelDificulty: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

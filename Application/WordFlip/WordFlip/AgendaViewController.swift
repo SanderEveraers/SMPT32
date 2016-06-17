@@ -16,6 +16,10 @@ class AgendaViewController: ViewController, PiechartDelegate {
     @IBOutlet weak var Table: UITableView!
     @IBOutlet weak var piechart1: UIView!
     @IBOutlet weak var lbTipOfDay: UILabel!
+    
+    //MOMENT:
+    var amount = 18
+    var planned = 15
 //    
 //    func loadJsonData()
 //    {
@@ -55,8 +59,8 @@ class AgendaViewController: ViewController, PiechartDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadJsonData()
         
+        loadJsonTipMomentsData()
         
         let color1 = UIColor(netHex: 0x42A5F5)
         let color2 = UIColor(netHex: 0xFF9800)
@@ -70,12 +74,12 @@ class AgendaViewController: ViewController, PiechartDelegate {
         
         //Uitgevoerd
         var uitgevoerd = Piechart.Slice()
-        uitgevoerd.value = 15
+        uitgevoerd.value = CGFloat(planned)
         uitgevoerd.color = color1
         uitgevoerd.text = "voltooid"
         
         var niet = Piechart.Slice()
-        niet.value = 3
+        niet.value = CGFloat(amount - planned)
         niet.color = color2
         niet.text = "gemist"
         
@@ -181,7 +185,7 @@ class AgendaViewController: ViewController, PiechartDelegate {
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[tijdChart(==120)]-25-|", options: [], metrics: nil, views: views4))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-300-[tijdChart(==120)]", options: [], metrics: nil, views: views4))
         
-        loadJsonData()
+        loadJsonTipOfDayData()
         sleep(1)
 //        
 //        let pie = Piechart()
@@ -219,7 +223,7 @@ class AgendaViewController: ViewController, PiechartDelegate {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func loadJsonData()
+    func loadJsonTipOfDayData()
     {
         let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip")
         let request = NSURLRequest(URL: url!)
@@ -229,7 +233,7 @@ class AgendaViewController: ViewController, PiechartDelegate {
             {
                 if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
                 {
-                    self.parseJSONData(jsonObject)
+                    self.parseJSONTipOfDayData(jsonObject)
                 }
             }
             catch
@@ -240,13 +244,47 @@ class AgendaViewController: ViewController, PiechartDelegate {
         dataTask.resume();
     }
     
-    func parseJSONData(jsonObject:AnyObject){
+    func parseJSONTipOfDayData(jsonObject:AnyObject){
         if let jsonData = jsonObject as? NSObject
         {
             let tip = jsonData.valueForKey("tip") as? String
             
             if (tip != nil){
                 lbTipOfDay.text = tip
+            }
+        }
+    }
+    
+    func loadJsonTipMomentsData()
+    {
+        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/moments")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    self.parseJSONTipMomentsData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
+    func parseJSONTipMomentsData(jsonObject:AnyObject){
+        if let jsonData = jsonObject as? NSObject
+        {
+            let amount = jsonData.valueForKey("amount") as? NSInteger
+            let planned = jsonData.valueForKey("planned") as? NSInteger
+            
+            if (amount != nil && planned != nil){
+                self.amount = amount!
+                self.planned = planned!
             }
         }
     }

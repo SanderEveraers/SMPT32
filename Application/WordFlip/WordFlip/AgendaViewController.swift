@@ -20,51 +20,36 @@ class AgendaViewController: ViewController, PiechartDelegate {
     //MOMENT:
     var amount = 18
     var planned = 15
-//    
-//    func loadJsonData()
-//    {
-//        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/speed")
-//        let request = NSURLRequest(URL: url!)
-//        let session = NSURLSession.sharedSession()
-//        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
-//            do
-//            {
-//                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
-//                {
-//                    self.parseJSONData(jsonObject)
-//                }
-//            }
-//            catch
-//            {
-//                print("Error parsing JSON data")
-//            }
-//        }
-//        dataTask.resume();
-//    }
-//    
-//    func parseJSONData(jsonObject:AnyObject){
-//        if let jsonData = jsonObject as? NSObject
-//        {
-//            
-//            for item in jsonData
-//            {
-//                let jName = item.valueForKey("name") as? NSString
-//                let jAmount = item.valueForKey("amount") as? Int
-//                tijden.append(jAmount)
-//            }
-//        }
-//    }
-
     
+    //SUBJECT:
+    var amountEn = 67
+    var amountFr = 12
+    var amountDe = 4
+    
+    //TIME
+    var amountMorn = 17
+    var amountNoon = 12
+    var amountEven = 4
+    var amountNigh = 5
+    
+    //SPEED
+    var amountLess1 = 10
+    var amountMore1 = 38
+    var amountMore2 = 12
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadJsonTipMomentsData()
+        loadJsonTipSubjectData()
+        loadJsonTipTimeData()
+        loadJsonTipSpeedData()
+        sleep(1)
         
         let color1 = UIColor(netHex: 0x42A5F5)
         let color2 = UIColor(netHex: 0xFF9800)
         let color3 = UIColor(netHex: 0x1D6AA8)
+        let color4 = UIColor(netHex: 0xAA00BB)
         
         var views2: [String: UIView] = [:]
         var views: [String: UIView] = [:]
@@ -85,35 +70,38 @@ class AgendaViewController: ViewController, PiechartDelegate {
         
         //tijden
         var ochtend = Piechart.Slice()
-        ochtend.value = 17
+        ochtend.value = CGFloat(amountMorn)
         ochtend.color = color1
         ochtend.text = "'s ochtends"
         
         var middag = Piechart.Slice()
-        middag.value = 12
+        middag.value = CGFloat(amountNoon)
         middag.color = color2
         middag.text = "'s middags"
         
         var avond = Piechart.Slice()
-        avond.value = 4
+        avond.value = CGFloat(amountEven)
         avond.color = color3
         avond.text = "'s avonds"
-//        
         
+        var nacht = Piechart.Slice()
+        nacht.value = CGFloat(amountNigh)
+        nacht.color = color4
+        nacht.text = "'s nachts"
         
         //per vak
         var engels = Piechart.Slice()
-        engels.value = 67
+        engels.value = CGFloat(amountEn)
         engels.color = color1
         engels.text = "engels"
         
         var frans = Piechart.Slice()
-        frans.value = 12
+        frans.value = CGFloat(amountFr)
         frans.color = color2
         frans.text = "frans"
         
         var duits = Piechart.Slice()
-        duits.value = 4
+        duits.value = CGFloat(amountDe)
         duits.color = color3
         duits.text = "duits"
         
@@ -126,17 +114,17 @@ class AgendaViewController: ViewController, PiechartDelegate {
         
         //tijd
         var kort = Piechart.Slice()
-        kort.value = 10
+        kort.value = CGFloat(amountLess1)
         kort.color = color1
         kort.text = "<1 minuut"
         
         var medium = Piechart.Slice()
-        medium.value = 38
+        medium.value = CGFloat(amountMore1)
         medium.color = color2
         medium.text = ">1minuut"
         
         var lang = Piechart.Slice()
-        lang.value = 12
+        lang.value = CGFloat(amountMore2)
         lang.color = color3
         lang.text = ">2 minuten"
         
@@ -161,7 +149,7 @@ class AgendaViewController: ViewController, PiechartDelegate {
         timePie.title = "tijden"
         timePie.activeSlice = 0
         timePie.layer.borderWidth = 0
-        timePie.slices = [ochtend, middag, avond]
+        timePie.slices = [ochtend, middag, avond, nacht]
         
         
         piechart.translatesAutoresizingMaskIntoConstraints = false
@@ -279,12 +267,147 @@ class AgendaViewController: ViewController, PiechartDelegate {
     func parseJSONTipMomentsData(jsonObject:AnyObject){
         if let jsonData = jsonObject as? NSObject
         {
-            let amount = jsonData.valueForKey("amount") as? NSInteger
-            let planned = jsonData.valueForKey("planned") as? NSInteger
+            let amountjson = jsonData.valueForKey("amount") as? NSInteger
+            let plannedjson = jsonData.valueForKey("planned") as? NSInteger
             
-            if (amount != nil && planned != nil){
-                self.amount = amount!
-                self.planned = planned!
+            if (amountjson != nil && plannedjson != nil){
+                self.amount = amountjson!
+                self.planned = plannedjson!
+            }
+        }
+    }
+    
+    func loadJsonTipSubjectData()
+    {
+        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/subject")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    self.parseJSONTipSubjectData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
+    func parseJSONTipSubjectData(jsonObject:AnyObject){
+        if let jsonData = jsonObject as? NSArray
+        {
+            amountEn = 0
+            amountFr = 0
+            amountDe = 0
+            for item in jsonData
+            {
+                let jName = item.valueForKey("name") as? NSString
+                let jAmount = item.valueForKey("amount") as? Int
+                if (jAmount != nil) {
+                    if (jName == "Engels"){
+                        amountEn = jAmount!
+                    } else if (jName == "Frans"){
+                        amountFr = jAmount!
+                    } else if (jName == "Duits"){
+                        amountDe = jAmount!
+                    }
+                }
+            }
+        }
+    }
+    
+    func loadJsonTipTimeData()
+    {
+        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/times")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    self.parseJSONTipTimeData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
+    func parseJSONTipTimeData(jsonObject:AnyObject){
+        if let jsonData = jsonObject as? NSArray
+        {
+            amountMorn = 0
+            amountNoon = 0
+            amountEven = 0
+            amountNigh = 0
+            for item in jsonData
+            {
+                let jName = item.valueForKey("name") as? NSString
+                let jAmount = item.valueForKey("amount") as? Int
+                if (jAmount != nil) {
+                    if (jName == "'s ochtends"){
+                        amountMorn = jAmount!
+                    } else if (jName == "'s middags"){
+                        amountNoon = jAmount!
+                    } else if (jName == "'s avonds"){
+                        amountEven = jAmount!
+                    } else if (jName == "'s nachts"){
+                        amountNigh = jAmount!
+                    }
+                }
+            }
+        }
+    }
+    
+    func loadJsonTipSpeedData()
+    {
+        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/speed")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    self.parseJSONTipSpeedData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
+    func parseJSONTipSpeedData(jsonObject:AnyObject){
+        if let jsonData = jsonObject as? NSArray
+        {
+            amountLess1 = 0
+            amountMore1 = 0
+            amountMore2 = 0
+            for item in jsonData
+            {
+                let jName = item.valueForKey("name") as? NSString
+                let jAmount = item.valueForKey("amount") as? Int
+                if (jAmount != nil) {
+                    if (jName == "'< 1 minuut"){
+                        amountLess1 = jAmount!
+                    } else if (jName == "> 1 minuut"){
+                        amountMore1 = jAmount!
+                    } else if (jName == "> 2 minuten"){
+                        amountMore2 = jAmount!
+                    }
+                }
             }
         }
     }

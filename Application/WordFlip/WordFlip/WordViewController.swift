@@ -26,6 +26,8 @@ class WordViewController: UIViewController, UITextFieldDelegate {
     let synth = AVSpeechSynthesizer()
     var myUtterance = AVSpeechUtterance(string: "")
     
+    var audioPlayer = AVAudioPlayer()
+    
     var word = Word(id: 1000, question: ".", answer:",", sentence: "';'", count: 0)
     
     var words:[Word] = []
@@ -69,6 +71,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
             
             if(vertaling == words.last?.getAnswer()) {
                 self.lbQuestion.slideInFromLeft()
+                playGoodSound()
                 lbQuestion.text = words.first?.getQuestion()
                 print("ITWORK")
                 self.geoefendeWoorden += 1
@@ -122,6 +125,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
                         lbAnswer.text = ""
                         lbQuestion.text = randomVal.getQuestion()
                         self.lbQuestion.slideInFromLeft()
+                        playGoodSound()
                         self.geoefendeWoorden += 1
                         
                         dispatch_async(dispatch_get_main_queue()) {
@@ -189,6 +193,28 @@ class WordViewController: UIViewController, UITextFieldDelegate {
             self.pbWords.progress = Float(self.geoefendeWoorden) / Float(self.words.count*2)
         }
         
+    }
+    
+    func playGoodSound(){
+        let goodSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("good", ofType: "mp3")!)
+        do{
+        try self.audioPlayer = AVAudioPlayer(contentsOfURL: goodSound)
+        } catch {
+            print("Something is wrong")
+        }
+        self.audioPlayer.prepareToPlay()
+        self.audioPlayer.play()
+    }
+    
+    func playFaultSound(){
+        let goodSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("fault", ofType: "mp3")!)
+        do{
+            try self.audioPlayer = AVAudioPlayer(contentsOfURL: goodSound)
+        } catch {
+            print("Something is wrong")
+        }
+        self.audioPlayer.prepareToPlay()
+        self.audioPlayer.play()
     }
     
     func handleSwipes(sender:UISwipeGestureRecognizer) {
@@ -280,6 +306,7 @@ class WordViewController: UIViewController, UITextFieldDelegate {
             } else {
                 bool = true
                 self.lbQuestion.slideInFromRight()
+                playFaultSound()
                 lbQuestion.text = randomVal.getQuestion()
                 lbAnswer.text = ""
             }

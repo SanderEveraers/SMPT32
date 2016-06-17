@@ -68,6 +68,8 @@
 		F5A198431CF850C60042703C /* Piechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A198411CF850C60042703C /* Piechart.swift */; };
 		F5A9A66C1D01706C00CAF718 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9A66B1D01706C00CAF718 /* LoginController.swift */; };
 		F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9A66D1D01732E00CAF718 /* Pupil.swift */; };
+		F5A9FD851D14033700DFD927 /* fault.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A9FD841D14033700DFD927 /* fault.mp3 */; };
+		F5A9FD871D14035B00DFD927 /* good.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A9FD861D14035B00DFD927 /* good.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,8 @@
 		F5A198411CF850C60042703C /* Piechart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Piechart.swift; path = ../PieChart/Piechart.swift; sourceTree = "<group>"; };
 		F5A9A66B1D01706C00CAF718 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F5A9A66D1D01732E00CAF718 /* Pupil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pupil.swift; sourceTree = "<group>"; };
+		F5A9FD841D14033700DFD927 /* fault.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fault.mp3; sourceTree = "<group>"; };
+		F5A9FD861D14035B00DFD927 /* good.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = good.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +281,8 @@
 		F554AEAB1D0178E200A80443 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				F5A9FD861D14035B00DFD927 /* good.mp3 */,
+				F5A9FD841D14033700DFD927 /* fault.mp3 */,
 				F58330861D12A8D900F5C6E0 /* Dashboard-50@2x.png */,
 				F58330871D12A8D900F5C6E0 /* Literature-50@2x.png */,
 				F58330881D12A8D900F5C6E0 /* Medal-50@2x.png */,
@@ -437,6 +443,7 @@
 				F503AE1E1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf in Resources */,
 				F554AE9B1D0178DB00A80443 /* Icon-Spotlight.png in Resources */,
 				F554AEA21D0178DB00A80443 /* Icon-Toolbar@2x.png in Resources */,
+				F5A9FD851D14033700DFD927 /* fault.mp3 in Resources */,
 				F5578EDA1D0AD66E00169AFB /* trophy_gold.png in Resources */,
 				F554AEAD1D01790A00A80443 /* Images.xcassets in Resources */,
 				F554AE9A1D0178DB00A80443 /* Icon-Spotlight-iPhone-6.png in Resources */,
@@ -456,6 +463,7 @@
 				F554AE9E1D0178DB00A80443 /* Icon-Tab-Bar.png in Resources */,
 				F583308B1D12A8D900F5C6E0 /* Medal-50@2x.png in Resources */,
 				F594B1151D0AC5F6006034BA /* speaker.png in Resources */,
+				F5A9FD871D14035B00DFD927 /* good.mp3 in Resources */,
 				F554AE901D0178DB00A80443 /* Icon-App-iPad-Pro.png in Resources */,
 				F554AE911D0178DB00A80443 /* Icon-App-iPad.png in Resources */,
 				F554AE981D0178DB00A80443 /* Icon-Settings@3x.png in Resources */,

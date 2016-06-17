@@ -173,13 +173,13 @@ class AgendaViewController: ViewController, PiechartDelegate {
         views3["vakChart"] = vakChart
         views4["tijdChart"] = tijdChart
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[piechart(==120)]", options: [], metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-200-[piechart(==120)]", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-160-[piechart(==120)]", options: [], metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[timePie(==120)]", options: [], metrics: nil, views: views2))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-340-[timePie(==120)]", options: [], metrics: nil, views: views2))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-300-[timePie(==120)]", options: [], metrics: nil, views: views2))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[vakChart(==120)]-25-|", options: [], metrics: nil, views: views3))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-200-[vakChart(==120)]", options: [], metrics: nil, views: views3))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-160-[vakChart(==120)]", options: [], metrics: nil, views: views3))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[tijdChart(==120)]-25-|", options: [], metrics: nil, views: views4))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-340-[tijdChart(==120)]", options: [], metrics: nil, views: views4))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-300-[tijdChart(==120)]", options: [], metrics: nil, views: views4))
         
         loadJsonData()
         sleep(1)

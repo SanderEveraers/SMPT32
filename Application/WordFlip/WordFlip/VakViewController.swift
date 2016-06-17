@@ -11,25 +11,25 @@ import UIKit
 class VakViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
-    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! VakTableViewCell
         // Configure the cell...
         let currentRow = indexPath.row
         switch currentRow{
         case 0:
-            cell.textLabel?.text = "Engels"
+            cell.labelVakName?.text = "Engels"
         case 1:
-            cell.textLabel?.text = "Frans"
+            cell.labelVakName?.text = "Frans"
         case 2:
-            cell.textLabel?.text = "Duits"
+            cell.labelVakName?.text = "Duits"
         default:
-            cell.textLabel?.text = "Nederlands"
+            cell.labelVakName?.text = "Nederlands"
         }
+        cell.buttonToets?.setTitle("Oefen voor hoofdstuk 12", forState: .Normal)
         return cell
     }
     
@@ -48,9 +48,15 @@ class VakViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 3
+    }
 }

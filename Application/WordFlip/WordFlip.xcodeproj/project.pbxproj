@@ -57,6 +57,7 @@
 		F5578EDA1D0AD66E00169AFB /* trophy_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = F5578ED61D0AD66E00169AFB /* trophy_gold.png */; };
 		F5578EDB1D0AD66E00169AFB /* trophy_none.png in Resources */ = {isa = PBXBuildFile; fileRef = F5578ED71D0AD66E00169AFB /* trophy_none.png */; };
 		F5578EDC1D0AD66E00169AFB /* trophy_silver.png in Resources */ = {isa = PBXBuildFile; fileRef = F5578ED81D0AD66E00169AFB /* trophy_silver.png */; };
+		F57C749D1D13F4A500D76DF5 /* VakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C749C1D13F4A500D76DF5 /* VakTableViewCell.swift */; };
 		F58330851D12A77500F5C6E0 /* Dashboard-28.png in Resources */ = {isa = PBXBuildFile; fileRef = F58330841D12A77500F5C6E0 /* Dashboard-28.png */; };
 		F58330891D12A8D900F5C6E0 /* Dashboard-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F58330861D12A8D900F5C6E0 /* Dashboard-50@2x.png */; };
 		F583308A1D12A8D900F5C6E0 /* Literature-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F58330871D12A8D900F5C6E0 /* Literature-50@2x.png */; };
@@ -159,6 +160,7 @@
 		F5578ED61D0AD66E00169AFB /* trophy_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_gold.png; sourceTree = "<group>"; };
 		F5578ED71D0AD66E00169AFB /* trophy_none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_none.png; sourceTree = "<group>"; };
 		F5578ED81D0AD66E00169AFB /* trophy_silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_silver.png; sourceTree = "<group>"; };
+		F57C749C1D13F4A500D76DF5 /* VakTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VakTableViewCell.swift; sourceTree = "<group>"; };
 		F58330841D12A77500F5C6E0 /* Dashboard-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dashboard-28.png"; path = "../Dashboard-28.png"; sourceTree = "<group>"; };
 		F58330861D12A8D900F5C6E0 /* Dashboard-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dashboard-50@2x.png"; path = "../Dashboard-50@2x.png"; sourceTree = "<group>"; };
 		F58330871D12A8D900F5C6E0 /* Literature-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Literature-50@2x.png"; path = "../Literature-50@2x.png"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				F5A9A66B1D01706C00CAF718 /* LoginController.swift */,
 				F503AE191CF8367000DA3F45 /* logo.png */,
 				20C04ED01CEF1BE300B09717 /* Main.storyboard */,
+				F57C749C1D13F4A500D76DF5 /* VakTableViewCell.swift */,
 				F5A198411CF850C60042703C /* Piechart.swift */,
 				F5A9A66D1D01732E00CAF718 /* Pupil.swift */,
 				20D80CAB1CF7046D004DD75E /* SplashViewController.swift */,
@@ -502,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */,
+				F57C749D1D13F4A500D76DF5 /* VakTableViewCell.swift in Sources */,
 				F583308F1D12C53400F5C6E0 /* VakViewController.swift in Sources */,
 				20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */,
 				F502334F1D073E8F00E4275D /* WordViewController.swift in Sources */,

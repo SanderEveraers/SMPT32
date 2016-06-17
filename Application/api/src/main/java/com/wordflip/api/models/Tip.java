@@ -59,7 +59,7 @@ public class Tip {
         Random rdm = new Random();
 
         if(practices > 2) {
-            if (consistent == 0) {
+            if (consistent == 0 || consistent == 1) {
                 //Je leert elke dag goed bezig
                 tips.add(con_pos.get(rdm.nextInt(3)));
 
@@ -94,7 +94,7 @@ public class Tip {
                     }
                 }
 
-            } else if (consistent > 2) {
+            } else if (consistent >= 2) {
 
                 tips.add(con_neg.get(rdm.nextInt(3)));
                 //Sla minder dagen over & kies een moment om eraan te leren

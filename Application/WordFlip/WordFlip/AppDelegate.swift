@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 struct api {
-    static var url = "http://145.93.160.40:8080"
+    static var url = "http://127.0.0.1:8080"
     static var user:Pupil?
 }
 

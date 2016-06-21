@@ -147,7 +147,7 @@
             </objects>
             <point key="canvasLocation" x="984" y="902"/>
         </scene>
-        <!--Agenda-->
+        <!--Dashboard-->
         <scene sceneID="Xfc-GR-URB">
             <objects>
                 <viewController id="xLK-2U-Z8T" customClass="AgendaViewController" customModule="WordFlip" customModuleProvider="target" sceneMemberID="viewController">
@@ -228,7 +228,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Agenda" id="7Ld-ny-HON"/>
-                    <navigationItem key="navigationItem" id="lkb-AQ-14V">
+                    <navigationItem key="navigationItem" title="Dashboard" id="lkb-AQ-14V">
                         <barButtonItem key="rightBarButtonItem" title="Uitloggen" id="U75-zs-ri1">
                             <connections>
                                 <action selector="logOutAction:" destination="xLK-2U-Z8T" id="elX-pd-d81"/>
@@ -257,7 +257,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J1U-CT-KEB" id="MPH-20-nO8">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="113.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="113"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpT-Id-Cu7">
@@ -306,6 +306,7 @@
                                     <outlet property="labelDificulty" destination="mnL-1p-YyD" id="eAN-iG-VKd"/>
                                     <outlet property="labelVakName" destination="OpT-Id-Cu7" id="l4Y-SW-uin"/>
                                     <outlet property="progressView" destination="e7L-Hm-fmp" id="deO-DN-mec"/>
+                                    <segue destination="cyI-kt-5lD" kind="show" id="hqu-hn-aUg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -320,6 +321,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jST-lh-VWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1843" y="-432"/>
+        </scene>
+        <!--Engels-->
+        <scene sceneID="iok-e4-hdj">
+            <objects>
+                <viewController id="cyI-kt-5lD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LDS-jw-lSs"/>
+                        <viewControllerLayoutGuide type="bottom" id="C8R-oh-1dA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f9J-48-pMW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvL-JX-ZcL">
+                                <rect key="frame" x="141" y="383" width="39" height="30"/>
+                                <state key="normal" title="Begin"/>
+                                <connections>
+                                    <segue destination="bEW-Aw-qxC" kind="show" id="oY8-8n-3dG"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAt-9T-60t">
+                                <rect key="frame" x="0.0" y="150" width="320" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZvL-JX-ZcL" firstAttribute="leading" secondItem="f9J-48-pMW" secondAttribute="leadingMargin" constant="121" id="GTy-C3-s3j"/>
+                            <constraint firstItem="xAt-9T-60t" firstAttribute="leading" secondItem="f9J-48-pMW" secondAttribute="leadingMargin" constant="-20" id="LS2-MP-hh9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZvL-JX-ZcL" secondAttribute="trailing" constant="120" id="MUX-8K-ykz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xAt-9T-60t" secondAttribute="trailing" constant="-20" id="hL1-9B-Dlz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Engels" id="T89-mb-BOq"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGt-2g-MyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2336" y="-437"/>
         </scene>
         <!--Prijzenlast-->
         <scene sceneID="9Lr-Bs-bRH">
@@ -351,7 +390,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YH6-GK-R4t" id="plV-He-1r0">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="127.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="qPI-Mk-Ytb">
@@ -448,49 +487,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< Updated upstream
-=======
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6K-uQ-3aF">
-                                <rect key="frame" x="20" y="49" width="280" height="146"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Engels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZa-NL-OrX">
-                                        <rect key="frame" x="8" y="8" width="264" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="redraw" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ngA-o8-gvd">
-                                        <rect key="frame" x="0.0" y="38" width="288" height="100"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_bronze.png" translatesAutoresizingMaskIntoConstraints="NO" id="G1F-Fg-wKT">
-                                                <rect key="frame" x="0.0" y="0.0" width="51" height="100"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="B3O-Et-yUn">
-                                                <rect key="frame" x="59" y="0.0" width="51" height="100"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trophy_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="dzE-X9-G9b">
-                                                <rect key="frame" x="118" y="0.0" width="52" height="100"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trophy_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="s8s-Em-469">
-                                                <rect key="frame" x="178" y="0.0" width="51" height="100"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="ahx-Uy-90B">
-                                                <rect key="frame" x="237" y="0.0" width="51" height="100"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ngA-o8-gvd" firstAttribute="leading" secondItem="E6K-uQ-3aF" secondAttribute="leading" id="7na-jg-aZa"/>
-                                    <constraint firstAttribute="bottom" secondItem="ngA-o8-gvd" secondAttribute="bottom" constant="8" id="Ft2-SV-vl3"/>
-                                    <constraint firstItem="LZa-NL-OrX" firstAttribute="leading" secondItem="E6K-uQ-3aF" secondAttribute="leading" constant="8" id="bfd-g8-yPs"/>
-                                    <constraint firstAttribute="trailing" secondItem="ngA-o8-gvd" secondAttribute="trailing" id="g8w-7K-bmN"/>
-                                    <constraint firstAttribute="trailing" secondItem="LZa-NL-OrX" secondAttribute="trailing" constant="8" id="ttG-t7-jEz"/>
-                                    <constraint firstAttribute="height" constant="146" id="wwP-ps-fcB"/>
-                                    <constraint firstItem="ngA-o8-gvd" firstAttribute="top" secondItem="E6K-uQ-3aF" secondAttribute="top" constant="38" id="zd6-bK-zcV"/>
-                                </constraints>
-                            </view>
->>>>>>> Stashed changes
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u6I-Bn-oTo">
                                 <rect key="frame" x="20" y="180" width="280" height="146"/>
                                 <subviews>
@@ -506,16 +502,16 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_bronze.png" translatesAutoresizingMaskIntoConstraints="NO" id="adH-Ej-74E">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="110"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trophy_bronze.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lmh-dC-6SN">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_bronze.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lmh-dC-6SN">
                                                 <rect key="frame" x="58" y="0.0" width="57" height="110"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="dl6-V6-YwW">
                                                 <rect key="frame" x="115" y="0.0" width="58" height="110"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="OR4-20-kOT">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="OR4-20-kOT">
                                                 <rect key="frame" x="173" y="0.0" width="57" height="110"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trophy_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-bf-4q9">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-bf-4q9">
                                                 <rect key="frame" x="230" y="0.0" width="58" height="110"/>
                                             </imageView>
                                         </subviews>
@@ -546,16 +542,16 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_bronze.png" translatesAutoresizingMaskIntoConstraints="NO" id="FEk-MT-Z4g">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="110"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trophy_bronze.png" translatesAutoresizingMaskIntoConstraints="NO" id="BFo-k8-kJt">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_bronze.png" translatesAutoresizingMaskIntoConstraints="NO" id="BFo-k8-kJt">
                                                 <rect key="frame" x="58" y="0.0" width="57" height="110"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="yH2-bY-U1C">
                                                 <rect key="frame" x="115" y="0.0" width="58" height="110"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="ETi-04-hoZ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="ETi-04-hoZ">
                                                 <rect key="frame" x="173" y="0.0" width="57" height="110"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trophy_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="hdm-xS-7D8">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="hdm-xS-7D8">
                                                 <rect key="frame" x="230" y="0.0" width="58" height="110"/>
                                             </imageView>
                                         </subviews>
@@ -588,13 +584,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="100"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="B3O-Et-yUn">
-                                                <rect key="frame" x="59" y="0.0" width="52" height="100"/>
+                                                <rect key="frame" x="59" y="0.0" width="51" height="100"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="dzE-X9-G9b">
-                                                <rect key="frame" x="119" y="0.0" width="51" height="100"/>
+                                                <rect key="frame" x="118" y="0.0" width="52" height="100"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="s8s-Em-469">
-                                                <rect key="frame" x="178" y="0.0" width="52" height="100"/>
+                                                <rect key="frame" x="178" y="0.0" width="51" height="100"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="ahx-Uy-90B">
                                                 <rect key="frame" x="237" y="0.0" width="51" height="100"/>
@@ -815,4 +811,7 @@
         <image name="trophy_none.png" width="256" height="256"/>
         <image name="trophy_silver.png" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oY8-8n-3dG"/>
+    </inferredMetricsTieBreakers>
 </document>

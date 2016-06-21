@@ -656,7 +656,7 @@
         <!--Word View Controller-->
         <scene sceneID="fxm-ey-Fm1">
             <objects>
-                <viewController id="bEW-Aw-qxC" customClass="WordViewController" customModule="WordFlip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="bEW-Aw-qxC" customClass="WordViewController" customModule="WordFlip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UsG-rX-7KF"/>
                         <viewControllerLayoutGuide type="bottom" id="cac-z4-iKU"/>

@@ -23,6 +23,7 @@
 		F503AE1E1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */; };
 		F503AE351CF8454900DA3F45 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503AE341CF8454900DA3F45 /* AgendaViewController.swift */; };
 		F52A4B141D129222000D5B6A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52A4B131D129222000D5B6A /* UIViewExtensions.swift */; };
+		F5511DD11D1B0B0300A38B0D /* VakSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5511DD01D1B0B0300A38B0D /* VakSettingsView.swift */; };
 		F554AE901D0178DB00A80443 /* Icon-App-iPad-Pro.png in Resources */ = {isa = PBXBuildFile; fileRef = F554AE751D0178DB00A80443 /* Icon-App-iPad-Pro.png */; };
 		F554AE911D0178DB00A80443 /* Icon-App-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F554AE761D0178DB00A80443 /* Icon-App-iPad.png */; };
 		F554AE921D0178DB00A80443 /* Icon-App-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F554AE771D0178DB00A80443 /* Icon-App-iPad@2x.png */; };
@@ -128,6 +129,7 @@
 		F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		F503AE341CF8454900DA3F45 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		F52A4B131D129222000D5B6A /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		F5511DD01D1B0B0300A38B0D /* VakSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VakSettingsView.swift; sourceTree = "<group>"; };
 		F554AE751D0178DB00A80443 /* Icon-App-iPad-Pro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-iPad-Pro.png"; path = "../icon/ios/Icon-App-iPad-Pro.png"; sourceTree = "<group>"; };
 		F554AE761D0178DB00A80443 /* Icon-App-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-iPad.png"; path = "../icon/ios/Icon-App-iPad.png"; sourceTree = "<group>"; };
 		F554AE771D0178DB00A80443 /* Icon-App-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-iPad@2x.png"; path = "../icon/ios/Icon-App-iPad@2x.png"; sourceTree = "<group>"; };
@@ -244,8 +246,8 @@
 				20C04ED01CEF1BE300B09717 /* Main.storyboard */,
 				F57C74A01D141E5400D76DF5 /* TrophyTableViewCell.swift */,
 				F57C749E1D141E1000D76DF5 /* TrophyTableViewController.swift */,
-				F57C749C1D13F4A500D76DF5 /* VakTableViewCell.swift */,
 				F5A198411CF850C60042703C /* Piechart.swift */,
+				F57C749C1D13F4A500D76DF5 /* VakTableViewCell.swift */,
 				F5A9A66D1D01732E00CAF718 /* Pupil.swift */,
 				20D80CAB1CF7046D004DD75E /* SplashViewController.swift */,
 				20C04ECE1CEF1BE300B09717 /* ViewController.swift */,
@@ -256,6 +258,7 @@
 				F58336041D0982A600FEF409 /* VakkenViewController.swift */,
 				F594B1121D0AAFE4006034BA /* TrophyChestController.swift */,
 				F583308E1D12C53400F5C6E0 /* VakViewController.swift */,
+				F5511DD01D1B0B0300A38B0D /* VakSettingsView.swift */,
 			);
 			path = WordFlip;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 			files = (
 				F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */,
 				F57C749D1D13F4A500D76DF5 /* VakTableViewCell.swift in Sources */,
+				F5511DD11D1B0B0300A38B0D /* VakSettingsView.swift in Sources */,
 				F583308F1D12C53400F5C6E0 /* VakViewController.swift in Sources */,
 				20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */,
 				F502334F1D073E8F00E4275D /* WordViewController.swift in Sources */,

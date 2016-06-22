@@ -325,7 +325,7 @@
         <!--Engels-->
         <scene sceneID="iok-e4-hdj">
             <objects>
-                <viewController id="cyI-kt-5lD" sceneMemberID="viewController">
+                <viewController id="cyI-kt-5lD" customClass="VakSettingsView" customModule="WordFlip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LDS-jw-lSs"/>
                         <viewControllerLayoutGuide type="bottom" id="C8R-oh-1dA"/>
@@ -344,17 +344,28 @@
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAt-9T-60t">
                                 <rect key="frame" x="0.0" y="150" width="320" height="216"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kies het aantal woorden:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkQ-Bs-JqT">
+                                <rect key="frame" x="66" y="121" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZvL-JX-ZcL" firstAttribute="leading" secondItem="f9J-48-pMW" secondAttribute="leadingMargin" constant="121" id="GTy-C3-s3j"/>
                             <constraint firstItem="xAt-9T-60t" firstAttribute="leading" secondItem="f9J-48-pMW" secondAttribute="leadingMargin" constant="-20" id="LS2-MP-hh9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZvL-JX-ZcL" secondAttribute="trailing" constant="120" id="MUX-8K-ykz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FkQ-Bs-JqT" secondAttribute="trailing" constant="46" id="cDH-PF-GpT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xAt-9T-60t" secondAttribute="trailing" constant="-20" id="hL1-9B-Dlz"/>
+                            <constraint firstItem="FkQ-Bs-JqT" firstAttribute="leading" secondItem="f9J-48-pMW" secondAttribute="leadingMargin" constant="46" id="lRi-c5-jrs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Engels" id="T89-mb-BOq"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="aantalWoordenPicker" destination="xAt-9T-60t" id="ujR-Bh-LV1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGt-2g-MyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

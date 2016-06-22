@@ -75,8 +75,8 @@ class WordViewController: UIViewController, UITextFieldDelegate {
                 lbQuestion.text = words.first?.getQuestion()
                 //print("ITWORK")
                 self.geoefendeWoorden += 1
-                lbAnswer.text = "Goedzo!"
                 lbAnswer.textColor = UIColor(red: 0, green: 1, blue: 0)
+                lbAnswer.text = "Goedzo!"
                 dispatch_async(dispatch_get_main_queue()) {
                     self.pbWords.progress = Float(self.geoefendeWoorden) / Float(self.words.count*2)
                 }
@@ -128,8 +128,8 @@ class WordViewController: UIViewController, UITextFieldDelegate {
                         self.lbQuestion.slideInFromLeft()
                         playGoodSound()
                         self.geoefendeWoorden += 1
-                        lbAnswer.text = "Goedzo!"
                         lbAnswer.textColor = UIColor(red: 0, green: 1, blue: 0)
+                        lbAnswer.text = "Goedzo!"
                         
                         
                         dispatch_async(dispatch_get_main_queue()) {

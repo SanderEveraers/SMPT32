@@ -14,6 +14,7 @@ class VakTableViewCell: UITableViewCell {
     @IBOutlet weak var labelVakName: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var labelDificulty: UILabel!
+    @IBOutlet weak var labelDate: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

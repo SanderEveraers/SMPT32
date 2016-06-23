@@ -116,17 +116,17 @@ class AgendaViewController: ViewController, PiechartDelegate {
         var kort = Piechart.Slice()
         kort.value = CGFloat(amountLess1)
         kort.color = color1
-        kort.text = "<10 seconde"
+        kort.text = "<10 seconden"
         
         var medium = Piechart.Slice()
         medium.value = CGFloat(amountMore1)
         medium.color = color2
-        medium.text = ">15 seconde"
+        medium.text = ">15 seconden"
         
         var lang = Piechart.Slice()
         lang.value = CGFloat(amountMore2)
         lang.color = color3
-        lang.text = ">20 seconde"
+        lang.text = ">20 seconden"
         
         let tijdChart = Piechart()
         tijdChart.delegate = self

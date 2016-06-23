@@ -26,16 +26,19 @@ class VakViewController: UITableViewController {
             cell.labelVakName?.text = "Engels"
             cell.labelDificulty?.textColor = getColorFromDifficulty()
             cell.progressView.progress = 0.6
+            cell.labelDate.text = "27-06-2016"
             cell.labelToets.text = "Toets hoofdstuk 4"
         case 1:
             cell.labelVakName?.text = "Frans"
             cell.labelDificulty?.textColor = UIColor.grayColor()
             cell.progressView.progress = 0.3
+            cell.labelDate.text = "29-06-2016"
             cell.labelToets.text = "Toets hoofdstuk 3"
         case 2:
             cell.labelVakName?.text = "Duits"
             cell.labelDificulty?.textColor = UIColor.grayColor()
             cell.progressView.progress = 0.8
+            cell.labelDate.text = "01-07-2016"
             cell.labelToets.text = "Toets hoofdstuk 6"
         default:
             cell.labelVakName?.text = "Nederlands"

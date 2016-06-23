@@ -13,15 +13,15 @@ import java.util.Random;
 public class Tip {
 
     List<String> con_pos = Arrays.asList("Je leert elke dag houd dit vol!",
-            "Je hebt een goede start houd dit vol.", "Ga zo door je hebt nog geen dag laten vallen.");
+            "Je hebt een goede start houd dit vol.", "Ga zo door je hebt nog geen dag laten vallen!");
 
     List<String> con_neg = Arrays.asList("probeer een vast moment te kiezen om elke dag een paar woordjes te leren.",
             "Probeer bijvoorbeeld na het eten 2 minuten te nemen om woordjes te leren.",
             "Probeer elke dag een aantal woordjes te leren.");
 
-    List<String> diff_neg = Arrays.asList("Kies een vast moment op de dag om je woordjes te leren.",
-            "Je leert elke dag probeer nu nog een vast moment te kiezen.",
-            "Probeer op een vast moment van de dag om woordjes te leren.");
+    List<String> diff_neg = Arrays.asList("Probeer vast te oefenen na het tandenpoetsen.",
+            "Probeert vast te oefenen na het ovondeten.",
+            "Oefen wat woordjes vast in je tussenuren.");
 
     List<String> diff_pos = Arrays.asList("Blijf het volhouden om elke dag 1 moment te hebben om woordjes te leren.",
             "Als je dit volhoud kost het 1 week om je engels toets te leren.",

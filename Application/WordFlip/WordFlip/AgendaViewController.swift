@@ -93,17 +93,17 @@ class AgendaViewController: ViewController, PiechartDelegate {
         var engels = Piechart.Slice()
         engels.value = CGFloat(amountEn)
         engels.color = color1
-        engels.text = "engels"
+        engels.text = "Engels"
         
         var frans = Piechart.Slice()
         frans.value = CGFloat(amountFr)
         frans.color = color2
-        frans.text = "frans"
+        frans.text = "Frans"
         
         var duits = Piechart.Slice()
         duits.value = CGFloat(amountDe)
         duits.color = color3
-        duits.text = "duits"
+        duits.text = "Duits"
         
         let vakChart = Piechart()
         vakChart.delegate = self

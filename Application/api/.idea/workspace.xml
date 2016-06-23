@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="164749f1-5d4b-4799-8237-8ade6ffdf869" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/VakTableViewCell.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/VakTableViewCell.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../WordFlip/WordFlip/VakViewController.swift" afterPath="$PROJECT_DIR$/../WordFlip/WordFlip/VakViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="api.iws" />
@@ -39,8 +41,8 @@
       <file leaf-file-name="Practice.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+            <state relative-caret-position="345">
+              <caret line="82" column="48" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -731,12 +733,12 @@
       <workItem from="1466074680027" duration="3033000" />
       <workItem from="1466149847485" duration="904000" />
       <workItem from="1466538715289" duration="57000" />
-      <workItem from="1466628953518" duration="2490000" />
+      <workItem from="1466628953518" duration="3367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6608000" />
+    <option name="totallyTimeSpent" value="7485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="6" />
@@ -951,8 +953,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+        <state relative-caret-position="345">
+          <caret line="82" column="48" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
           <folding />
         </state>
       </provider>

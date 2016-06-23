@@ -60,7 +60,7 @@
                                 <rect key="frame" x="40" y="91" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMl-gL-alu">
-                                <rect key="frame" x="70" y="314" width="181" height="30"/>
+                                <rect key="frame" x="99" y="314" width="181" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Uzn-9g-9tY"/>
                                 </constraints>
@@ -72,7 +72,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLd-SC-Nyc">
-                                <rect key="frame" x="70" y="360" width="181" height="30"/>
+                                <rect key="frame" x="105" y="359" width="168" height="30"/>
                                 <state key="normal" title="Registreer"/>
                             </button>
                         </subviews>
@@ -106,24 +106,24 @@
                                 <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSl-PZ-sz4">
-                                <rect key="frame" x="20" y="212" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mu-Tt-eax">
-                                <rect key="frame" x="70" y="249" width="181" height="30"/>
-                                <state key="normal" title="Inloggen"/>
-                                <connections>
-                                    <action selector="loginAction:" destination="Tro-yN-4VR" eventType="touchUpInside" id="k9Y-9w-jTb"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gebruikersnaam" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYu-ZQ-cKz">
                                 <rect key="frame" x="20" y="115" width="280" height="30"/>
                                 <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSl-PZ-sz4">
+                                <rect key="frame" x="40" y="212" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mu-Tt-eax">
+                                <rect key="frame" x="90" y="254" width="181" height="30"/>
+                                <state key="normal" title="Inloggen"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="Tro-yN-4VR" eventType="touchUpInside" id="k9Y-9w-jTb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -334,6 +334,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="labelDificulty" destination="mnL-1p-YyD" id="eAN-iG-VKd"/>
+                                    <outlet property="labelToets" destination="8mI-Tw-wNt" id="rBr-LD-xmY"/>
                                     <outlet property="labelVakName" destination="OpT-Id-Cu7" id="l4Y-SW-uin"/>
                                     <outlet property="progressView" destination="e7L-Hm-fmp" id="deO-DN-mec"/>
                                     <segue destination="cyI-kt-5lD" kind="show" id="hqu-hn-aUg"/>

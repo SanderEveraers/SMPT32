@@ -24,18 +24,20 @@ class VakViewController: UITableViewController {
             cell.labelVakName?.text = "Engels"
             cell.labelDificulty?.textColor = UIColor.greenColor()
             cell.progressView.progress = 0.6
+            cell.labelToets.text = "Toets hoofdstuk 4"
         case 1:
             cell.labelVakName?.text = "Frans"
             cell.labelDificulty?.textColor = UIColor.redColor()
             cell.progressView.progress = 0.3
+            cell.labelToets.text = "Toets hoofdstuk 3"
         case 2:
             cell.labelVakName?.text = "Duits"
             cell.labelDificulty?.textColor = UIColor.orangeColor()
             cell.progressView.progress = 0.8
+            cell.labelToets.text = "Toets hoofdstuk 6"
         default:
             cell.labelVakName?.text = "Nederlands"
         }
-        cell.buttonToets?.setTitle("Oefen voor hoofdstuk 12", forState: .Normal)
         return cell
     }
     

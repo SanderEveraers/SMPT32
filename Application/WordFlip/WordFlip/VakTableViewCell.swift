@@ -10,9 +10,9 @@ import UIKit
 
 class VakTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelToets: UILabel!
     @IBOutlet weak var labelVakName: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet var buttonToets: UIButton!
     @IBOutlet weak var labelDificulty: UILabel!
     
     override func awakeFromNib() {

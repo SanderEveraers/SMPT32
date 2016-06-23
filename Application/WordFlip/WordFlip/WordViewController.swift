@@ -70,13 +70,15 @@ class WordViewController: UIViewController, UITextFieldDelegate {
         if(geoefendeWoorden == ((words.count*2)-1)) {
             
             if(vertaling == words.last?.getAnswer()) {
+                timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: false)
                 self.lbQuestion.slideInFromLeft()
                 playGoodSound()
                 lbQuestion.text = words.first?.getQuestion()
                 //print("ITWORK")
                 self.geoefendeWoorden += 1
-                lbAnswer.textColor = UIColor(red: 0, green: 1, blue: 0)
+                //lbAnswer.textColor = UIColor(red: 0, green: 1, blue: 0)
                 lbAnswer.text = "Goedzo!"
+                lbAnswer.textColor = UIColor.greenColor()
                 dispatch_async(dispatch_get_main_queue()) {
                     self.pbWords.progress = Float(self.geoefendeWoorden) / Float(self.words.count*2)
                 }
@@ -88,6 +90,9 @@ class WordViewController: UIViewController, UITextFieldDelegate {
         }
         if(geoefendeWoorden == ((words.count*2))) {
             if(vertaling == words.first?.getAnswer()) {
+                lbAnswer.text = "Goedzo!"
+                lbAnswer.textColor = UIColor.greenColor()
+                timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: false)
                 pbWords.progress = Float(geoefendeWoorden/words.count)
                 self.lbQuestion.text = "Je bent klaar"
                 lbAantalWoorden.text = ""
@@ -124,12 +129,15 @@ class WordViewController: UIViewController, UITextFieldDelegate {
                         lbQuestion.text = ""
                         tbTranslation.text = ""
                         lbAnswer.text = ""
+                        timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: false)
                         lbQuestion.text = randomVal.getQuestion()
                         self.lbQuestion.slideInFromLeft()
                         playGoodSound()
                         self.geoefendeWoorden += 1
-                        lbAnswer.textColor = UIColor(red: 0, green: 1, blue: 0)
+                        //lbAnswer.textColor = UIColor(red: 0, green: 1, blue: 0)
+                        lbAnswer.textColor = UIColor.greenColor()
                         lbAnswer.text = "Goedzo!"
+                        
                         
                         
                         dispatch_async(dispatch_get_main_queue()) {

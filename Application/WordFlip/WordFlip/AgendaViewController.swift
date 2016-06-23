@@ -11,15 +11,45 @@ import UIKit
 
 class AgendaViewController: ViewController, PiechartDelegate {
     
+    var tijden = [Int]()
+    
     @IBOutlet weak var Table: UITableView!
     @IBOutlet weak var piechart1: UIView!
+    @IBOutlet weak var lbTipOfDay: UILabel!
+    
+    //MOMENT:
+    var amount = 18
+    var planned = 15
+    
+    //SUBJECT:
+    var amountEn = 67
+    var amountFr = 12
+    var amountDe = 4
+    
+    //TIME
+    var amountMorn = 17
+    var amountNoon = 12
+    var amountEven = 4
+    var amountNigh = 5
+    
+    //SPEED
+    var amountLess1 = 10
+    var amountMore1 = 38
+    var amountMore2 = 12
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadJsonTipMomentsData()
+        loadJsonTipSubjectData()
+        loadJsonTipTimeData()
+        loadJsonTipSpeedData()
+        sleep(1)
         
         let color1 = UIColor(netHex: 0x42A5F5)
         let color2 = UIColor(netHex: 0xFF9800)
         let color3 = UIColor(netHex: 0x1D6AA8)
+        let color4 = UIColor(netHex: 0xAA00BB)
         
         var views2: [String: UIView] = [:]
         var views: [String: UIView] = [:]
@@ -29,48 +59,51 @@ class AgendaViewController: ViewController, PiechartDelegate {
         
         //Uitgevoerd
         var uitgevoerd = Piechart.Slice()
-        uitgevoerd.value = 15
+        uitgevoerd.value = CGFloat(planned)
         uitgevoerd.color = color1
         uitgevoerd.text = "voltooid"
         
         var niet = Piechart.Slice()
-        niet.value = 3
+        niet.value = CGFloat(amount - planned)
         niet.color = color2
         niet.text = "gemist"
         
         //tijden
         var ochtend = Piechart.Slice()
-        ochtend.value = 17
+        ochtend.value = CGFloat(amountMorn)
         ochtend.color = color1
-        ochtend.text = "'s ochtends"
+        ochtend.text = "ochtend"
         
         var middag = Piechart.Slice()
-        middag.value = 12
+        middag.value = CGFloat(amountNoon)
         middag.color = color2
-        middag.text = "'s middags"
+        middag.text = "middag"
         
         var avond = Piechart.Slice()
-        avond.value = 4
+        avond.value = CGFloat(amountEven)
         avond.color = color3
-        avond.text = "'s avonds"
-//        
+        avond.text = "avond"
         
+        var nacht = Piechart.Slice()
+        nacht.value = CGFloat(amountNigh)
+        nacht.color = color4
+        nacht.text = "'s nachts"
         
         //per vak
         var engels = Piechart.Slice()
-        engels.value = 67
+        engels.value = CGFloat(amountEn)
         engels.color = color1
-        engels.text = "engels"
+        engels.text = "Engels"
         
         var frans = Piechart.Slice()
-        frans.value = 12
+        frans.value = CGFloat(amountFr)
         frans.color = color2
-        frans.text = "frans"
+        frans.text = "Frans"
         
         var duits = Piechart.Slice()
-        duits.value = 4
+        duits.value = CGFloat(amountDe)
         duits.color = color3
-        duits.text = "duits"
+        duits.text = "Duits"
         
         let vakChart = Piechart()
         vakChart.delegate = self
@@ -81,19 +114,20 @@ class AgendaViewController: ViewController, PiechartDelegate {
         
         //tijd
         var kort = Piechart.Slice()
-        kort.value = 10
+        kort.value = CGFloat(amountLess1)
         kort.color = color1
-        kort.text = "<1 minuut"
+        kort.text = "Snel"
+
         
         var medium = Piechart.Slice()
-        medium.value = 38
+        medium.value = CGFloat(amountMore1)
         medium.color = color2
-        medium.text = ">1minuut"
+        medium.text = "Gemiddeld"
         
         var lang = Piechart.Slice()
-        lang.value = 12
+        lang.value = CGFloat(amountMore2)
         lang.color = color3
-        lang.text = ">2 minuten"
+        lang.text = "Langzaam"
         
         let tijdChart = Piechart()
         tijdChart.delegate = self
@@ -116,7 +150,7 @@ class AgendaViewController: ViewController, PiechartDelegate {
         timePie.title = "tijden"
         timePie.activeSlice = 0
         timePie.layer.borderWidth = 0
-        timePie.slices = [ochtend, middag, avond]
+        timePie.slices = [ochtend, middag, avond, nacht]
         
         
         piechart.translatesAutoresizingMaskIntoConstraints = false
@@ -132,15 +166,16 @@ class AgendaViewController: ViewController, PiechartDelegate {
         views3["vakChart"] = vakChart
         views4["tijdChart"] = tijdChart
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[piechart(==120)]", options: [], metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-200-[piechart(==120)]", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-230-[piechart(==120)]", options: [], metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[timePie(==120)]", options: [], metrics: nil, views: views2))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-340-[timePie(==120)]", options: [], metrics: nil, views: views2))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-400-[timePie(==120)]", options: [], metrics: nil, views: views2))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[vakChart(==120)]-25-|", options: [], metrics: nil, views: views3))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-200-[vakChart(==120)]", options: [], metrics: nil, views: views3))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-230-[vakChart(==120)]", options: [], metrics: nil, views: views3))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[tijdChart(==120)]-25-|", options: [], metrics: nil, views: views4))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-340-[tijdChart(==120)]", options: [], metrics: nil, views: views4))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-400-[tijdChart(==120)]", options: [], metrics: nil, views: views4))
         
-        
+        loadJsonTipOfDayData()
+        sleep(1)
 //        
 //        let pie = Piechart()
 //        pie.delegate = self
@@ -177,49 +212,206 @@ class AgendaViewController: ViewController, PiechartDelegate {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-//    func loadJsonData()
-//    {
-//        let url = NSURL(string: api.url + "/login?name=\(tfUserName.text!)&password=\(tfPassWord.text!)")
-//        let request = NSURLRequest(URL: url!)
-//        let session = NSURLSession.sharedSession()
-//        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
-//            do
-//            {
-//                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
-//                {
-//                    self.parseJSONData(jsonObject)
-//                }
-//            }
-//            catch
-//            {
-//                print("Error parsing JSON data")
-//            }
-//        }
-//        dataTask.resume();
-//    }
-//    
-//    func parseJSONData(jsonObject:AnyObject){
-//        if let jsonData = jsonObject as? NSObject
-//        {
-//            let id = jsonData.valueForKey("id") as? NSInteger
-//            let userName = jsonData.valueForKey("username") as? String
-//            let passWord = jsonData.valueForKey("password") as? String
-//            let lastLIMillis = jsonData.valueForKey("lastLoggedIn") as? Int
-//            var lastLoggedIn: NSDate?
-//            
-//            if (lastLIMillis != nil){
-//                lastLoggedIn = NSDate(timeIntervalSince1970:Double(lastLIMillis!) / 1000.0)
-//            }
-//            if (id != nil && userName != nil && passWord != nil && lastLoggedIn != nil){
-//                loggedInPupil = Pupil (
-//                    id: id!,
-//                    userName: userName!,
-//                    passWord: passWord!,
-//                    lastLoggedIn: lastLoggedIn!)
-//            }
-//        }
-//    }
-//    
+    func loadJsonTipOfDayData()
+    {
+        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    self.parseJSONTipOfDayData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
+    func parseJSONTipOfDayData(jsonObject:AnyObject){
+        if let jsonData = jsonObject as? NSObject
+        {
+            let tip = jsonData.valueForKey("tip") as? String
+            
+            if (tip != nil){
+                lbTipOfDay.text = tip
+            }
+        }
+    }
+    
+    func loadJsonTipMomentsData()
+    {
+        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/moments")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    self.parseJSONTipMomentsData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
+    func parseJSONTipMomentsData(jsonObject:AnyObject){
+        if let jsonData = jsonObject as? NSObject
+        {
+            let amountjson = jsonData.valueForKey("amount") as? NSInteger
+            let plannedjson = jsonData.valueForKey("planned") as? NSInteger
+            
+            if (amountjson != nil && plannedjson != nil){
+                self.amount = amountjson!
+                self.planned = plannedjson!
+            }
+        }
+    }
+    
+    func loadJsonTipSubjectData()
+    {
+        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/subject")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    self.parseJSONTipSubjectData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
+    func parseJSONTipSubjectData(jsonObject:AnyObject){
+        if let jsonData = jsonObject as? NSArray
+        {
+            amountEn = 0
+            amountFr = 0
+            amountDe = 0
+            for item in jsonData
+            {
+                let jName = item.valueForKey("name") as? NSString
+                let jAmount = item.valueForKey("amount") as? Int
+                if (jAmount != nil) {
+                    if (jName == "Engels"){
+                        amountEn = jAmount!
+                    } else if (jName == "Frans"){
+                        amountFr = jAmount!
+                    } else if (jName == "Duits"){
+                        amountDe = jAmount!
+                    }
+                }
+            }
+        }
+    }
+    
+    func loadJsonTipTimeData()
+    {
+        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/times")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    self.parseJSONTipTimeData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
+    func parseJSONTipTimeData(jsonObject:AnyObject){
+        if let jsonData = jsonObject as? NSArray
+        {
+            amountMorn = 0
+            amountNoon = 0
+            amountEven = 0
+            amountNigh = 0
+            for item in jsonData
+            {
+                let jName = item.valueForKey("name") as? NSString
+                let jAmount = item.valueForKey("amount") as? Int
+                if (jAmount != nil) {
+                    if (jName == "'s ochtends"){
+                        amountMorn = jAmount!
+                    } else if (jName == "'s middags"){
+                        amountNoon = jAmount!
+                    } else if (jName == "'s avonds"){
+                        amountEven = jAmount!
+                    } else if (jName == "'s nachts"){
+                        amountNigh = jAmount!
+                    }
+                }
+            }
+        }
+    }
+    
+    func loadJsonTipSpeedData()
+    {
+        let url = NSURL(string: api.url + "/" + String(api.user!.id) + "/tip/speed")
+        let request = NSURLRequest(URL: url!)
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            do
+            {
+                if let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, 	   options: NSJSONReadingOptions.AllowFragments)
+                {
+                    self.parseJSONTipSpeedData(jsonObject)
+                }
+            }
+            catch
+            {
+                print("Error parsing JSON data")
+            }
+        }
+        dataTask.resume();
+    }
+    
+    func parseJSONTipSpeedData(jsonObject:AnyObject){
+        if let jsonData = jsonObject as? NSArray
+        {
+            amountLess1 = 0
+            amountMore1 = 0
+            amountMore2 = 0
+            for item in jsonData
+            {
+                let jName = item.valueForKey("name") as? NSString
+                let jAmount = item.valueForKey("amount") as? Int
+                if (jAmount != nil) {
+                    if (jName == "'< 1 minuut"){
+                        amountLess1 = jAmount!
+                    } else if (jName == "> 1 minuut"){
+                        amountMore1 = jAmount!
+                    } else if (jName == "> 2 minuten"){
+                        amountMore2 = jAmount!
+                    }
+                }
+            }
+        }
+    }
     
     func logout() -> Void{
         let preferences = NSUserDefaults.standardUserDefaults()

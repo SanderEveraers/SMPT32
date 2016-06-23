@@ -23,6 +23,7 @@
 		F503AE1E1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */; };
 		F503AE351CF8454900DA3F45 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F503AE341CF8454900DA3F45 /* AgendaViewController.swift */; };
 		F52A4B141D129222000D5B6A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52A4B131D129222000D5B6A /* UIViewExtensions.swift */; };
+		F5511DD11D1B0B0300A38B0D /* VakSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5511DD01D1B0B0300A38B0D /* VakSettingsView.swift */; };
 		F554AE901D0178DB00A80443 /* Icon-App-iPad-Pro.png in Resources */ = {isa = PBXBuildFile; fileRef = F554AE751D0178DB00A80443 /* Icon-App-iPad-Pro.png */; };
 		F554AE911D0178DB00A80443 /* Icon-App-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F554AE761D0178DB00A80443 /* Icon-App-iPad.png */; };
 		F554AE921D0178DB00A80443 /* Icon-App-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F554AE771D0178DB00A80443 /* Icon-App-iPad@2x.png */; };
@@ -57,12 +58,22 @@
 		F5578EDA1D0AD66E00169AFB /* trophy_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = F5578ED61D0AD66E00169AFB /* trophy_gold.png */; };
 		F5578EDB1D0AD66E00169AFB /* trophy_none.png in Resources */ = {isa = PBXBuildFile; fileRef = F5578ED71D0AD66E00169AFB /* trophy_none.png */; };
 		F5578EDC1D0AD66E00169AFB /* trophy_silver.png in Resources */ = {isa = PBXBuildFile; fileRef = F5578ED81D0AD66E00169AFB /* trophy_silver.png */; };
+		F57C749D1D13F4A500D76DF5 /* VakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C749C1D13F4A500D76DF5 /* VakTableViewCell.swift */; };
+		F57C749F1D141E1000D76DF5 /* TrophyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C749E1D141E1000D76DF5 /* TrophyTableViewController.swift */; };
+		F57C74A11D141E5400D76DF5 /* TrophyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C74A01D141E5400D76DF5 /* TrophyTableViewCell.swift */; };
+		F58330851D12A77500F5C6E0 /* Dashboard-28.png in Resources */ = {isa = PBXBuildFile; fileRef = F58330841D12A77500F5C6E0 /* Dashboard-28.png */; };
+		F58330891D12A8D900F5C6E0 /* Dashboard-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F58330861D12A8D900F5C6E0 /* Dashboard-50@2x.png */; };
+		F583308A1D12A8D900F5C6E0 /* Literature-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F58330871D12A8D900F5C6E0 /* Literature-50@2x.png */; };
+		F583308B1D12A8D900F5C6E0 /* Medal-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F58330881D12A8D900F5C6E0 /* Medal-50@2x.png */; };
+		F583308F1D12C53400F5C6E0 /* VakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F583308E1D12C53400F5C6E0 /* VakViewController.swift */; };
 		F58336051D0982A600FEF409 /* VakkenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58336041D0982A600FEF409 /* VakkenViewController.swift */; };
 		F594B1131D0AAFE4006034BA /* TrophyChestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594B1121D0AAFE4006034BA /* TrophyChestController.swift */; };
 		F594B1151D0AC5F6006034BA /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = F594B1141D0AC5F6006034BA /* speaker.png */; };
 		F5A198431CF850C60042703C /* Piechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A198411CF850C60042703C /* Piechart.swift */; };
 		F5A9A66C1D01706C00CAF718 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9A66B1D01706C00CAF718 /* LoginController.swift */; };
 		F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9A66D1D01732E00CAF718 /* Pupil.swift */; };
+		F5A9FD851D14033700DFD927 /* fault.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A9FD841D14033700DFD927 /* fault.mp3 */; };
+		F5A9FD871D14035B00DFD927 /* good.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A9FD861D14035B00DFD927 /* good.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +129,7 @@
 		F503AE1C1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		F503AE341CF8454900DA3F45 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		F52A4B131D129222000D5B6A /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		F5511DD01D1B0B0300A38B0D /* VakSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VakSettingsView.swift; sourceTree = "<group>"; };
 		F554AE751D0178DB00A80443 /* Icon-App-iPad-Pro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-iPad-Pro.png"; path = "../icon/ios/Icon-App-iPad-Pro.png"; sourceTree = "<group>"; };
 		F554AE761D0178DB00A80443 /* Icon-App-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-iPad.png"; path = "../icon/ios/Icon-App-iPad.png"; sourceTree = "<group>"; };
 		F554AE771D0178DB00A80443 /* Icon-App-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-iPad@2x.png"; path = "../icon/ios/Icon-App-iPad@2x.png"; sourceTree = "<group>"; };
@@ -152,12 +164,22 @@
 		F5578ED61D0AD66E00169AFB /* trophy_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_gold.png; sourceTree = "<group>"; };
 		F5578ED71D0AD66E00169AFB /* trophy_none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_none.png; sourceTree = "<group>"; };
 		F5578ED81D0AD66E00169AFB /* trophy_silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_silver.png; sourceTree = "<group>"; };
+		F57C749C1D13F4A500D76DF5 /* VakTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VakTableViewCell.swift; sourceTree = "<group>"; };
+		F57C749E1D141E1000D76DF5 /* TrophyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrophyTableViewController.swift; sourceTree = "<group>"; };
+		F57C74A01D141E5400D76DF5 /* TrophyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrophyTableViewCell.swift; sourceTree = "<group>"; };
+		F58330841D12A77500F5C6E0 /* Dashboard-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dashboard-28.png"; path = "../Dashboard-28.png"; sourceTree = "<group>"; };
+		F58330861D12A8D900F5C6E0 /* Dashboard-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dashboard-50@2x.png"; path = "../Dashboard-50@2x.png"; sourceTree = "<group>"; };
+		F58330871D12A8D900F5C6E0 /* Literature-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Literature-50@2x.png"; path = "../Literature-50@2x.png"; sourceTree = "<group>"; };
+		F58330881D12A8D900F5C6E0 /* Medal-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Medal-50@2x.png"; path = "../Medal-50@2x.png"; sourceTree = "<group>"; };
+		F583308E1D12C53400F5C6E0 /* VakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VakViewController.swift; sourceTree = "<group>"; };
 		F58336041D0982A600FEF409 /* VakkenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VakkenViewController.swift; sourceTree = "<group>"; };
 		F594B1121D0AAFE4006034BA /* TrophyChestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrophyChestController.swift; sourceTree = "<group>"; };
 		F594B1141D0AC5F6006034BA /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
 		F5A198411CF850C60042703C /* Piechart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Piechart.swift; path = ../PieChart/Piechart.swift; sourceTree = "<group>"; };
 		F5A9A66B1D01706C00CAF718 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F5A9A66D1D01732E00CAF718 /* Pupil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pupil.swift; sourceTree = "<group>"; };
+		F5A9FD841D14033700DFD927 /* fault.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fault.mp3; sourceTree = "<group>"; };
+		F5A9FD861D14035B00DFD927 /* good.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = good.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,7 +244,10 @@
 				F5A9A66B1D01706C00CAF718 /* LoginController.swift */,
 				F503AE191CF8367000DA3F45 /* logo.png */,
 				20C04ED01CEF1BE300B09717 /* Main.storyboard */,
+				F57C74A01D141E5400D76DF5 /* TrophyTableViewCell.swift */,
+				F57C749E1D141E1000D76DF5 /* TrophyTableViewController.swift */,
 				F5A198411CF850C60042703C /* Piechart.swift */,
+				F57C749C1D13F4A500D76DF5 /* VakTableViewCell.swift */,
 				F5A9A66D1D01732E00CAF718 /* Pupil.swift */,
 				20D80CAB1CF7046D004DD75E /* SplashViewController.swift */,
 				20C04ECE1CEF1BE300B09717 /* ViewController.swift */,
@@ -232,6 +257,8 @@
 				F52A4B131D129222000D5B6A /* UIViewExtensions.swift */,
 				F58336041D0982A600FEF409 /* VakkenViewController.swift */,
 				F594B1121D0AAFE4006034BA /* TrophyChestController.swift */,
+				F583308E1D12C53400F5C6E0 /* VakViewController.swift */,
+				F5511DD01D1B0B0300A38B0D /* VakSettingsView.swift */,
 			);
 			path = WordFlip;
 			sourceTree = "<group>";
@@ -266,6 +293,12 @@
 		F554AEAB1D0178E200A80443 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				F5A9FD861D14035B00DFD927 /* good.mp3 */,
+				F5A9FD841D14033700DFD927 /* fault.mp3 */,
+				F58330861D12A8D900F5C6E0 /* Dashboard-50@2x.png */,
+				F58330871D12A8D900F5C6E0 /* Literature-50@2x.png */,
+				F58330881D12A8D900F5C6E0 /* Medal-50@2x.png */,
+				F58330841D12A77500F5C6E0 /* Dashboard-28.png */,
 				F554AE751D0178DB00A80443 /* Icon-App-iPad-Pro.png */,
 				F554AE761D0178DB00A80443 /* Icon-App-iPad.png */,
 				F554AE771D0178DB00A80443 /* Icon-App-iPad@2x.png */,
@@ -414,6 +447,7 @@
 				F503AE1A1CF8367000DA3F45 /* logo.png in Resources */,
 				F554AEA61D0178DB00A80443 /* Icon-Web-App.png in Resources */,
 				F554AEA01D0178DB00A80443 /* Icon-Tab-Bar@3x.png in Resources */,
+				F58330891D12A8D900F5C6E0 /* Dashboard-50@2x.png in Resources */,
 				F554AE921D0178DB00A80443 /* Icon-App-iPad@2x.png in Resources */,
 				20C04EDA1CEF1BE300B09717 /* LaunchScreen.storyboard in Resources */,
 				F554AEA91D0178DB00A80443 /* iTunesArtwork.png in Resources */,
@@ -421,6 +455,7 @@
 				F503AE1E1CF83CCA00DA3F45 /* Roboto-LightItalic.ttf in Resources */,
 				F554AE9B1D0178DB00A80443 /* Icon-Spotlight.png in Resources */,
 				F554AEA21D0178DB00A80443 /* Icon-Toolbar@2x.png in Resources */,
+				F5A9FD851D14033700DFD927 /* fault.mp3 in Resources */,
 				F5578EDA1D0AD66E00169AFB /* trophy_gold.png in Resources */,
 				F554AEAD1D01790A00A80443 /* Images.xcassets in Resources */,
 				F554AE9A1D0178DB00A80443 /* Icon-Spotlight-iPhone-6.png in Resources */,
@@ -438,7 +473,9 @@
 				F554AE961D0178DB00A80443 /* Icon-Settings.png in Resources */,
 				F554AEAF1D01797600A80443 /* Images-2.xcassets in Resources */,
 				F554AE9E1D0178DB00A80443 /* Icon-Tab-Bar.png in Resources */,
+				F583308B1D12A8D900F5C6E0 /* Medal-50@2x.png in Resources */,
 				F594B1151D0AC5F6006034BA /* speaker.png in Resources */,
+				F5A9FD871D14035B00DFD927 /* good.mp3 in Resources */,
 				F554AE901D0178DB00A80443 /* Icon-App-iPad-Pro.png in Resources */,
 				F554AE911D0178DB00A80443 /* Icon-App-iPad.png in Resources */,
 				F554AE981D0178DB00A80443 /* Icon-Settings@3x.png in Resources */,
@@ -446,10 +483,12 @@
 				F554AE951D0178DB00A80443 /* Icon-App@3x.png in Resources */,
 				F554AEA11D0178DB00A80443 /* Icon-Toolbar.png in Resources */,
 				F554AE931D0178DB00A80443 /* Icon-App.png in Resources */,
+				F58330851D12A77500F5C6E0 /* Dashboard-28.png in Resources */,
 				F554AEA81D0178DB00A80443 /* Icon-Web-App@3x.png in Resources */,
 				20C04ED21CEF1BE300B09717 /* Main.storyboard in Resources */,
 				F554AEA51D0178DB00A80443 /* Icon-Web-App-iPad@2x.png in Resources */,
 				F554AE941D0178DB00A80443 /* Icon-App@2x.png in Resources */,
+				F583308A1D12A8D900F5C6E0 /* Literature-50@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,10 +514,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A9A66E1D01732E00CAF718 /* Pupil.swift in Sources */,
+				F57C749D1D13F4A500D76DF5 /* VakTableViewCell.swift in Sources */,
+				F5511DD11D1B0B0300A38B0D /* VakSettingsView.swift in Sources */,
+				F583308F1D12C53400F5C6E0 /* VakViewController.swift in Sources */,
 				20C04ECF1CEF1BE300B09717 /* ViewController.swift in Sources */,
 				F502334F1D073E8F00E4275D /* WordViewController.swift in Sources */,
 				F52A4B141D129222000D5B6A /* UIViewExtensions.swift in Sources */,
 				F502334D1D073C8700E4275D /* Word.swift in Sources */,
+				F57C749F1D141E1000D76DF5 /* TrophyTableViewController.swift in Sources */,
+				F57C74A11D141E5400D76DF5 /* TrophyTableViewCell.swift in Sources */,
 				F58336051D0982A600FEF409 /* VakkenViewController.swift in Sources */,
 				20C04ECD1CEF1BE300B09717 /* AppDelegate.swift in Sources */,
 				20C04ED51CEF1BE300B09717 /* WordFlip.xcdatamodeld in Sources */,

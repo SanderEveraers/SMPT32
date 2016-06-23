@@ -11,7 +11,7 @@ import Foundation
 import AVFoundation
 import CoreData
 
-class WordViewController: UIViewController {
+class WordViewController: UIViewController, UITextFieldDelegate {
     var managedObjectContext: NSManagedObjectContext?
 
     @IBOutlet weak var pbWords: UIProgressView!
@@ -26,6 +26,8 @@ class WordViewController: UIViewController {
     let synth = AVSpeechSynthesizer()
     var myUtterance = AVSpeechUtterance(string: "")
     
+    var audioPlayer = AVAudioPlayer()
+    
     var word = Word(id: 1000, question: ".", answer:",", sentence: "';'", count: 0)
     
     var words:[Word] = []
@@ -37,6 +39,9 @@ class WordViewController: UIViewController {
     var geoefendeWoorden: Int = 1
     var aantalWoorden: Int = 0
     
+    var timerAll = NSTimer()
+    var secondsPassed:Int = 0
+    
     var timer = NSTimer()
     var timerInterrupt = NSTimer()
     var timerSwipe = NSTimer()
@@ -46,7 +51,10 @@ class WordViewController: UIViewController {
     
     var hetAntWoord = ""
     
-    @IBAction func btWoordDoorgeven(sender: UIButton) {
+    var mistakes:Int = 0
+    
+    
+    @IBAction func btWoordDoorgeven(sender: AnyObject?) {
         
         let vertaling = tbTranslation.text?.lowercaseString
         isGoed = false
@@ -62,16 +70,19 @@ class WordViewController: UIViewController {
         if(geoefendeWoorden == ((words.count*2)-1)) {
             
             if(vertaling == words.last?.getAnswer()) {
+                timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: false)
+                self.lbQuestion.slideInFromLeft()
+                playGoodSound()
                 lbQuestion.text = words.first?.getQuestion()
-                print("ITWORK")
+                //print("ITWORK")
                 self.geoefendeWoorden += 1
-                
+                //lbAnswer.textColor = UIColor(red: 0, green: 1, blue: 0)
+                lbAnswer.text = "Goedzo!"
+                lbAnswer.textColor = UIColor.greenColor()
                 dispatch_async(dispatch_get_main_queue()) {
-                    //self.pbWords.setProgress(Float(self.geoefendeWoorden/self.words.count), animated: false)
                     self.pbWords.progress = Float(self.geoefendeWoorden) / Float(self.words.count*2)
                 }
                 
-                //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
                 tbTranslation.text = ""
             }
             return
@@ -79,19 +90,20 @@ class WordViewController: UIViewController {
         }
         if(geoefendeWoorden == ((words.count*2))) {
             if(vertaling == words.first?.getAnswer()) {
+                lbAnswer.text = "Goedzo!"
+                lbAnswer.textColor = UIColor.greenColor()
+                timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: false)
                 pbWords.progress = Float(geoefendeWoorden/words.count)
                 self.lbQuestion.text = "Je bent klaar"
-                //var disableMyButton = sender as? UIButton
-                //disableMyButton!.enabled = false
                 lbAantalWoorden.text = ""
                 btWoordDoorgeven.hidden = true
                 btReady.hidden = false
                 tbTranslation.hidden = true
                 self.leftSwipe.enabled = false
+
             }
         }
 
-        //timerInterrupt.invalidate()
         //repeatDing: repeat {
         forLoop: for (_, element) in words.enumerate() {
             if(element.getQuestion() == lbQuestion.text!) {
@@ -117,29 +129,32 @@ class WordViewController: UIViewController {
                         lbQuestion.text = ""
                         tbTranslation.text = ""
                         lbAnswer.text = ""
+                        timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: false)
                         lbQuestion.text = randomVal.getQuestion()
                         self.lbQuestion.slideInFromLeft()
+                        playGoodSound()
                         self.geoefendeWoorden += 1
+                        //lbAnswer.textColor = UIColor(red: 0, green: 1, blue: 0)
+                        lbAnswer.textColor = UIColor.greenColor()
+                        lbAnswer.text = "Goedzo!"
+                        
+                        
                         
                         dispatch_async(dispatch_get_main_queue()) {
-                            //self.pbWords.setProgress(Float(self.geoefendeWoorden/self.words.count), animated: false)
                             self.pbWords.progress = Float(self.geoefendeWoorden) / Float(self.words.count*2)
                         }
                         
                         element.setCount()
                         isGoed = true
-                        //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
                         if(geoefendeWoorden == ((words.count*2)-1)) {
                             lbQuestion.text = words.last?.getQuestion()
                         }
                         continue //repeatDing
                     } else {
-                        //lbUitkomst.text = "Probeer het later opnieuw."
                         timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(timerAction), userInfo: word, repeats: false)
                         timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: true)
-                        //isGoed = false
                         tbTranslation.text = ""
-                        //self.geoefendeWoorden += 1
+                        self.mistakes += 1
                         performSelector(#selector(nextWord), withObject: nil, afterDelay: 2)
                     }
                 }
@@ -149,49 +164,15 @@ class WordViewController: UIViewController {
         //}while(geoefendeWoorden < aantalWoorden)
         if(geoefendeWoorden >= words.count*2) {
             self.lbQuestion.text = "Je bent klaar"
-            //var disableMyButton = sender as? UIButton
-            //disableMyButton!.enabled = false
             lbAantalWoorden.text = ""
             btWoordDoorgeven.hidden = true
             btReady.hidden = false
             tbTranslation.hidden = true
             self.leftSwipe.enabled = false
+            timerAll.invalidate()
+            sendRequest()
         }
-        
-        //        if(words[vertaling!] != nil) {
-        //            if(words[vertaling!] == lbWoord.text)
-        //            {
-        //                var index: Int = Int(arc4random_uniform(UInt32(words.count)))
-        //                var randomVal = Array(words.values)[index]
-        //                var bool = false
-        //
-        //                while(!bool) {
-        //                    if(randomVal == lbWoord.text) {
-        //                        index = Int(arc4random_uniform(UInt32(words.count)))
-        //                        randomVal = Array(words.values)[index]
-        //                    } else {
-        //                        bool = true
-        //                    }
-        //                }
-        //                lbWoord.text = ""
-        //                tbVertaling.text = ""
-        //                lbUitkomst.text = ""
-        //                lbWoord.text = randomVal
-        //            }
-        //
-        //        }  else {
-        //            lbUitkomst.text = "Probeer het later opnieuw." + self.words[lbWoord.text!]!
-        //        }
-        //
-        
-        
-        //        if(vertaling == "onafhankelijkheid") {
-        //            lbUitkomst.text = "Juist!"
-        //            lbUitkomst.textColor = UIColor.init(red: 0.0, green: 153.0/255, blue: 51.0/255, alpha: 255.0/255)
-        //        } else {
-        //            lbUitkomst.text = "Probeer het later nog eens."
-        //            lbUitkomst.textColor = UIColor.redColor()
-        //        }
+
     }
     
     @IBAction func btReady(sender: UIButton) {
@@ -203,6 +184,8 @@ class WordViewController: UIViewController {
         super.viewDidLoad()
         //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(aantalWoorden)
         // Do any additional setup after loading the view, typically from a nib.
+        timerAll = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: Selector("countSeconds"), userInfo: nil, repeats: true)
+        tbTranslation.delegate = self
         self.loadJsonData()
         sleep(1)
         
@@ -219,10 +202,31 @@ class WordViewController: UIViewController {
         performSelector(#selector(loadData), withObject: nil, afterDelay: 1)
         
         dispatch_async(dispatch_get_main_queue()) {
-            //self.pbWords.setProgress(Float(self.geoefendeWoorden/self.words.count), animated: false)
             self.pbWords.progress = Float(self.geoefendeWoorden) / Float(self.words.count*2)
         }
         
+    }
+    
+    func playGoodSound(){
+        let goodSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("good", ofType: "mp3")!)
+        do{
+        try self.audioPlayer = AVAudioPlayer(contentsOfURL: goodSound)
+        } catch {
+            print("Something is wrong")
+        }
+        self.audioPlayer.prepareToPlay()
+        self.audioPlayer.play()
+    }
+    
+    func playFaultSound(){
+        let goodSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("fault", ofType: "mp3")!)
+        do{
+            try self.audioPlayer = AVAudioPlayer(contentsOfURL: goodSound)
+        } catch {
+            print("Something is wrong")
+        }
+        self.audioPlayer.prepareToPlay()
+        self.audioPlayer.play()
     }
     
     func handleSwipes(sender:UISwipeGestureRecognizer) {
@@ -233,6 +237,7 @@ class WordViewController: UIViewController {
                     word = Word(id: element.getID(), question: element.getQuestion(), answer: element.getAnswer(), sentence: element.getSentence(), count: element.getCount())
                 }
             }
+            self.mistakes += 1
             timerSwipe = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(timerSwipeAction), userInfo: word, repeats: false)
             
             timerInterrupt = NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: #selector(timerInterruptAction), userInfo: nil, repeats: false)
@@ -270,23 +275,18 @@ class WordViewController: UIViewController {
     
     //TIMER
     func timerAction() {
-        // Something cool
         timer.invalidate()
-        //let word = timer.userInfo as! Word
         self.lbAnswer.text = word.getAnswer()
         lbAnswer.textColor = UIColor.redColor()
     }
     
     func timerSwipeAction() {
-        // Something cool
         timerSwipe.invalidate()
-        //let word = timer.userInfo as! Word
         self.lbAnswer.text = word.getAnswer()
         lbAnswer.textColor = UIColor.redColor()
     }
     
     func timerInterruptAction() {
-        // Something cool
         timer.invalidate()
         self.lbAnswer.text = ""
     }
@@ -318,6 +318,7 @@ class WordViewController: UIViewController {
             } else {
                 bool = true
                 self.lbQuestion.slideInFromRight()
+                playFaultSound()
                 lbQuestion.text = randomVal.getQuestion()
                 lbAnswer.text = ""
             }
@@ -326,13 +327,12 @@ class WordViewController: UIViewController {
     
     func loadData() {
         nextWord()
-        //self.lbAantalWoorden.text = String(geoefendeWoorden) + "/" + String(words.count*2)
     }
     
     //JSON parsing
     func loadJsonData()
     {
-        let url = NSURL(string: "\(api.url)/practice?userid=6&course=Engels")
+        let url = NSURL(string: "\(api.url)/practice?userid=\(api.user!.id)&course=Engels")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
@@ -384,5 +384,48 @@ class WordViewController: UIViewController {
         myUtterance = AVSpeechUtterance(string: "")
     }
     
+    //For the return key
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.btWoordDoorgeven( nil )
+        textField.becomeFirstResponder()
+        return true
+    }
+    
+    //  STUREN IN POST REQUEST() ->
+    //      Toets ID                        int
+    //      Aantal geleerde woorden         int
+    //      Aantal fouten                   int
+    //      Duratie in sec                  int
+    //      Gepland door app                bool
+    
+    func sendRequest() {
+        let request: NSMutableURLRequest =
+            NSMutableURLRequest(URL: NSURL(string: api.url + "/" + String(api.user!.id) + "/tip")!)
+        request.HTTPMethod = "POST"
+        
+        let postString = "toets_id=1&amount=\(words.count)&mistakes=\(self.mistakes)&duration=\(self.secondsPassed)&planned=true"
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            guard error == nil && data != nil else {                                                          // check for fundamental networking error
+                print("error=\(error)")
+                return
+            }
+            
+            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {           // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print("responseString = \(responseString)")
+        }
+        task.resume()
+
+    }
+    
+    func countSeconds() {
+        secondsPassed += 1
+    }
     
 }

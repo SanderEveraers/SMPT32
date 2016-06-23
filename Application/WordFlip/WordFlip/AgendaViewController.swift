@@ -72,17 +72,17 @@ class AgendaViewController: ViewController, PiechartDelegate {
         var ochtend = Piechart.Slice()
         ochtend.value = CGFloat(amountMorn)
         ochtend.color = color1
-        ochtend.text = "'s ochtends"
+        ochtend.text = "ochtend"
         
         var middag = Piechart.Slice()
         middag.value = CGFloat(amountNoon)
         middag.color = color2
-        middag.text = "'s middags"
+        middag.text = "middag"
         
         var avond = Piechart.Slice()
         avond.value = CGFloat(amountEven)
         avond.color = color3
-        avond.text = "'s avonds"
+        avond.text = "avond"
         
         var nacht = Piechart.Slice()
         nacht.value = CGFloat(amountNigh)
@@ -116,17 +116,18 @@ class AgendaViewController: ViewController, PiechartDelegate {
         var kort = Piechart.Slice()
         kort.value = CGFloat(amountLess1)
         kort.color = color1
-        kort.text = "<10 sec."
+        kort.text = "Snel"
+
         
         var medium = Piechart.Slice()
         medium.value = CGFloat(amountMore1)
         medium.color = color2
-        medium.text = "<15 sec."
+        medium.text = "Gemiddeld"
         
         var lang = Piechart.Slice()
         lang.value = CGFloat(amountMore2)
         lang.color = color3
-        lang.text = ">15 sec."
+        lang.text = "Langzaam"
         
         let tijdChart = Piechart()
         tijdChart.delegate = self

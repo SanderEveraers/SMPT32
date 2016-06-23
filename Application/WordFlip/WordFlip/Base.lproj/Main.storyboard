@@ -312,12 +312,6 @@
                                             <rect key="frame" x="46" y="99" width="189" height="2"/>
                                             <color key="progressTintColor" red="0.1137254902" green="0.41568627450000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         </progressView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="28-06-2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dia-DJ-RFc">
-                                            <rect key="frame" x="15" y="65" width="241" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="●" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnL-1p-YyD">
                                             <rect key="frame" x="138" y="38" width="106" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -336,9 +330,16 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trophy_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="RQy-w3-Pi2">
                                             <rect key="frame" x="15" y="85" width="25" height="25"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="28-06-2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dia-DJ-RFc">
+                                            <rect key="frame" x="15" y="65" width="241" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="labelDate" destination="Dia-DJ-RFc" id="KVT-wM-5BL"/>
                                     <outlet property="labelDificulty" destination="mnL-1p-YyD" id="eAN-iG-VKd"/>
                                     <outlet property="labelToets" destination="8mI-Tw-wNt" id="rBr-LD-xmY"/>
                                     <outlet property="labelVakName" destination="OpT-Id-Cu7" id="l4Y-SW-uin"/>

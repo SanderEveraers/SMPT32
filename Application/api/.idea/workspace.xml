@@ -28,7 +28,7 @@
       <file leaf-file-name="Practice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
+            <state relative-caret-position="1035">
               <caret line="82" column="48" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
               <folding />
             </state>
@@ -38,8 +38,8 @@
       <file leaf-file-name="TipController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="173" column="34" selection-start-line="173" selection-start-column="34" selection-end-line="173" selection-end-column="34" />
+            <state relative-caret-position="222">
+              <caret line="179" column="47" selection-start-line="179" selection-start-column="47" selection-end-line="179" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -708,12 +708,12 @@
       <workItem from="1466074680027" duration="3033000" />
       <workItem from="1466149847485" duration="904000" />
       <workItem from="1466538715289" duration="57000" />
-      <workItem from="1466628953518" duration="3709000" />
+      <workItem from="1466628953518" duration="4976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7827000" />
+    <option name="totallyTimeSpent" value="9094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="6" />
@@ -928,7 +928,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/models/Practice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
+        <state relative-caret-position="1035">
           <caret line="82" column="48" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
           <folding />
         </state>
@@ -936,8 +936,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wordflip/api/controllers/TipController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="173" column="34" selection-start-line="173" selection-start-column="34" selection-end-line="173" selection-end-column="34" />
+        <state relative-caret-position="222">
+          <caret line="179" column="47" selection-start-line="179" selection-start-column="47" selection-end-line="179" selection-end-column="47" />
           <folding />
         </state>
       </provider>

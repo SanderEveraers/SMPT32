@@ -171,13 +171,13 @@ public class TipController {
 		DayPart nacht = new DayPart(0,"'s nachts");
 
 		for (Practice p : practices) {
-			if (p.getHourOfDay() >= 5 || p.getHourOfDay() <= 12) {
+			if (p.getHourOfDay() >= 5 && p.getHourOfDay() <= 12) {
 				ochtend.appendAmount(1);
-			} else if (p.getHourOfDay() >= 12 || p.getHourOfDay() <= 18) {
+			} else if (p.getHourOfDay() >= 12 && p.getHourOfDay() <= 18) {
 				middag.appendAmount(1);
-			} else if (p.getHourOfDay() >= 18 || p.getHourOfDay() <= 24) {
+			} else if (p.getHourOfDay() >= 18 && p.getHourOfDay() <= 24) {
 				avond.appendAmount(1);
-			} else if (p.getHourOfDay() >= 0 || p.getHourOfDay() <= 5) {
+			} else if (p.getHourOfDay() >= 0 && p.getHourOfDay() <= 5) {
 				nacht.appendAmount(1);
 			}
 		}

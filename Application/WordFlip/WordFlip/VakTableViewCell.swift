@@ -25,5 +25,9 @@ class VakTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func increaseProgressView(amount: Float) {
+        progressView.progress = amount
+    }
 
 }

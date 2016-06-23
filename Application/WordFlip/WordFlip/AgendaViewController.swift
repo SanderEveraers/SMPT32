@@ -116,17 +116,17 @@ class AgendaViewController: ViewController, PiechartDelegate {
         var kort = Piechart.Slice()
         kort.value = CGFloat(amountLess1)
         kort.color = color1
-        kort.text = "<1 minuut"
+        kort.text = "<10 seconde"
         
         var medium = Piechart.Slice()
         medium.value = CGFloat(amountMore1)
         medium.color = color2
-        medium.text = ">1minuut"
+        medium.text = ">15 seconde"
         
         var lang = Piechart.Slice()
         lang.value = CGFloat(amountMore2)
         lang.color = color3
-        lang.text = ">2 minuten"
+        lang.text = ">20 seconde"
         
         let tijdChart = Piechart()
         tijdChart.delegate = self
@@ -165,13 +165,13 @@ class AgendaViewController: ViewController, PiechartDelegate {
         views3["vakChart"] = vakChart
         views4["tijdChart"] = tijdChart
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[piechart(==120)]", options: [], metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-160-[piechart(==120)]", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-230-[piechart(==120)]", options: [], metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-25-[timePie(==120)]", options: [], metrics: nil, views: views2))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-300-[timePie(==120)]", options: [], metrics: nil, views: views2))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-400-[timePie(==120)]", options: [], metrics: nil, views: views2))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[vakChart(==120)]-25-|", options: [], metrics: nil, views: views3))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-160-[vakChart(==120)]", options: [], metrics: nil, views: views3))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-230-[vakChart(==120)]", options: [], metrics: nil, views: views3))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[tijdChart(==120)]-25-|", options: [], metrics: nil, views: views4))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-300-[tijdChart(==120)]", options: [], metrics: nil, views: views4))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-400-[tijdChart(==120)]", options: [], metrics: nil, views: views4))
         
         loadJsonTipOfDayData()
         sleep(1)

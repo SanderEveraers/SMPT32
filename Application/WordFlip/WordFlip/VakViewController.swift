@@ -23,12 +23,15 @@ class VakViewController: UITableViewController {
         case 0:
             cell.labelVakName?.text = "Engels"
             cell.labelDificulty?.textColor = UIColor.greenColor()
+            cell.progressView.progress = 0.6
         case 1:
             cell.labelVakName?.text = "Frans"
             cell.labelDificulty?.textColor = UIColor.redColor()
+            cell.progressView.progress = 0.3
         case 2:
             cell.labelVakName?.text = "Duits"
             cell.labelDificulty?.textColor = UIColor.orangeColor()
+            cell.progressView.progress = 0.8
         default:
             cell.labelVakName?.text = "Nederlands"
         }
